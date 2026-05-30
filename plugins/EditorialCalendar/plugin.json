@@ -1,0 +1,18 @@
+{
+  "slug": "editorial-calendar",
+  "name": "Editorial Calendar",
+  "description": "Kalenderansicht fuer geplante und veroeffentlichte News.",
+  "version": "1.0.0",
+  "enabled": true,
+  "routes_file": "routes/web.php",
+  "admin_nav": [
+    {
+      "route": "admin.editorial-calendar.index",
+      "label": "Editorial Calendar",
+      "icon": "fas fa-calendar-alt",
+      "active_pattern": "admin.editorial-calendar.*",
+      "permission": "news"
+    }
+  ]
+}
+

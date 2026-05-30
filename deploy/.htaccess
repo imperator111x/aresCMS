@@ -1,0 +1,38 @@
+# Apache-Konfiguration für den Lizenz-Host (z. B. key.luetcke.eu)
+# -----------------------------------------------------------------
+# Auf dem Server als .htaccess ins Document Root legen (Dateiname: .htaccess).
+# PHP-Datei aus key-server-validate.example.php z. B. als key-server-validate.php
+# hochladen und unten den Namen bei RewriteRule anpassen, falls abweichend.
+#
+# Voraussetzungen: mod_rewrite, mod_headers (optional), AllowOverride All
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Basis nur nötig, wenn die Site in einem Unterordner liegt, z. B.:
+    # RewriteBase /
+
+    # HTTP → HTTPS (wenn noch nicht im vHost erzwungen)
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # CMS erwartet: POST https://key.luetcke.eu/api/validate
+    # → leitet auf die PHP-Datei im Document Root um
+    RewriteRule ^api/validate/?$ key-server-validate.php [L,QSA]
+</IfModule>
+
+# Kein Directory Listing
+Options -Indexes
+
+# Sensible Dateien blocken (falls vorhanden)
+<FilesMatch "^\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>
+
+# Optional: JSON-API härten (nur wenn mod_headers aktiv)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+</IfModule>

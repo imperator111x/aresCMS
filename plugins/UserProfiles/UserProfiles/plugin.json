@@ -1,0 +1,10 @@
+{
+  "slug": "user-profiles",
+  "name": "Benutzerprofile & Chat",
+  "description": "Mitgliederverzeichnis, Freundschaftsanfragen und Chat (Standard oder Ende-zu-Ende im Browser).",
+  "version": "1.0.0",
+  "enabled": true,
+  "provider_file": "src/UserProfilesServiceProvider.php",
+  "provider": "Plugins\\UserProfiles\\UserProfilesServiceProvider",
+  "routes_file": "routes/web.php"
+}

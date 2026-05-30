@@ -1,0 +1,19 @@
+{
+  "slug": "sponsor-ad-slots",
+  "name": "Sponsor / Ad Slots Manager",
+  "description": "Verwaltet Sponsor-Banner mit Impression- und Klick-Tracking.",
+  "version": "1.0.0",
+  "enabled": true,
+  "provider_file": "src/SponsorAdSlotsServiceProvider.php",
+  "provider": "Plugins\\SponsorAdSlots\\SponsorAdSlotsServiceProvider",
+  "routes_file": "routes/web.php",
+  "admin_nav": [
+    {
+      "route": "admin.ad-slots.index",
+      "label": "Sponsor / Ad Slots",
+      "icon": "fas fa-bullhorn",
+      "active_pattern": "admin.ad-slots.*",
+      "permission": "news"
+    }
+  ]
+}

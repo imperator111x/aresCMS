@@ -1,0 +1,6 @@
+aresCMS 1.0.1
+
+- Admin-Link in der öffentlichen Navigation ins Benutzer-Dropdown verschoben (Desktop).
+- News: Datumsanzeige (formatted_date) robuster bei DB-Strings (kein format()-Fehler mehr).
+
+Nach Installation: public/cms-update-verification.txt prüfen.

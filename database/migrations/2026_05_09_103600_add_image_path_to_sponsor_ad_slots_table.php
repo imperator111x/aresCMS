@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        if (! Schema::hasTable('sponsor_ad_slots')) {
+            return;
+        }
+
+        Schema::table('sponsor_ad_slots', function (Blueprint $table): void {
+            if (! Schema::hasColumn('sponsor_ad_slots', 'image_path')) {
+                $table->string('image_path')->nullable()->after('image_url');
+            }
+        });
+    }
+
+    public function down(): void
+    {
+        if (! Schema::hasTable('sponsor_ad_slots')) {
+            return;
+        }
+
+        Schema::table('sponsor_ad_slots', function (Blueprint $table): void {
+            if (Schema::hasColumn('sponsor_ad_slots', 'image_path')) {
+                $table->dropColumn('image_path');
+            }
+        });
+    }
+};

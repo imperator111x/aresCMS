@@ -1,0 +1,1115 @@
+{
+    "Home": "Startseite",
+    "Login": "Anmelden",
+    "Register": "Registrieren",
+    "Logout": "Abmelden",
+    "Admin": "Admin",
+    "Dashboard": "Dashboard",
+    "News": "Nachrichten",
+    "Latest News": "Neueste Nachrichten",
+    "Read More": "Mehr lesen",
+    "Comments": "Kommentare",
+    "Add a Comment": "Kommentar hinzufügen",
+    "Your Comment": "Dein Kommentar",
+    "Post Comment": "Kommentar posten",
+    "Delete": "Löschen",
+    "Back to News": "Zurück zu Nachrichten",
+    "Welcome": "Willkommen",
+    "You are logged in!": "Du bist eingeloggt!",
+    "You have admin privileges": "Du hast Admin-Rechte",
+    "Go to Admin Dashboard": "Zum Admin-Dashboard",
+    "View News": "Nachrichten anzeigen",
+    "News Management": "Nachrichtenverwaltung",
+    "Create News": "Nachricht erstellen",
+    "Edit News": "Nachricht bearbeiten",
+    "View News": "Nachricht anzeigen",
+    "Back to List": "Zurück zur Liste",
+    "Title": "Titel",
+    "Content": "Inhalt",
+    "Image": "Bild",
+    "Publish immediately": "Sofort veröffentlichen",
+    "Published": "Veröffentlicht",
+    "Draft": "Entwurf",
+    "Save": "Speichern",
+    "Update": "Aktualisieren",
+    "Create": "Erstellen",
+    "User Management": "Benutzerverwaltung",
+    "Manage Users": "Benutzer verwalten",
+    "Name": "Name",
+    "Email": "E-Mail",
+    "Role": "Rolle",
+    "Status": "Status",
+    "Joined": "Beigetreten",
+    "Actions": "Aktionen",
+    "Admin": "Admin",
+    "User": "Benutzer",
+    "Active": "Aktiv",
+    "Banned": "Gesperrt",
+    "Edit": "Bearbeiten",
+    "Remove Admin": "Admin entfernen",
+    "Make Admin": "Zum Admin machen",
+    "Unban": "Entsperren",
+    "Ban": "Sperren",
+    "View User": "Benutzer anzeigen",
+    "Last Updated": "Zuletzt aktualisiert",
+    "Email Verified": "E-Mail verifiziert",
+    "Yes": "Ja",
+    "No": "Nein",
+    "News Articles": "Nachrichtenartikel",
+    "No news articles yet": "Noch keine Nachrichtenartikel",
+    "No comments yet": "Noch keine Kommentare",
+    "Be the first to comment!": "Sei der Erste, der kommentiert!",
+    "Please login to leave a comment": "Bitte melde dich an, um einen Kommentar zu hinterlassen",
+    "Comment added successfully!": "Kommentar erfolgreich hinzugefügt!",
+    "Comment deleted successfully!": "Kommentar erfolgreich gelöscht!",
+    "News created successfully!": "Nachricht erfolgreich erstellt!",
+    "News updated successfully!": "Nachricht erfolgreich aktualisiert!",
+    "News deleted successfully!": "Nachricht erfolgreich gelöscht!",
+    "User updated successfully!": "Benutzer erfolgreich aktualisiert!",
+    "User deleted successfully!": "Benutzer erfolgreich gelöscht!",
+    "User promoted to admin": "Benutzer zum Admin befördert",
+    "User demoted from admin": "Admin-Rechte entfernt",
+    "User banned successfully!": "Benutzer erfolgreich gesperrt!",
+    "User unbanned successfully!": "Benutzer erfolgreich entsperrt!",
+    "You cannot delete yourself!": "Du kannst dich nicht selbst löschen!",
+    "You cannot change your own admin status!": "Du kannst deinen eigenen Admin-Status nicht ändern!",
+    "You cannot ban yourself!": "Du kannst dich nicht selbst sperren!",
+    "You do not have permission to access this page": "Du hast keine Berechtigung, auf diese Seite zuzugreifen",
+    "Forgot Your Password?": "Passwort vergessen?",
+    "Don't have an account?": "Noch kein Konto?",
+    "Already have an account?": "Bereits ein Konto?",
+    "Send Password Reset Link": "Passwort-Reset-Link senden",
+    "Reset Password": "Passwort zurücksetzen",
+    "Password": "Passwort",
+    "Confirm Password": "Passwort bestätigen",
+    "Remember Me": "Angemeldet bleiben",
+    "Verify Email": "E-Mail verifizieren",
+    "Before proceeding, please check your email for a verification link": "Bevor du fortfährst, überprüfe bitte deine E-Mail auf einen Verifizierungslink",
+    "If you did not receive the email": "Wenn du die E-Mail nicht erhalten hast",
+    "Resend Verification Email": "Verifizierungs-E-Mail erneut senden",
+    "A fresh verification link has been sent to your email address": "Ein neuer Verifizierungslink wurde an deine E-Mail-Adresse gesendet",
+    "Quick Actions": "Schnellaktionen",
+    "No news articles available yet": "Noch keine Nachrichtenartikel verfügbar",
+    "No users found": "Keine Benutzer gefunden",
+    "characters": "Zeichen",
+    "Back to Top": "Nach oben",
+    "Language": "Sprache",
+    "German": "Deutsch",
+    "English": "Englisch",
+    "CAPTCHA verification failed. Please try again.": "CAPTCHA-Verifizierung fehlgeschlagen. Bitte versuche es erneut.",
+    "Our Team": "Unser Team",
+    "Team": "Team",
+    "Team Members": "Teammitglieder",
+    "Meet the amazing people behind our platform": "Lerne die großartigen Menschen hinter unserer Plattform kennen",
+    "No team members yet": "Noch keine Teammitglieder",
+    "Contact": "Kontakt",
+    "Task": "Aufgabe",
+    "Bio": "Biografie",
+    "Member since": "Mitglied seit",
+    "View Site": "Seite anzeigen",
+    "Search...": "Suchen...",
+    "Welcome back! Here's what's happening with your news portal.": "Willkommen zurück! Hier ist, was in deinem aresCMS passiert.",
+    "View all": "Alle anzeigen",
+    "Total comments": "Kommentare gesamt",
+    "Manage users": "Benutzer verwalten",
+    "Create News": "Nachricht erstellen",
+    "View Team": "Team anzeigen",
+    "Recent Activity": "Letzte Aktivitäten",
+    "No recent activity": "Keine letzten Aktivitäten",
+    "Author": "Autor",
+    "Date": "Datum",
+    "View": "Anzeigen",
+    "Article Info": "Artikel-Informationen",
+    "Created": "Erstellt",
+    "Updated": "Aktualisiert",
+    "View on Site": "Auf der Seite anzeigen",
+    "User": "Benutzer",
+    "Upload a file": "Datei hochladen",
+    "or drag and drop": "oder ziehen und ablegen",
+    "PNG, JPG, GIF up to 2MB": "PNG, JPG, GIF bis zu 2MB",
+    "Replace Image": "Bild ersetzen",
+    "Current Image": "Aktuelles Bild",
+    "Article will be visible to everyone": "Der Artikel wird für alle sichtbar sein",
+    "Article will be saved as draft": "Der Artikel wird als Entwurf gespeichert",
+    "Update News": "Nachricht aktualisieren",
+    "Are you sure you want to delete this news article?": "Bist du sicher, dass du diesen Nachrichtenartikel löschen möchtest?",
+    "Current Avatar": "Aktueller Avatar",
+    "Upload New Avatar": "Neuen Avatar hochladen",
+    "User will have admin privileges": "Der Benutzer wird Admin-Rechte haben",
+    "User will be banned from the platform": "Der Benutzer wird von der Plattform gesperrt",
+    "Update User": "Benutzer aktualisieren",
+    "User Details": "Benutzerdetails",
+    "ID": "ID",
+    "Not verified": "Nicht verifiziert",
+    "You cannot modify your own account": "Du kannst dein eigenes Konto nicht ändern",
+    "No Team Members Yet": "Noch keine Teammitglieder",
+    "Our team will appear here soon": "Unser Team wird hier bald erscheinen",
+    "Articles": "Artikel",
+    "Admins": "Admins",
+    "Tell us about yourself...": "Erzähl uns etwas über dich...",
+    "e.g., Developer, Designer, Manager": "z.B., Entwickler, Designer, Manager",
+    "Task / Position": "Aufgabe / Position",
+    "Please fix the following errors:": "Bitte behebe die folgenden Fehler:",
+    "All rights reserved.": "Alle Rechte vorbehalten.",
+    "Version": "Version",
+    "Welcome back!": "Willkommen zurück!",
+    "Explore the latest news and stay updated with our platform.": "Entdecke die neuesten Nachrichten und bleibe auf dem Laufenden.",
+    "What you can do": "Was du tun kannst",
+    "Explore all the features available to you as a registered user.": "Entdecke alle Funktionen, die dir als registrierter Benutzer zur Verfügung stehen.",
+    "Read News": "Nachrichten lesen",
+    "Stay updated with the latest news and articles from our platform.": "Bleibe auf dem Laufenden mit den neuesten Nachrichten und Artikeln unserer Plattform.",
+    "Comment & Discuss": "Kommentieren & Diskutieren",
+    "Share your thoughts and engage with other readers through comments.": "Teile deine Gedanken und interagiere mit anderen Lesern durch Kommentare.",
+    "Meet the Team": "Das Team kennenlernen",
+    "Get to know the amazing people behind our platform.": "Lerne die großartigen Menschen hinter unserer Plattform kennen.",
+    "Admin Privileges": "Admin-Berechtigungen",
+    "You have full access to the admin panel.": "Du hast vollen Zugriff auf das Admin-Panel.",
+    "Navigate to important sections of the platform.": "Navigiere zu wichtigen Bereichen der Plattform.",
+    "Meet the amazing people": "Lerne die großartigen Menschen kennen",
+    "behind our platform": "hinter unserer Plattform",
+    "Get to know the talented individuals who make everything possible.": "Lerne die talentierten Personen kennen, die alles möglich machen.",
+    "Team Member": "Teammitglied",
+    "Want to join our team?": "Möchtest du unserem Team beitreten?",
+    "We are always looking for talented individuals to join our growing team.": "Wir suchen immer nach talentierten Personen, die unserem wachsenden Team beitreten.",
+    "Get in Touch": "Kontakt aufnehmen",
+    "Your trusted source for the latest news and updates.": "Deine vertrauenswürdige Quelle für die neuesten Nachrichten und Updates.",
+    "City, Country": "Stadt, Land",
+    "Quick Links": "Schnelllinks",
+    "Home": "Startseite",
+    "Team": "Team",
+    "Login": "Anmelden",
+    "Register": "Registrieren",
+    "Contact": "Kontakt",
+    "News": "Nachrichten",
+    "Admin": "Admin",
+    "Logout": "Abmelden",
+    "View Site": "Seite anzeigen",
+    "Search...": "Suchen...",
+    "Dashboard": "Dashboard",
+    "User Management": "Benutzerverwaltung",
+    "Edit User": "Benutzer bearbeiten",
+    "Edit user details": "Benutzerdetails bearbeiten",
+    "News Management": "Nachrichtenverwaltung",
+    "Create News": "Nachricht erstellen",
+    "Edit": "Bearbeiten",
+    "Delete": "Löschen",
+    "View": "Anzeigen",
+    "Back to List": "Zurück zur Liste",
+    "Save": "Speichern",
+    "Update": "Aktualisieren",
+    "Cancel": "Abbrechen",
+    "Actions": "Aktionen",
+    "Status": "Status",
+    "Published": "Veröffentlicht",
+    "Draft": "Entwurf",
+    "Yes": "Ja",
+    "No": "Nein",
+    "Active": "Aktiv",
+    "Banned": "Gesperrt",
+    "Admin": "Admin",
+    "User": "Benutzer",
+    "Name": "Name",
+    "Email": "E-Mail",
+    "Role": "Rolle",
+    "Joined": "Beigetreten",
+    "Last Updated": "Zuletzt aktualisiert",
+    "Email Verified": "E-Mail verifiziert",
+    "Not verified": "Nicht verifiziert",
+    "Task": "Aufgabe",
+    "Bio": "Biografie",
+    "Member since": "Mitglied seit",
+    "Avatar": "Avatar",
+    "Current Avatar": "Aktueller Avatar",
+    "Upload New Avatar": "Neuen Avatar hochladen",
+    "Upload a file": "Datei hochladen",
+    "or drag and drop": "oder ziehen und ablegen",
+    "PNG, JPG, GIF up to 2MB": "PNG, JPG, GIF bis zu 2MB",
+    "Replace Image": "Bild ersetzen",
+    "Current Image": "Aktuelles Bild",
+    "Title": "Titel",
+    "Content": "Inhalt",
+    "Image": "Bild",
+    "Publish immediately": "Sofort veröffentlichen",
+    "Article will be visible to everyone": "Der Artikel wird für alle sichtbar sein",
+    "Article will be saved as draft": "Der Artikel wird als Entwurf gespeichert",
+    "Update News": "Nachricht aktualisieren",
+    "Update User": "Benutzer aktualisieren",
+    "User Details": "Benutzerdetails",
+    "ID": "ID",
+    "Author": "Autor",
+    "Date": "Datum",
+    "Created": "Erstellt",
+    "Updated": "Aktualisiert",
+    "View on Site": "Auf der Seite anzeigen",
+    "Article Info": "Artikel-Informationen",
+    "No news articles yet": "Noch keine Nachrichtenartikel",
+    "No comments yet": "Noch keine Kommentare",
+    "No team members yet": "Noch keine Teammitglieder",
+    "No Team Members Yet": "Noch keine Teammitglieder",
+    "Our team will appear here soon": "Unser Team wird hier bald erscheinen",
+    "Articles": "Artikel",
+    "Admins": "Admins",
+    "Total comments": "Kommentare gesamt",
+    "Recent Activity": "Letzte Aktivitäten",
+    "No recent activity": "Keine letzten Aktivitäten",
+    "View all": "Alle anzeigen",
+    "Manage users": "Benutzer verwalten",
+    "View Team": "Team anzeigen",
+    "Tell us about yourself...": "Erzähl uns etwas über dich...",
+    "e.g., Developer, Designer, Manager": "z.B., Entwickler, Designer, Manager",
+    "You cannot modify your own account": "Du kannst dein eigenes Konto nicht ändern",
+    "Are you sure you want to delete this news article?": "Bist du sicher, dass du diesen Nachrichtenartikel löschen möchtest?",
+    "User will have admin privileges": "Der Benutzer wird Admin-Rechte haben",
+    "User will be banned from the platform": "Der Benutzer wird von der Plattform gesperrt",
+    "Please fix the following errors:": "Bitte behebe die folgenden Fehler:",
+    "Stay Updated with": "Bleiben Sie auf dem Laufenden mit",
+    "Our News": "Unseren Nachrichten",
+    "Discover the latest stories, insights, and updates from our platform.": "Entdecken Sie die neuesten Geschichten, Einblicke und Updates von unserer Plattform.",
+    "Check back later for the latest updates.": "Schauen Sie später für die neuesten Updates vorbei.",
+    "Settings": "Einstellungen",
+    "Website Settings": "Website-Einstellungen",
+    "Site Name": "Website-Name",
+    "Site URL": "Website-URL",
+    "Site Description": "Website-Beschreibung",
+    "Site Logo": "Website-Logo",
+    "This will be displayed in the browser tab and throughout the site.": "Dies wird im Browser-Tab und auf der gesamten Website angezeigt.",
+    "This will be used throughout the site for links and references.": "Dies wird auf der gesamten Website für Links und Verweise verwendet.",
+    "A brief description of your website for SEO purposes.": "Eine kurze Beschreibung Ihrer Website für SEO-Zwecke.",
+    "Current logo": "Aktuelles Logo",
+    "Choose new logo": "Neues Logo auswählen",
+    "Recommended size: 200x50 pixels. Max file size: 2MB.": "Empfohlene Größe: 200x50 Pixel. Maximale Dateigröße: 2MB.",
+    "Preview": "Vorschau",
+    "Save Settings": "Einstellungen speichern",
+    "Settings updated successfully!": "Einstellungen erfolgreich aktualisiert!",
+    "Sign in to your account to continue": "Melde dich an, um fortzufahren",
+    "Create an account": "Konto erstellen",
+    "Join us today and start exploring": "Tritt uns heute bei und lege los",
+    "Enter your name": "Gib deinen Namen ein",
+    "Enter your email": "Gib deine E-Mail ein",
+    "Enter your password": "Gib dein Passwort ein",
+    "Confirm your password": "Bestätige dein Passwort",
+    "or": "oder",
+    "Back to Home": "Zurück zur Startseite",
+    "Back to Login": "Zurück zum Login",
+    "Enter your email to receive a password reset link": "Gib deine E-Mail ein, um einen Link zum Zurücksetzen des Passworts zu erhalten",
+    "Enter your new password below": "Gib unten dein neues Passwort ein",
+    "Enter your new password": "Gib dein neues Passwort ein",
+    "Confirm your new password": "Bestätige dein neues Passwort",
+    "Email or Username": "E-Mail oder Benutzername",
+    "Enter your email or username": "Gib deine E-Mail oder deinen Benutzernamen ein",
+    "Want to stay updated?": "Möchtest du auf dem Laufenden bleiben?",
+    "Join our community and never miss the latest news and updates.": "Tritt unserer Community bei und verpasse keine Neuigkeiten mehr.",
+    "Register Now": "Jetzt registrieren",
+    "PNG, JPG, GIF, WebP up to 2MB": "PNG, JPG, GIF, WebP bis zu 2MB",
+    "Write your article…": "Schreibe deinen Artikel…",
+    "Write your comment here...": "Schreibe hier deinen Kommentar …",
+    "Are you sure you want to delete this comment?": "Möchtest du diesen Kommentar wirklich löschen?",
+    "Your account cannot post comments.": "Dein Konto darf keine Kommentare mehr schreiben.",
+    "You can only reply to top-level comments.": "Du kannst nur auf Hauptkommentare antworten.",
+    "Reply": "Antworten",
+    "Post Reply": "Antwort senden",
+    "Write your reply...": "Antwort schreiben …",
+    "Banned users cannot post comments and are excluded from the public team page.": "Gesperrte Nutzer können keine Kommentare schreiben und erscheinen nicht auf der öffentlichen Team-Seite.",
+    "Manage all users": "Alle Benutzer verwalten",
+    "Users": "Benutzer",
+    "View all team members": "Alle Teammitglieder anzeigen",
+    "Search": "Suche",
+    "Search results": "Suchergebnisse",
+    "Search for:": "Suche nach:",
+    "Enter at least :count characters to search.": "Bitte mindestens :count Zeichen eingeben, um zu suchen.",
+    "No news articles found.": "Keine Nachrichten gefunden.",
+    "No users found.": "Keine Benutzer gefunden.",
+    "No suggestions.": "Keine Vorschläge.",
+    "Show all results": "Alle Ergebnisse anzeigen",
+    "Searching...": "Suche läuft …",
+    "Notifications": "Benachrichtigungen",
+    "New posts": "Neue Beiträge",
+    "New comments": "Neue Kommentare",
+    "New registrations": "Neue Registrierungen",
+    "No posts yet": "Noch keine Beiträge",
+    "No comments yet": "Noch keine Kommentare",
+    "No registrations yet": "Noch keine Registrierungen",
+    "New": "Neu",
+    "Loading...": "Laden …",
+    "On article": "Artikel:",
+    "Nothing new since you cleared the list.": "Seit dem Leeren gibt es hier noch keine neuen Einträge.",
+    "Only activity after clearing is shown here.": "Es werden nur Einträge nach „Verlauf löschen“ angezeigt.",
+    "Clear history": "Verlauf löschen",
+    "Clear notification history? The list will stay empty until new posts, comments or registrations arrive.": "Benachrichtigungsverlauf wirklich leeren? Die Liste bleibt leer, bis es neue Beiträge, Kommentare oder Registrierungen gibt.",
+    "Activity log": "Aktivitätsprotokoll",
+    "Recent changes in the admin area and on the site.": "Letzte Änderungen im Admin und auf der Seite.",
+    "When": "Zeit",
+    "Action": "Aktion",
+    "Details": "Details",
+    "No activity recorded yet.": "Noch keine Aktivität protokolliert.",
+    "JSON": "JSON",
+    "Two-factor authentication": "Zwei-Faktor-Authentifizierung",
+    "Admins can secure their account with an authenticator app (TOTP).": "Admins können ihr Konto mit einer Authenticator-App absichern (TOTP).",
+    "Scan the QR code or enter the secret, then confirm with a code.": "QR-Code scannen oder Geheimnis eingeben, dann mit einem Code bestätigen.",
+    "Add this account in Google Authenticator, Authy or a similar app.": "Dieses Konto in Google Authenticator, Authy oder einer ähnlichen App hinzufügen.",
+    "Secret key (manual entry)": "Geheimer Schlüssel (manuelle Eingabe)",
+    "6-digit code": "6-stelliger Code",
+    "Confirm and activate": "Bestätigen und aktivieren",
+    "Set up two-factor authentication": "Zwei-Faktor-Authentifizierung einrichten",
+    "Two-factor authentication is enabled.": "Zwei-Faktor-Authentifizierung ist aktiv.",
+    "Disable 2FA": "2FA deaktivieren",
+    "Current password": "Aktuelles Passwort",
+    "Disable two-factor authentication?": "Zwei-Faktor-Authentifizierung wirklich deaktivieren?",
+    "The verification code is invalid.": "Der Bestätigungscode ist ungültig.",
+    "Enter the 6-digit code from your authenticator app.": "Gib den 6-stelligen Code aus deiner Authenticator-App ein.",
+    "Authentication code": "Authentifizierungscode",
+    "Continue": "Weiter",
+    "Back to login": "Zurück zum Login",
+    "Your account has been suspended.": "Dein Konto wurde gesperrt.",
+    "The code is invalid. Try again.": "Der Code ist ungültig. Bitte erneut versuchen.",
+    "Please start setup again.": "Bitte richte die Einrichtung erneut aus.",
+    "Two-factor authentication is now active.": "Zwei-Faktor-Authentifizierung ist jetzt aktiv.",
+    "Two-factor authentication has been turned off.": "Zwei-Faktor-Authentifizierung wurde deaktiviert.",
+    "Incorrect password.": "Falsches Passwort.",
+    "Main settings updated": "Haupteinstellungen aktualisiert",
+    "General settings updated": "Allgemeine Einstellungen aktualisiert",
+    "Logo settings updated": "Logo-Einstellungen aktualisiert",
+    "Registration settings updated": "Registrierungseinstellungen aktualisiert",
+    "Two-factor authentication enabled": "Zwei-Faktor-Authentifizierung aktiviert",
+    "Two-factor authentication disabled": "Zwei-Faktor-Authentifizierung deaktiviert",
+    "Login history": "Login-Verlauf",
+    "Successful logins and failed attempts (web).": "Erfolgreiche Logins und fehlgeschlagene Versuche (Web).",
+    "Result": "Ergebnis",
+    "Success": "Erfolg",
+    "Failed": "Fehlgeschlagen",
+    "All": "Alle",
+    "All users": "Alle Benutzer",
+    "Identifier": "Kennung",
+    "Note": "Hinweis",
+    "No entries found.": "Keine Einträge gefunden.",
+    "Filter": "Filtern",
+    "Reset": "Zurücksetzen",
+    "Category": "Kategorie",
+    "e.g. Politics, Sports": "z. B. Politik, Sport",
+    "Publish date / schedule": "Veröffentlichung / Planung",
+    "Leave empty to publish immediately when status is Published. Future date = scheduled.": "Leer lassen für sofortige Veröffentlichung bei Status „Veröffentlicht“. Zukünftiges Datum = geplant.",
+    "Leave empty to keep current time when Published. Future date = scheduled.": "Leer lassen, um die aktuelle Zeit beizubehalten. Zukünftiges Datum = geplant.",
+    "Scheduled": "Geplant",
+    "Password must be at least :length characters and meet the complexity requirements.": "Das Passwort muss mindestens :length Zeichen haben und die Komplexitätsregeln erfüllen.",
+    "From": "Von",
+    "To": "Bis",
+    "Email / login": "E-Mail / Login",
+    "Maintenance": "Wartung",
+    "We are performing maintenance": "Wir führen gerade Wartungsarbeiten durch",
+    "The site is temporarily unavailable. Please try again in a few minutes.": "Die Seite ist vorübergehend nicht erreichbar. Bitte versuche es in wenigen Minuten erneut.",
+    "Retry suggested in :seconds seconds.": "Erneuter Versuch in :seconds Sekunden empfohlen.",
+    "Operations": "Betrieb",
+    "Backups and maintenance mode (also available via CLI, see docs/BETRIEB.md).": "Backups und Wartungsmodus (zusätzlich per CLI, siehe docs/BETRIEB.md).",
+    "Bypass URL (save this — opens the public site during maintenance):": "Bypass-URL (unbedingt speichern — öffentliche Seite während der Wartung aufrufbar):",
+    "Command output": "Ausgabe",
+    "Maintenance mode": "Wartungsmodus",
+    "Active — visitors see the maintenance page.": "Aktiv — Besucher sehen die Wartungsseite.",
+    "Off — site is publicly available.": "Aus — Seite ist öffentlich erreichbar.",
+    "Existing bypass URL:": "Vorhandene Bypass-URL:",
+    "While logged in as admin, you can use the whole site (public pages and admin) during maintenance. Guests see the maintenance page.": "Als eingeloggter Admin kannst du während der Wartung die ganze Website nutzen (öffentliche Seiten und Admin). Gäste sehen die Wartungsseite.",
+    "Also generate a secret bypass URL for the public site (bookmark it before activating).": "Zusätzlich eine geheime Bypass-URL für die öffentliche Seite erzeugen (vor dem Aktivieren als Lesezeichen speichern).",
+    "Enable maintenance mode": "Wartungsmodus aktivieren",
+    "Disable maintenance mode": "Wartungsmodus deaktivieren",
+    "Enable maintenance mode? The public site will show the maintenance page.": "Wartungsmodus aktivieren? Die öffentliche Seite zeigt dann die Wartungsseite.",
+    "Disable maintenance mode and make the site public again?": "Wartungsmodus beenden und die Seite wieder öffentlich schalten?",
+    "Backup": "Backup",
+    "Creates a ZIP in storage/app/backups (database + public uploads). May take a while.": "Erstellt ein ZIP unter storage/app/backups (Datenbank + öffentliche Uploads). Kann einige Minuten dauern.",
+    "Start backup now? This can take several minutes.": "Backup jetzt starten? Das kann mehrere Minuten dauern.",
+    "Create backup now": "Jetzt sichern",
+    "Recent backups": "Letzte Backups",
+    "Files in storage/app/backups": "Dateien in storage/app/backups",
+    "No backups yet. Run a backup above or use the scheduler.": "Noch keine Backups. Oben ein Backup starten oder den Scheduler nutzen.",
+    "Backup failed.": "Backup fehlgeschlagen.",
+    "Backup created successfully.": "Backup erfolgreich erstellt.",
+    "Database migration": "Datenbank-Migration",
+    "Runs php artisan migrate --force to apply pending migrations.": "Führt php artisan migrate --force aus, um ausstehende Migrationen anzuwenden.",
+    "Run database migrations now?": "Datenbank-Migrationen jetzt ausführen?",
+    "I understand this changes the database schema.": "Ich verstehe, dass dadurch das Datenbankschema geändert wird.",
+    "Run migration now": "Migration jetzt ausführen",
+    "Migration output": "Migration-Ausgabe",
+    "Migration failed: :msg": "Migration fehlgeschlagen: :msg",
+    "Migration failed.": "Migration fehlgeschlagen.",
+    "Migration completed successfully.": "Migration erfolgreich abgeschlossen.",
+    "No changes detected.": "Keine Änderungen erkannt.",
+    "Database migration completed (admin).": "Datenbank-Migration abgeschlossen (Admin).",
+    "Clear cache": "Cache leeren",
+    "Runs php artisan optimize:clear to clear config, route, view and application cache.": "Führt php artisan optimize:clear aus, um Konfigurations-, Routen-, View- und Anwendungscache zu leeren.",
+    "Clear cache now?": "Cache jetzt leeren?",
+    "I understand this clears runtime caches and may affect the next request time briefly.": "Ich verstehe, dass dadurch Laufzeit-Caches geleert werden und der nächste Request kurzzeitig länger dauern kann.",
+    "Clear cache now": "Cache jetzt leeren",
+    "Cache clear output": "Cache-Ausgabe",
+    "Frontend build": "Frontend-Build",
+    "Runs npm install and npm run build to rebuild frontend assets for deployment.": "Führt npm install und npm run build aus, um Frontend-Assets für das Deployment neu zu bauen.",
+    "Start frontend build now? This can take several minutes.": "Frontend-Build jetzt starten? Das kann mehrere Minuten dauern.",
+    "I understand this runs npm install and npm run build on the server.": "Ich verstehe, dass dadurch npm install und npm run build auf dem Server ausgeführt werden.",
+    "Run frontend build": "Frontend-Build starten",
+    "Frontend build output": "Frontend-Build-Ausgabe",
+    "Frontend build failed: :msg": "Frontend-Build fehlgeschlagen: :msg",
+    "Frontend build failed in step: :step": "Frontend-Build fehlgeschlagen im Schritt: :step",
+    "Frontend build completed successfully.": "Frontend-Build erfolgreich abgeschlossen.",
+    "Frontend build completed successfully (admin).": "Frontend-Build erfolgreich abgeschlossen (Admin).",
+    "Frontend build is unavailable: the route is missing or route cache is outdated. Deploy the latest routes/web.php, then run php artisan route:clear (or php artisan route:cache after deployment).": "Frontend-Build ist nicht verfügbar: Die Route fehlt oder der Routen-Cache ist veraltet. Bitte die aktuelle routes/web.php deployen, danach php artisan route:clear ausführen (oder nach dem Deploy php artisan route:cache).",
+    "Cache clear failed: :msg": "Cache leeren fehlgeschlagen: :msg",
+    "Cache clear failed.": "Cache leeren fehlgeschlagen.",
+    "Cache cleared successfully.": "Cache erfolgreich geleert.",
+    "Cache cleared successfully (admin).": "Cache erfolgreich geleert (Admin).",
+    "No output.": "Keine Ausgabe.",
+    "Dependency updates": "Abhängigkeits-Updates",
+    "Runs composer update, composer audit, npm install, npm audit fix and rebuilds frontend assets.": "Führt composer update, composer audit, npm install, npm audit fix aus und baut die Frontend-Assets neu.",
+    "This may take several minutes and can temporarily increase server load. Use only as admin during low-traffic periods.": "Dies kann mehrere Minuten dauern und die Serverlast kurzzeitig erhöhen. Nur als Admin in Zeiten mit wenig Traffic ausführen.",
+    "Start dependency update now? This can take several minutes.": "Abhängigkeits-Update jetzt starten? Das kann mehrere Minuten dauern.",
+    "I understand this updates dependency versions and rebuilds assets.": "Ich verstehe, dass dabei Abhängigkeitsversionen aktualisiert und Assets neu gebaut werden.",
+    "Run dependency update": "Abhängigkeits-Update starten",
+    "Dependency update output": "Ausgabe Abhängigkeits-Update",
+    "Dependency update failed in step: :step": "Abhängigkeits-Update fehlgeschlagen im Schritt: :step",
+    "Dependencies updated successfully.": "Abhängigkeiten erfolgreich aktualisiert.",
+    "Dependencies updated successfully (admin).": "Abhängigkeiten erfolgreich aktualisiert (Admin).",
+    "CLI Console": "CLI-Konsole",
+    "Open CLI Console": "CLI Console öffnen",
+    "Run maintenance commands directly on the server (Owner only).": "Wartungsbefehle direkt auf dem Server ausführen (nur Inhaber).",
+    "Allowed commands: php artisan ..., php ..., composer ..., npm ...": "Erlaubte Befehle: php artisan ..., php ..., composer ..., npm ...",
+    "Command": "Befehl",
+    "Execute command": "Befehl ausführen",
+    "Common commands": "Häufige Befehle",
+    "Click or copy these as a base for your command input.": "Diese kannst du als Basis für die Befehlseingabe anklicken oder kopieren.",
+    "All available Artisan commands (:count)": "Alle verfügbaren Artisan-Befehle (:count)",
+    "Generated live from this installation.": "Live aus dieser Installation erzeugt.",
+    "Scheduled jobs": "Geplante Jobs",
+    "Configure recurring maintenance tasks for the scheduler.": "Wiederkehrende Wartungsaufgaben für den Scheduler konfigurieren.",
+    "Important": "Wichtig",
+    "Server cron must run \"php artisan schedule:run\" every minute for these jobs to execute.": "Der Server-Cron muss \"php artisan schedule:run\" jede Minute ausführen, damit diese Jobs laufen.",
+    "Application backup": "Anwendungs-Backup",
+    "Creates a full application backup ZIP.": "Erstellt ein vollständiges Anwendungs-Backup als ZIP.",
+    "Restart queue workers": "Queue-Worker neu starten",
+    "Signals queue workers to restart gracefully.": "Signalisiert den Queue-Workern einen sauberen Neustart.",
+    "Enabled": "Aktiviert",
+    "Frequency": "Intervall",
+    "Hourly": "Stündlich",
+    "Daily": "Täglich",
+    "Weekly": "Wöchentlich",
+    "Time (HH:MM)": "Uhrzeit (HH:MM)",
+    "Weekday (for weekly)": "Wochentag (für wöchentlich)",
+    "Monday": "Montag",
+    "Tuesday": "Dienstag",
+    "Wednesday": "Mittwoch",
+    "Thursday": "Donnerstag",
+    "Friday": "Freitag",
+    "Saturday": "Samstag",
+    "Sunday": "Sonntag",
+    "Save scheduled jobs": "Geplante Jobs speichern",
+    "Scheduled jobs saved.": "Geplante Jobs gespeichert.",
+    "Last run": "Letzter Lauf",
+    "Last exit code": "Letzter Exit-Code",
+    "Last duration": "Letzte Dauer",
+    "Run now": "Jetzt ausführen",
+    "Run this job now?": "Diesen Job jetzt ausführen?",
+    "Unknown scheduled job.": "Unbekannter geplanter Job.",
+    "Job run failed: :msg": "Job-Ausführung fehlgeschlagen: :msg",
+    "Scheduled job failed.": "Geplanter Job fehlgeschlagen.",
+    "Scheduled job executed successfully.": "Geplanter Job erfolgreich ausgeführt.",
+    "Export system report (PDF)": "Systembericht exportieren (PDF)",
+    "System report": "Systembericht",
+    "Generated at: :time": "Erstellt am: :time",
+    "Health summary": "Gesundheitsübersicht",
+    "Health checks": "Gesundheitsprüfungen",
+    "Check": "Prüfung",
+    "Message": "Meldung",
+    "Key": "Schlüssel",
+    "Value": "Wert",
+    "System report exported as PDF (admin).": "Systembericht als PDF exportiert (Admin).",
+    "Export PDF": "PDF exportieren",
+    "Only owner can access the CLI console.": "Nur der Inhaber kann auf die CLI-Konsole zugreifen.",
+    "Command is not allowed for security reasons.": "Befehl ist aus Sicherheitsgründen nicht erlaubt.",
+    "CLI command failed: :msg": "CLI-Befehl fehlgeschlagen: :msg",
+    "CLI command failed.": "CLI-Befehl fehlgeschlagen.",
+    "CLI command executed successfully.": "CLI-Befehl erfolgreich ausgeführt.",
+    "Owner": "Inhaber",
+    "Moderator": "Moderator",
+    "Owner can assign roles and permissions for each admin page.": "Der Inhaber kann Rollen und Berechtigungen für jede Admin-Seite vergeben.",
+    "Only owner has full access automatically. Admin and Moderator use the selected page permissions.": "Nur der Inhaber hat automatisch Vollzugriff. Admin und Moderator nutzen die ausgewählten Seitenberechtigungen.",
+    "Admin page permissions": "Berechtigungen für Admin-Seiten",
+    "Only owner can change roles and page permissions.": "Nur der Inhaber kann Rollen und Seitenberechtigungen ändern.",
+    "Owner cannot be banned.": "Der Inhaber kann nicht gesperrt werden.",
+    "Health check": "Gesundheitscheck",
+    "Quick runtime checks for core services and production readiness.": "Schnelle Laufzeitprüfungen für Kernservices und Produktionsbereitschaft.",
+    "Warnings": "Warnungen",
+    "Failures": "Fehler",
+    "Checks": "Prüfungen",
+    "Warning": "Warnung",
+    "Failure": "Fehler",
+    "Connection successful.": "Verbindung erfolgreich.",
+    "Connection failed: :msg": "Verbindung fehlgeschlagen: :msg",
+    "Cache store": "Cache-Speicher",
+    "Read/write successful.": "Lesen/Schreiben erfolgreich.",
+    "Read/write failed.": "Lesen/Schreiben fehlgeschlagen.",
+    "Read/write successful. Driver: :driver": "Lesen/Schreiben erfolgreich. Treiber: :driver",
+    "Read/write failed. Driver: :driver": "Lesen/Schreiben fehlgeschlagen. Treiber: :driver",
+    "Cache driver \":driver\" does not persist values (expected behavior).": "Cache-Treiber \":driver\" speichert keine Werte dauerhaft (erwartetes Verhalten).",
+    "Read/write failed: :msg": "Lesen/Schreiben fehlgeschlagen: :msg",
+    "Path: :path | exists: :exists | writable: :writable": "Pfad: :path | vorhanden: :exists | beschreibbar: :writable",
+    "Public storage disk": "Public-Storage-Disk",
+    "Public storage path": "Public-Storage-Pfad",
+    "public/storage is available.": "public/storage ist verfügbar.",
+    "public/storage is missing. Fallback route is active, but a symlink is recommended.": "public/storage fehlt. Die Fallback-Route ist aktiv, aber ein Symlink wird empfohlen.",
+    "App debug mode": "App-Debug-Modus",
+    "APP_DEBUG is enabled. Disable it in production.": "APP_DEBUG ist aktiviert. In Produktion deaktivieren.",
+    "APP_DEBUG is disabled.": "APP_DEBUG ist deaktiviert.",
+    "Queue is set to sync. For production, a worker queue is recommended.": "Queue ist auf sync gesetzt. Für Produktion wird eine Worker-Queue empfohlen.",
+    "Queue driver: :driver": "Queue-Treiber: :driver",
+    "The site is already in maintenance mode.": "Die Seite befindet sich bereits im Wartungsmodus.",
+    "Could not enable maintenance mode.": "Wartungsmodus konnte nicht aktiviert werden.",
+    "Maintenance mode has been enabled.": "Wartungsmodus wurde aktiviert.",
+    "Maintenance mode is not active.": "Wartungsmodus ist nicht aktiv.",
+    "Could not disable maintenance mode.": "Wartungsmodus konnte nicht beendet werden.",
+    "Maintenance mode has been disabled. The site is live again.": "Wartungsmodus wurde beendet. Die Seite ist wieder öffentlich.",
+    "Application backup created (admin).": "Anwendungs-Backup erstellt (Admin).",
+    "Maintenance mode enabled (admin).": "Wartungsmodus aktiviert (Admin).",
+    "Maintenance mode disabled (admin).": "Wartungsmodus beendet (Admin).",
+    "Admin sign-in (maintenance)": "Admin-Anmeldung (Wartung)",
+    "Sign in with an administrator account to use the site during maintenance.": "Melde dich mit einem Administrator-Konto an, um die Website während der Wartung zu nutzen.",
+    "Only administrators can sign in on this page.": "Auf dieser Seite können sich nur Administratoren anmelden.",
+    "Administrator sign-in": "Administrator-Anmeldung",
+    "For site administrators only.": "Nur für Website-Administratoren.",
+    "You are signed in as a non-administrator. Sign out first, then sign in with an admin account.": "Du bist als Nicht-Administrator angemeldet. Bitte zuerst abmelden, danach mit einem Admin-Konto anmelden.",
+    "Direct admin login (for guests on the maintenance page):": "Direkter Admin-Login (für Gäste auf der Wartungsseite):",
+    "General Settings": "Allgemeine Einstellungen",
+    "Language Settings": "Spracheinstellungen",
+    "Plugins": "Plugins",
+    "Manage local CMS plugins from the plugins directory.": "Lokale CMS-Plugins aus dem plugins-Verzeichnis verwalten.",
+    "No plugins found.": "Keine Plugins gefunden.",
+    "Each plugin is loaded from plugins/<slug>/plugin.json. Set \"enabled\": true/false in the manifest.": "Jedes Plugin wird aus plugins/<slug>/plugin.json geladen. Setze \"enabled\": true/false im Manifest.",
+    "Upload plugin ZIP": "Plugin-ZIP hochladen",
+    "Upload a plugin ZIP containing plugin.json in the plugin root.": "Ein Plugin-ZIP hochladen, das plugin.json im Plugin-Hauptordner enthält.",
+    "Enable": "Aktivieren",
+    "Disable": "Deaktivieren",
+    "Plugin uploaded successfully.": "Plugin erfolgreich hochgeladen.",
+    "Plugin upload failed.": "Plugin-Upload fehlgeschlagen.",
+    "Plugin ZIP could not be opened.": "Plugin-ZIP konnte nicht geöffnet werden.",
+    "Plugin ZIP is empty.": "Plugin-ZIP ist leer.",
+    "Plugin ZIP contains invalid paths.": "Plugin-ZIP enthält ungültige Pfade.",
+    "A plugin with this directory already exists.": "Ein Plugin mit diesem Verzeichnis existiert bereits.",
+    "Plugin manifest is missing (plugin.json).": "Plugin-Manifest fehlt (plugin.json).",
+    "Plugin state could not be updated.": "Plugin-Status konnte nicht aktualisiert werden.",
+    "Plugin enabled.": "Plugin aktiviert.",
+    "Plugin disabled.": "Plugin deaktiviert.",
+    "Site name, public URL, and SEO description for your portal.": "Seitenname, öffentliche URL und Kurzbeschreibung für dein Portal.",
+    "Website identity": "Website-Auftritt",
+    "Name and address visitors see in the browser and in metadata.": "Name und Adresse, die Besucher im Browser und in Metadaten sehen.",
+    "Description text": "Beschreibungstext",
+    "Shown in meta tags where supported.": "Wird in Meta-Tags angezeigt, wo die Vorlage es unterstützt.",
+    "Short summary for search engines and social previews…": "Kurzer Text für Suchmaschinen und Social-Media-Vorschauen …",
+    "Maximum :max characters.": "Maximal :max Zeichen.",
+    "News Portal": "aresCMS",
+    "Site name, URL, description, logo, and registration for your portal.": "Seitenname, URL, Beschreibung, Logo und Registrierung für dein Portal.",
+    "Save site settings": "Website-Einstellungen speichern",
+    "Save logo": "Logo speichern",
+    "Save registration": "Registrierung speichern",
+    "Header and admin bar branding. Recommended wide format.": "Erscheinungsbild in Kopfzeile und Admin-Leiste. Empfohlen: breites Format.",
+    "Upload new logo": "Neues Logo hochladen",
+    "Control whether new accounts can register on the public site.": "Legt fest, ob sich neue Nutzer auf der öffentlichen Seite registrieren dürfen.",
+    "Logo updated": "Logo aktualisiert",
+    "Registration Settings": "Registrierung",
+    "Disable Registration": "Registrierung deaktivieren",
+    "If enabled, new users will not be able to register.": "Wenn aktiv, können sich keine neuen Benutzer registrieren.",
+    "Logo Settings": "Logo-Einstellungen",
+    "System updates": "System-Updates",
+    "Installed version": "Installierte Version",
+    "Update source": "Update-Quelle",
+    "Not configured. Set CMS_UPDATE_MANIFEST_URL in .env to a HTTPS JSON manifest.": "Nicht konfiguriert. Trage CMS_UPDATE_MANIFEST_URL in der .env ein (HTTPS-URL zu einer JSON-Manifest-Datei).",
+    "See docs/UPDATES.md for manifest format and packaging.": "Siehe docs/UPDATES.md für Manifest-Format und ZIP-Erstellung.",
+    "Check again now": "Jetzt erneut prüfen",
+    "Available release": "Verfügbares Release",
+    "Update available": "Update verfügbar",
+    "Up to date": "Aktuell",
+    "Requires PHP :v or newer.": "Benötigt PHP :v oder neuer.",
+    "Release notes": "Release-Notes",
+    "Run update now? The site may be briefly unavailable. A backup is recommended.": "Update jetzt ausführen? Die Seite kann kurz ausfallen. Ein Backup wird empfohlen.",
+    "I understand that config/ and .env stay untouched; uploads in storage/app/public and backups are preserved. I have a backup.": "Ich habe verstanden, dass config/ und .env unverändert bleiben; Uploads in storage/app/public und Backups bleiben erhalten. Ich habe ein Backup.",
+    "Install update": "Update installieren",
+    "Updates are disabled (CMS_UPDATE_ENABLED=false).": "Updates sind deaktiviert (CMS_UPDATE_ENABLED=false).",
+    "Manifest could not be loaded. Check URL, TLS, firewall and JSON format.": "Manifest konnte nicht geladen werden. Prüfe URL, TLS, Firewall und JSON-Format.",
+    "Update completed. Installed version: :v": "Update abgeschlossen. Installierte Version: :v",
+    "Update failed: :msg": "Update fehlgeschlagen: :msg",
+    "Update manifest could not be loaded.": "Update-Manifest konnte nicht geladen werden.",
+    "You are already on the latest version.": "Du nutzt bereits die neueste Version.",
+    "CMS updates are disabled on this installation.": "CMS-Updates sind auf dieser Installation deaktiviert.",
+    "No newer version to install.": "Es gibt keine neuere Version zum Installieren.",
+    "PHP :current is below required :required.": "PHP :current ist älter als die erforderliche Version :required.",
+    "Checksum of the update package does not match.": "Prüfsumme des Update-Pakets stimmt nicht.",
+    "Could not download update package (HTTP :status).": "Update-Paket konnte nicht heruntergeladen werden (HTTP :status).",
+    "Update archive could not be opened.": "Update-Archiv konnte nicht geöffnet werden.",
+    "Database migration failed: :msg": "Datenbank-Migration fehlgeschlagen: :msg",
+    "CMS updated to version :v.": "CMS auf Version :v aktualisiert.",
+    "License required": "Lizenz erforderlich",
+    "This installation is not licensed.": "Diese Installation ist nicht lizenziert.",
+    "No license key is configured.": "Es ist kein Lizenzschlüssel konfiguriert.",
+    "The license server could not be reached. Check the network or try again later.": "Der Lizenzserver ist nicht erreichbar. Prüfe die Netzwerkverbindung oder versuche es später erneut.",
+    "License validation URL is not configured.": "Die Lizenz-Validierungs-URL ist nicht konfiguriert.",
+    "License validation URL must include a hostname.": "Die Lizenz-Validierungs-URL muss einen Hostnamen enthalten.",
+    "License validation host is not allowed.": "Der Host der Lizenz-Validierungs-URL ist nicht erlaubt (CMS_LICENSE_ALLOWED_VALIDATE_HOSTS).",
+    "This license is not valid for this installation.": "Diese Lizenz ist für diese Installation nicht gültig.",
+    "Set :key in :env and ensure the domain is registered for this key at :host.": "Trage :key in der :env ein und stelle sicher, dass die Domain für diesen Schlüssel bei :host hinterlegt ist.",
+    "License request failed: :msg": "Lizenz-Anfrage fehlgeschlagen: :msg",
+    "License server responded with HTTP :status. Check CMS_LICENSE_VALIDATE_URL and whether /api/validate reaches your PHP file (see deploy/key.luetcke.eu.htaccess).": "Der Lizenzserver antwortete mit HTTP :status. Prüfe CMS_LICENSE_VALIDATE_URL und ob /api/validate wirklich deine PHP-Datei erreicht (siehe deploy/key.luetcke.eu.htaccess).",
+    "Invalid response from license server. Expected JSON with a \"valid\" field (HTTP 200).": "Ungültige Antwort vom Lizenzserver. Erwartet wird JSON mit dem Feld \"valid\" (HTTP 200).",
+    "Enter the license key for this domain. The key must be registered for your hostname at :host (including :local).": "Gib den Lizenzschlüssel für diese Domain ein. Der Schlüssel muss bei :host für deinen Hostnamen hinterlegt sein (einschließlich :local).",
+    "License key": "Lizenzschlüssel",
+    "Paste your key here": "Schlüssel hier einfügen",
+    "Activate license": "Lizenz aktivieren",
+    "Alternatively you can set :key in :env.": "Alternativ kannst du :key in der :env setzen.",
+    "License key is set in the environment file and cannot be changed here.": "Der Lizenzschlüssel ist in der Umgebungsdatei gesetzt und kann hier nicht geändert werden.",
+    "If the site still shows this page, check CMS_LICENSE_KEY in :env and your domain at :host.": "Wenn die Seite trotzdem erscheint, prüfe CMS_LICENSE_KEY in der :env und deine Domain bei :host.",
+    "License activated successfully.": "Lizenz wurde erfolgreich aktiviert.",
+    "Legal notice (Imprint)": "Impressum",
+    "These fields appear on the public imprint page and in the site footer (e-mail). If a field is empty here, the value from the server .env file (LEGAL_*) is used as a fallback.": "Diese Angaben erscheinen auf der öffentlichen Impressum-Seite und im Footer (E-Mail). Ist ein Feld hier leer, wird der Wert aus der Server-.env (LEGAL_*) verwendet.",
+    "Legal notice / imprint settings updated": "Impressum / rechtliche Angaben aktualisiert",
+    "Provider / company": "Anbieter / Firma",
+    "Company or name (§ 5 TMG)": "Firma oder Name (§ 5 TMG)",
+    "Authorised representative (optional)": "Vertretungsberechtigte Person (optional)",
+    "Street & number": "Straße und Hausnummer",
+    "ZIP code": "PLZ",
+    "City": "Stadt",
+    "Country": "Land",
+    "Phone (optional)": "Telefon (optional)",
+    "VAT ID (optional)": "USt-IdNr. (optional)",
+    "Commercial register / professional body (optional)": "Handelsregister / Berufskammer (optional)",
+    "Editorial responsibility (optional, e.g. § 18 Abs. 2 MStV)": "Inhaltlich verantwortlich (optional, z. B. § 18 Abs. 2 MStV)",
+    "View public imprint": "Öffentliches Impressum ansehen",
+    "Cookie consent": "Cookies & Einwilligung",
+    "We use cookies and similar technologies for essential functions, language and session. With your consent, optional services (e.g. CAPTCHA) may load as described in the privacy policy.": "Wir setzen Cookies und ähnliche Technologien für notwendige Funktionen, Sprache und Sitzung ein. Mit Ihrer Einwilligung können optionale Dienste (z. B. CAPTCHA) geladen werden, wie in der Datenschutzerklärung beschrieben.",
+    "Only necessary": "Nur notwendige",
+    "Accept all": "Alle akzeptieren",
+    "Cookie privacy link": "Datenschutz",
+    "Cookie settings": "Cookie-Einstellungen",
+    "Close": "Schließen",
+    "Contact details in imprint": "Kontaktangaben im Impressum",
+    "Page not found": "Seite nicht gefunden",
+    "The page you are looking for does not exist or has been moved.": "Die angeforderte Seite existiert nicht oder wurde verschoben.",
+    "Dark mode": "Dunkelmodus",
+    "Light mode": "Heller Modus",
+    "Account": "Konto",
+    "Account settings": "Kontoeinstellungen",
+    "Manage your profile, password, email, and linked sign-in methods.": "Profilbild, Passwort, E-Mail und verknüpfte Anmeldungen verwalten.",
+    "Profile picture": "Profilbild",
+    "Upload new picture": "Neues Bild hochladen",
+    "Use Discord profile picture": "Discord-Profilbild übernehmen",
+    "Profile picture updated.": "Profilbild wurde aktualisiert.",
+    "Profile picture updated from Discord.": "Profilbild von Discord übernommen.",
+    "Link Discord first to use its profile picture.": "Verknüpfe zuerst Discord, um dessen Profilbild zu nutzen.",
+    "Could not load Discord profile picture.": "Discord-Profilbild konnte nicht geladen werden.",
+    "Profile picture could not be updated.": "Profilbild konnte nicht aktualisiert werden.",
+    "Email address": "E-Mail-Adresse",
+    "Current email: :email": "Aktuelle E-Mail: :email",
+    "New email": "Neue E-Mail",
+    "Save email": "E-Mail speichern",
+    "Email address updated.": "E-Mail-Adresse wurde aktualisiert.",
+    "New password": "Neues Passwort",
+    "Update password": "Passwort ändern",
+    "Password updated.": "Passwort wurde geändert.",
+    "Current password": "Aktuelles Passwort",
+    "Linked accounts": "Verknüpfte Konten",
+    "Connect Google or Discord to sign in with one click. Unlinking requires your current password.": "Verknüpfe Google oder Discord für die Anmeldung mit einem Klick. Zum Aufheben der Verknüpfung ist dein aktuelles Passwort nötig.",
+    "Connected": "Verbunden",
+    "Not connected": "Nicht verbunden",
+    "Not configured on this site": "Auf dieser Website nicht konfiguriert",
+    "Link": "Verknüpfen",
+    "Unlink": "Trennen",
+    "Unlink this account?": "Diese Verknüpfung wirklich aufheben?",
+    "Account linked successfully.": "Konto wurde erfolgreich verknüpft.",
+    "This account is already linked.": "Dieses Konto ist bereits verknüpft.",
+    "This :provider account is already linked to another user.": "Dieses :provider-Konto ist bereits mit einem anderen Benutzer verknüpft.",
+    "You already have a :provider account linked.": "Du hast bereits ein :provider-Konto verknüpft.",
+    ":provider has been unlinked.": ":provider wurde getrennt.",
+    "No linked :provider account found.": "Kein verknüpftes :provider-Konto gefunden.",
+    "Continue with Google": "Mit Google fortfahren",
+    "Continue with Discord": "Mit Discord fortfahren",
+    "Sign in with Google": "Mit Google anmelden",
+    "Sign in with Discord": "Mit Discord anmelden",
+    "OAuth sign-in failed. Please try again.": "OAuth-Anmeldung fehlgeschlagen. Bitte erneut versuchen.",
+    "Your :provider account has no email on file. Please use another sign-in method or add an email in :provider.": "Für dein :provider-Konto liegt keine E-Mail vor. Bitte nutze eine andere Anmeldung oder hinterlege eine E-Mail bei :provider.",
+    "No account found for this sign-in. Register first or use email and password.": "Kein Konto für diese Anmeldung gefunden. Registriere dich zuerst oder nutze E-Mail und Passwort.",
+    "Password requirements": "Passwort-Anforderungen",
+    "At least :count characters": "Mindestens :count Zeichen",
+    "At least one letter": "Mindestens ein Buchstabe",
+    "Uppercase and lowercase letters": "Groß- und Kleinbuchstaben",
+    "At least one number": "Mindestens eine Ziffer",
+    "At least one special character (e.g. ! ? # @)": "Mindestens ein Sonderzeichen (z. B. ! ? # @)",
+    "Password strength": "Passwortstärke",
+    "password.strength.simple": "Einfach",
+    "password.strength.medium": "Mittel",
+    "password.strength.strong": "Stark",
+    "Passwords match": "Passwörter stimmen überein",
+    "Server information": "Server-Informationen",
+    "Technical runtime information of this installation.": "Technische Laufzeitinformationen dieser Installation.",
+    "System values": "Systemwerte",
+    "PHP extensions": "PHP-Erweiterungen",
+    "Loaded": "Geladen",
+    "Missing": "Fehlt",
+    "App env": "App-Umgebung",
+    "App debug": "App-Debug",
+    "App url": "App-URL",
+    "Php version": "PHP-Version",
+    "Laravel version": "Laravel-Version",
+    "Server software": "Server-Software",
+    "Database connection": "Datenbank-Verbindung",
+    "Database version": "Datenbank-Version",
+    "Timezone": "Zeitzone",
+    "Locale": "Sprache",
+    "Memory limit": "Speicherlimit",
+    "Upload max filesize": "Upload max. Dateigröße",
+    "Post max size": "POST max. Größe",
+    "Max execution time": "Max. Ausführungszeit",
+    "Add language": "Sprache hinzufügen",
+    "Create a new locale JSON file, optionally copied from an existing language.": "Neue Locale-JSON-Datei erstellen, optional aus einer vorhandenen Sprache kopiert.",
+    "Create language": "Sprache erstellen",
+    "Locale code": "Sprachcode",
+    "Copy from": "Kopieren von",
+    "Edit JSON key/value pairs. Save writes to resources/lang/:locale.json.": "JSON-Schlüssel/Werte bearbeiten. Beim Speichern wird nach resources/lang/:locale.json geschrieben.",
+    "No logo uploaded yet.": "Noch kein Logo hochgeladen.",
+    "Social networks": "Soziale Netzwerke",
+    "These links are shown in the website footer.": "Diese Links werden im Website-Footer angezeigt.",
+    "Show in footer": "Im Footer anzeigen",
+    "Team banner": "Team-Banner",
+    "Customize the banner background on the public team page (color, image, or GIF).": "Passe den Banner-Hintergrund auf der öffentlichen Team-Seite an (Farbe, Bild oder GIF).",
+    "Banner mode": "Banner-Modus",
+    "Color": "Farbe",
+    "Image / GIF": "Bild / GIF",
+    "Banner color": "Banner-Farbe",
+    "Banner image/GIF URL (optional)": "Banner-Bild-/GIF-URL (optional)",
+    "Upload banner image/GIF (optional)": "Banner-Bild/GIF hochladen (optional)",
+    "Upload has priority over URL. Max file size: 5MB.": "Upload hat Vorrang vor URL. Maximale Dateigröße: 5MB.",
+    "Current uploaded banner": "Aktuell hochgeladener Banner",
+    "Team banner preview": "Team-Banner-Vorschau",
+    "Remove uploaded banner": "Hochgeladenen Banner entfernen",
+    "Save banner": "Banner speichern",
+    "Team banner updated for :name.": "Team-Banner für :name aktualisiert.",
+    "Show this team member on public team page": "Dieses Teammitglied auf der öffentlichen Team-Seite anzeigen",
+    "Team order (lower = higher)": "Team-Reihenfolge (kleiner = weiter oben)",
+    "News Categories": "News-Kategorien",
+    "Allow comments": "Kommentare erlauben",
+    "Visitors can comment on this article.": "Besucher können diesen Artikel kommentieren.",
+    "Comments disabled": "Kommentare deaktiviert",
+    "Comments are disabled for this article.": "Kommentare sind für diesen Artikel deaktiviert.",
+    "Create and manage categories for news filtering.": "Kategorien für die News-Filterung erstellen und verwalten.",
+    "Categories": "Kategorien",
+    "Create category": "Kategorie erstellen",
+    "Order": "Reihenfolge",
+    "Category created successfully.": "Kategorie erfolgreich erstellt.",
+    "Category updated successfully.": "Kategorie erfolgreich aktualisiert.",
+    "Category deleted successfully.": "Kategorie erfolgreich gelöscht.",
+    "Delete this category? Assigned news will be uncategorized.": "Diese Kategorie löschen? Zugewiesene News werden ohne Kategorie gespeichert.",
+    "No categories yet.": "Noch keine Kategorien vorhanden.",
+    "No category": "Keine Kategorie",
+    "All News": "Alle News",
+    "Browse all news": "Alle Nachrichten durchsuchen",
+    "All categories": "Alle Kategorien",
+    "More news": "Mehr lesen",
+    "Show all news": "Alle News anzeigen",
+    "Filter by category and discover all published articles.": "Nach Kategorien filtern und alle veröffentlichten Artikel entdecken.",
+    "PDF export is currently unavailable. Please install dompdf via Composer.": "PDF-Export ist derzeit nicht verfügbar. Bitte installiere dompdf per Composer.",
+    "Export Excel": "Excel exportieren",
+    "Pages": "Seiten",
+    "Create and manage custom pages with drag-and-drop blocks.": "Eigene Seiten mit Drag-and-Drop-Blöcken erstellen und verwalten.",
+    "Create Page": "Seite erstellen",
+    "Build your page by adding blocks and reordering them.": "Baue deine Seite, indem du Blöcke hinzufügst und neu anordnest.",
+    "Page created successfully.": "Seite erfolgreich erstellt.",
+    "Page updated successfully.": "Seite erfolgreich aktualisiert.",
+    "Page deleted successfully.": "Seite erfolgreich gelöscht.",
+    "Delete this page?": "Diese Seite wirklich löschen?",
+    "No pages created yet.": "Noch keine Seiten erstellt.",
+    "Will be available under /page/:slug": "Verfügbar unter /page/:slug",
+    "Add Text Block": "Textblock hinzufügen",
+    "Add Image Block": "Bildblock hinzufügen",
+    "Add Button Block": "Button-Block hinzufügen",
+    "No blocks yet. Add your first block above.": "Noch keine Blöcke. Füge oben deinen ersten Block hinzu.",
+    "Block": "Block",
+    "Drag to reorder": "Zum Neuordnen ziehen",
+    "Remove": "Entfernen",
+    "Image URL": "Bild-URL",
+    "Button text": "Button-Text",
+    "Button URL": "Button-URL",
+    "This page has no content blocks yet.": "Diese Seite hat noch keine Inhaltsblöcke.",
+    "Show in navigation": "Im Navigationsmenü anzeigen",
+    "Navigation label (optional)": "Navigations-Label (optional)",
+    "Navigation order": "Navigations-Reihenfolge",
+    "Layout": "Layout",
+    "Single column": "Eine Spalte",
+    "Two columns": "Zwei Spalten",
+    "Text alignment": "Textausrichtung",
+    "Left": "Links",
+    "Center": "Zentriert",
+    "Background": "Hintergrund",
+    "None": "Keiner",
+    "Gray": "Grau",
+    "Primary": "Primär",
+    "Padding": "Innenabstand",
+    "Small": "Klein",
+    "Medium": "Mittel",
+    "Large": "Groß",
+    "Left column content": "Inhalt linke Spalte",
+    "Right column content": "Inhalt rechte Spalte",
+    "Navigation": "Navigation",
+    "Live preview": "Live-Vorschau",
+    "Desktop": "Desktop",
+    "Tablet": "Tablet",
+    "Mobile": "Mobil",
+    "Upload image": "Bild hochladen",
+    "Versions": "Versionen",
+    "Saved at": "Gespeichert am",
+    "Restore version": "Version wiederherstellen",
+    "Revision restored successfully.": "Version erfolgreich wiederhergestellt."
+    ,"Block width": "Block-Breite"
+    ,"Full width": "Volle Breite"
+    ,"Half width (2 per row)": "Halbe Breite (2 pro Zeile)"
+    ,"Image size": "Bildgröße"
+    ,"Button in text: [Label](https://example.com)": "Button im Text: [Label](https://example.com)"
+    ,"Insert button": "Button einfügen"
+    ,"Button size": "Button-Größe"
+    ,"Button size in text: [Label|sm](https://example.com), [Label|md](...), [Label|lg](...)": "Button-Größe im Text: [Label|sm](https://example.com), [Label|md](...), [Label|lg](...)"
+    ,"Button color": "Button-Farbe"
+    ,"Outline": "Kontur"
+    ,"No background": "Kein Hintergrund"
+    ,"Button color in text: [Label|primary](...), [Label|secondary](...), [Label|outline](...)": "Button-Farbe im Text: [Label|primary](...), [Label|secondary](...), [Label|outline](...)"
+    ,"Button label": "Button-Beschriftung"
+    ,"Button size (sm, md, lg)": "Button-Größe (sm, md, lg)"
+    ,"Button color (primary, secondary, outline)": "Button-Farbe (primary, secondary, outline)"
+    ,"Button color (primary, secondary, outline, none)": "Button-Farbe (primary, secondary, outline, none)"
+    ,"Navigation icon": "Navigations-Icon"
+    ,"Default": "Standard"
+    ,"Highlight": "Hervorhebung"
+    ,"Services": "Leistungen"
+    ,"Gallery": "Galerie"
+    ,"FAQ": "FAQ"
+    ,"Icon": "Icon"
+    ,"Insert image": "Bild einfügen"
+    ,"Image in text: ![img|sm](https://example.com), ![img|md](...), ![img|lg](...)": "Bild im Text: ![img|sm](https://example.com), ![img|md](...), ![img|lg](...)"
+    ,"Registration is currently disabled.": "Registrierung ist derzeit deaktiviert."
+    ,"Current status: :status": "Aktueller Status: :status"
+    ,"Disabled": "Deaktiviert"
+    ,"Forms": "Formulare"
+    ,"Create Form": "Formular erstellen"
+    ,"Edit Form": "Formular bearbeiten"
+    ,"Create reusable forms and embed them in pages.": "Erstelle wiederverwendbare Formulare und binde sie in Seiten ein."
+    ,"Build a reusable contact or inquiry form.": "Erstelle ein wiederverwendbares Kontakt- oder Anfrageformular."
+    ,"Recipient email": "Empfänger-E-Mail"
+    ,"Success message": "Erfolgsmeldung"
+    ,"Fields": "Felder"
+    ,"Add field": "Feld hinzufügen"
+    ,"Field key": "Feld-Schlüssel"
+    ,"Type": "Typ"
+    ,"Textarea": "Textbereich"
+    ,"Required": "Pflichtfeld"
+    ,"No forms created yet.": "Noch keine Formulare erstellt."
+    ,"Submissions": "Einsendungen"
+    ,"Create Form Block": "Formular-Block hinzufügen"
+    ,"Select form": "Formular auswählen"
+    ,"Submit button label": "Text des Absende-Buttons"
+    ,"Send message": "Nachricht senden"
+    ,"Upload image file": "Bilddatei hochladen"
+    ,"Uploading...": "Wird hochgeladen..."
+    ,"Selected form is not available.": "Das ausgewählte Formular ist nicht verfügbar."
+    ,"Manage JSON translations and add new language files.": "JSON-Übersetzungen verwalten und neue Sprachdateien hinzufügen."
+    ,"Manage all news articles": "Alle News-Artikel verwalten"
+    ,"Form created successfully.": "Formular erfolgreich erstellt."
+    ,"Form updated successfully.": "Formular erfolgreich aktualisiert."
+    ,"Form deleted successfully.": "Formular erfolgreich gelöscht."
+    ,"Delete this form?": "Dieses Formular löschen?"
+    ,"Thank you! Your message has been sent.": "Danke! Deine Nachricht wurde gesendet."
+    ,":label is required.": ":label ist erforderlich."
+    ,"Read all submitted form entries.": "Alle eingesendeten Formular-Einträge lesen."
+    ,"No submissions yet.": "Noch keine Einsendungen vorhanden."
+    ,"Back": "Zurück"
+    ,"Clear submissions": "Einsendungen leeren"
+    ,"Submissions cleared successfully.": "Einsendungen erfolgreich geleert."
+    ,"Clear all submissions for this form?": "Alle Einsendungen für dieses Formular wirklich löschen?"
+    ,"I accept the": "Ich akzeptiere die"
+    ,"Please accept the terms and conditions.": "Bitte akzeptiere die AGB."
+    ,"Show hero header": "Hero-Header anzeigen"
+    ,"Hero badge": "Hero-Badge"
+    ,"Hero heading": "Hero-Überschrift"
+    ,"Hero subheading": "Hero-Unterüberschrift"
+    ,"Hero color theme": "Hero-Farbthema"
+    ,"Blue": "Blau"
+    ,"Green": "Grün"
+    ,"Purple": "Lila"
+    ,"Orange": "Orange"
+    ,"Hero background image URL": "Hero-Hintergrundbild-URL"
+    ,"Hero overlay strength": "Hero-Overlay-Stärke"
+    ,"Light": "Leicht"
+    ,"Strong": "Stark"
+    ,"Hero height": "Hero-Höhe"
+    ,"Full screen": "Vollbild"
+    ,"Hero primary button text": "Hero Primär-Button Text"
+    ,"Hero primary button URL": "Hero Primär-Button URL"
+    ,"Hero secondary button text": "Hero Sekundär-Button Text"
+    ,"Hero secondary button URL": "Hero Sekundär-Button URL"
+    ,"Learn more": "Mehr erfahren"
+    ,"Contact": "Kontakt"
+    ,"Apply template": "Vorlage anwenden"
+    ,"Select page template": "Seitenvorlage auswählen"
+    ,"Template will replace hero settings and all content blocks.": "Die Vorlage ersetzt Hero-Einstellungen und alle Inhaltsblöcke."
+    ,"Template applied.": "Vorlage wurde angewendet."
+    ,"Template preview": "Vorlagenvorschau"
+    ,"No template selected yet.": "Noch keine Vorlage ausgewählt."
+    ,"Hero": "Hero"
+    ,"Blocks: :count": "Blöcke: :count"
+    ,"Preview blocks": "Vorschau-Blöcke"
+    ,"No preview available.": "Keine Vorschau verfügbar."
+    ,"Template placeholder values": "Template-Platzhalterwerte"
+    ,"Fill values for placeholders from the selected template.": "Werte für Platzhalter aus der gewählten Vorlage eintragen."
+    ,"No placeholders in this template.": "Diese Vorlage enthält keine Platzhalter."
+    ,"Dynamic tokens for text blocks:": "Dynamische Tokens für Textblöcke:"
+    ,"No news articles available.": "Keine News-Artikel verfügbar."
+    ,"Insert token": "Token einfügen"
+    ,"Select token": "Token auswählen"
+    ,"Team list": "Teamliste"
+    ,"News boxes (3)": "News-Boxen (3)"
+    ,"News boxes (6)": "News-Boxen (6)"
+    ,"Current user name (or visitor)": "Aktueller Benutzername (oder Besucher)"
+    ,"Visitor": "Besucher"
+    ,"CMS info": "CMS-Info"
+    ,"CMS version": "CMS-Version"
+    ,"MySQL version": "MySQL-Version"
+    ,"Laravel version": "Laravel-Version"
+    ,"PHP version": "PHP-Version"
+    ,"Environment": "Umgebung"
+    ,"Developer": "Entwickler"
+    ,"Build release": "Build-Release"
+    ,"Database": "Datenbank"
+    ,"License status": "Lizenzstatus"
+    ,"Copy info": "Infos kopieren"
+    ,"Copied": "Kopiert"
+    ,"Comment Moderation AI": "Kommentar-Moderation KI"
+    ,"Review comments flagged by AI before publishing.": "Von der KI markierte Kommentare vor der Veroeffentlichung pruefen."
+    ,"No pending comments right now.": "Aktuell sind keine Kommentare in der Moderationswarteschlange."
+    ,"Score": "Score"
+    ,"Approve": "Freigeben"
+    ,"Reject": "Ablehnen"
+    ,"Comment approved.": "Kommentar wurde freigegeben."
+    ,"Comment rejected.": "Kommentar wurde abgelehnt."
+    ,"Your comment is awaiting moderation.": "Dein Kommentar wartet auf die Moderationsfreigabe."
+    ,"Run migrations to enable comment moderation columns.": "Fuehre Migrationen aus, um die Moderationsspalten zu aktivieren."
+    ,"Rule tuning": "Regeln feinjustieren"
+    ,"Pending threshold": "Schwelle fuer Warteschlange"
+    ,"Auto reject threshold": "Schwelle fuer Auto-Ablehnung"
+    ,"Max links allowed": "Maximal erlaubte Links"
+    ,"Blocked words (comma or newline separated)": "Blockierte Woerter (Komma oder neue Zeile)"
+    ,"Save moderation rules": "Moderationsregeln speichern"
+    ,"Comment moderation settings updated.": "Moderationseinstellungen wurden aktualisiert."
+    ,"Your comment was rejected by moderation.": "Dein Kommentar wurde von der Moderation abgelehnt."
+    ,"Sponsor / Ad Slots": "Sponsoren / Werbeslots"
+    ,"Manage sponsor banners with impressions and clicks.": "Sponsor-Banner mit Impressionen und Klicks verwalten."
+    ,"Create ad slot": "Werbeslot erstellen"
+    ,"Optional HTML banner code": "Optionaler HTML-Banner-Code"
+    ,"Run migrations to enable ad slots table.": "Fuehre Migrationen aus, um die Tabelle fuer Werbeslots zu aktivieren."
+    ,"Ad slot created.": "Werbeslot wurde erstellt."
+    ,"Ad slot updated.": "Werbeslot wurde aktualisiert."
+    ,"Ad slot deleted.": "Werbeslot wurde geloescht."
+    ,"Delete this ad slot?": "Diesen Werbeslot wirklich loeschen?"
+    ,"No ad slots yet.": "Noch keine Werbeslots vorhanden."
+    ,"Available slot keys": "Verfügbare Slot-Keys"
+    ,"No predefined slot keys available.": "Keine vordefinierten Slot-Keys verfügbar."
+    ,"Use one of the predefined slot keys shown above.": "Verwende einen der oben gezeigten vordefinierten Slot-Keys."
+    ,"Field info": "Feld-Infos"
+    ,"Internal name shown in admin only.": "Interner Name, der nur im Admin angezeigt wird."
+    ,"Defines where the ad appears on the site.": "Legt fest, an welcher Position die Werbung auf der Website erscheint."
+    ,"Destination when users click the ad.": "Zielseite, die beim Klick auf die Werbung geöffnet wird."
+    ,"External image URL for the banner (optional).": "Externe Bild-URL für den Banner (optional)."
+    ,"Upload a local image file; preferred over image_url.": "Lokale Bilddatei hochladen; wird gegenüber image_url bevorzugt."
+    ,"Priority": "Priorität"
+    ,"Default 100. Lower number = shown first (e.g. 10 before 100).": "Standard ist 100. Kleinere Zahl = wird zuerst angezeigt (z. B. 10 vor 100)."
+    ,"Only active ad slots can be displayed.": "Nur aktive Werbeslots können angezeigt werden."
+    ,"Optional time window for automatic start/stop.": "Optionales Zeitfenster für automatischen Start/Stopp."
+    ,"Fallback if no image is set (use trusted HTML only).": "Fallback, wenn kein Bild gesetzt ist (nur vertrauenswürdiges HTML verwenden)."
+    ,"Upload banner image (optional)": "Banner-Bild hochladen (optional)"
+    ,"PNG, JPG, GIF, WebP up to 5MB": "PNG, JPG, GIF, WebP bis zu 5MB"
+    ,"Impressions": "Impressionen"
+    ,"Clicks": "Klicks"
+    ,"Breaking News Mode": "Banner"
+    ,"Show a prominent breaking-news banner across the website.": "Zeigt einen globalen Hinweis-Banner auf der gesamten Website (z. B. für Wartung, Infos oder Eilmeldungen)."
+    ,"Enable breaking news banner": "Banner aktivieren"
+    ,"Badge text": "Badge-Text"
+    ,"Theme": "Farbthema"
+    ,"Display mode": "Anzeigemodus"
+    ,"Banner (top bar)": "Banner (oben)"
+    ,"Popup (dismissible)": "Popup (wegklickbar)"
+    ,"Popup text (optional)": "Popup-Text (optional)"
+    ,"Displayed only in popup mode as normal body text.": "Wird nur im Popup-Modus als normaler Fließtext angezeigt."
+    ,"Headline": "Überschrift"
+    ,"Target URL (optional)": "Ziel-URL (optional)"
+    ,"Amber": "Amber"
+    ,"Breaking News Mode updated.": "Banner wurde aktualisiert."
+    ,"Unknown": "Unbekannt"
+    ,"Invalid": "Ungültig"
+    ,"Members": "Mitglieder"
+    ,"Member directory": "Mitgliederverzeichnis"
+    ,"Find members and send friend requests. When a request is accepted, you can chat.": "Finde Mitglieder und sende Freundschaftsanfragen. Nach Annahme könnt ihr chatten."
+    ,"Incoming friend requests": "Eingehende Freundschaftsanfragen"
+    ,"Accept": "Annehmen"
+    ,"Decline": "Ablehnen"
+    ,"Search by name…": "Nach Namen suchen…"
+    ,"Search": "Suchen"
+    ,"No members found.": "Keine Mitglieder gefunden."
+    ,"Back to directory": "Zurück zum Verzeichnis"
+    ,"Open chat": "Chat öffnen"
+    ,"Accept request": "Anfrage annehmen"
+    ,"Friend request pending": "Freundschaftsanfrage ausstehend"
+    ,"Send friend request": "Freundschaftsanfrage senden"
+    ,"Chat with :name": "Chat mit :name"
+    ,"Direct messages": "Direktnachrichten"
+    ,"Profile": "Profil"
+    ,"Standard chat": "Standard-Chat"
+    ,"End-to-end encrypted": "Ende-zu-Ende verschlüsselt"
+    ,"End-to-end mode encrypts in your browser. The server only stores ciphertext; register keys once per browser.": "Ende-zu-Ende wird im Browser verschlüsselt. Der Server speichert nur Geheimtext; Schlüssel je Browser einmalig registrieren."
+    ,"Write a message…": "Nachricht schreiben…"
+    ,"Decrypting…": "Entschlüsseln…"
+    ,"Could not decrypt.": "Entschlüsselung nicht möglich."
+    ,"Waiting for encryption keys…": "Warte auf Verschlüsselungsschlüssel…"
+    ,"Your contact has not registered end-to-end encryption in the browser yet. Encrypted messages are disabled until both sides have opened the chat.": "Dein Kontakt hat die Ende-zu-Ende-Verschlüsselung im Browser noch nicht aktiviert. Verschlüsselte Nachrichten sind erst möglich, wenn beide den Chat geöffnet haben."
+    ,"Generating your encryption key…": "Verschlüsselungsschlüssel wird erzeugt…"
+    ,"Friend request sent.": "Freundschaftsanfrage gesendet."
+    ,"You are already friends.": "Ihr seid bereits befreundet."
+    ,"Friend request already sent.": "Freundschaftsanfrage bereits gesendet."
+    ,"This user has already sent you a request — accept it from your member directory.": "Diese Person hat dir bereits eine Anfrage gesendet — bitte im Mitgliederverzeichnis annehmen."
+    ,"You are now friends. Open the chat to message each other.": "Ihr seid jetzt befreundet. Im Chat könnt ihr euch schreiben."
+    ,"Request is no longer pending.": "Die Anfrage ist nicht mehr offen."
+    ,"Friend request declined.": "Freundschaftsanfrage abgelehnt."
+    ,"User profiles plugin database tables are missing. Run migrations.": "Datenbanktabellen für Benutzerprofile fehlen. Bitte Migrationen ausführen."
+    ,"End-to-end encryption requires both users to register encryption keys (open the chat once in this browser).": "Ende-zu-Ende erfordert, dass beide Nutzer ihre Schlüssel registrieren (Chat in diesem Browser einmal öffnen)."
+    ,"Invalid public key format.": "Ungültiges Format des öffentlichen Schlüssels."
+    ,"Could not send.": "Senden fehlgeschlagen."
+    ,"End-to-end encryption requires both users to have opened this chat in the browser.": "Ende-zu-Ende erfordert, dass beide diesen Chat im Browser geöffnet haben."
+    ,"Waiting for the other user to publish an encryption key on the server (usually a few seconds after they open this chat).": "Warte auf den Verschlüsselungsschlüssel der anderen Person auf dem Server (meist wenige Sekunden, nachdem sie den Chat geöffnet hat)."
+    ,"Syncing your encryption key to the server…": "Synchronisiere deinen Verschlüsselungsschlüssel mit dem Server…"
+    ,"End-to-end encryption is not ready yet: wait until both keys appear on the server (this page updates automatically).": "Ende-zu-Ende ist noch nicht bereit: Bitte warten, bis beide Schlüssel auf dem Server registriert sind (diese Seite aktualisiert sich automatisch)."
+    ,"Only the public key may be uploaded, not the private key.": "Es darf nur der öffentliche Schlüssel hochgeladen werden, nicht der private Schlüssel."
+    ,"Delete conversation": "Konversation löschen"
+    ,"Delete the entire conversation for both users? This cannot be undone.": "Den gesamten Chat-Verlauf für beide Nutzer löschen? Das kann nicht rückgängig gemacht werden."
+    ,"Conversation deleted.": "Konversation wurde gelöscht."
+    ,"Could not delete chat.": "Chat konnte nicht gelöscht werden."
+    ,"Anyone can open this chat. End-to-end sending needs the other person's key too — they must open this chat once. Standard chat always works.": "Jeder kann diesen Chat öffnen. Zum Senden mit Ende-zu-Ende brauchst du auch den Schlüssel der anderen Person — sie muss diesen Chat einmal öffnen. Der Standard-Chat funktioniert jederzeit."
+    ,"Open this chat once in your browser so your encryption key is saved — then you can use end-to-end mode.": "Öffne diesen Chat einmal in deinem Browser, damit dein Verschlüsselungsschlüssel gespeichert wird — danach kannst du den Ende-zu-Ende-Modus nutzen."
+    ,"To send encrypted messages, the other person must open this chat once in their browser. Until then, use standard chat.": "Um verschlüsselt zu senden, muss die andere Person diesen Chat einmal in ihrem Browser öffnen. Bis dahin nutze bitte den Standard-Chat."
+    ,"End-to-end send is not ready: the other user has not published an encryption key yet. Use standard chat, or wait until they open this chat (this page updates automatically).": "Ende-zu-Ende-Senden ist noch nicht möglich: Die andere Person hat noch keinen Verschlüsselungsschlüssel veröffentlicht. Nutze den Standard-Chat oder warte, bis sie den Chat öffnet (diese Seite aktualisiert sich automatisch)."
+    ,"Import backup…": "Backup importieren…"
+    ,"Export encryption backup…": "Verschlüsselungs-Backup exportieren…"
+    ,"Create new encryption key": "Neuen Verschlüsselungsschlüssel erstellen"
+    ,"This creates a new encryption key on this device. End-to-end messages encrypted with your previous key will remain unreadable here. Continue?": "Damit wird auf diesem Gerät ein neuer Verschlüsselungsschlüssel erzeugt. Ältere Ende-zu-Ende-Nachrichten bleiben hier unlesbar. Fortfahren?"
+    ,"Invalid backup file.": "Ungültige Backup-Datei."
+    ,"This backup is for a different user account.": "Dieses Backup gehört zu einem anderen Benutzerkonto."
+    ,"No local encryption key to export.": "Kein lokaler Verschlüsselungsschlüssel zum Exportieren."
+    ,"Your encryption key is not stored on this browser. Import the backup file you exported on another device, or create a new key (then older E2E messages cannot be read here).": "Dein Verschlüsselungsschlüssel liegt in diesem Browser nicht vor. Importiere die Backup-Datei von einem anderen Gerät, oder erstelle einen neuen Schlüssel (dann sind ältere E2E-Nachrichten hier nicht lesbar)."
+    ,"Set up encryption on this device first: import a backup or create a new key.": "Richte zuerst die Verschlüsselung auf diesem Gerät ein: Backup importieren oder neuen Schlüssel erstellen."
+    ,"Encrypted messages need your key on this device — use Import backup.": "Verschlüsselte Nachrichten brauchen deinen Schlüssel auf diesem Gerät — nutze „Backup importieren“."
+    ,"Remove image": "Bild entfernen"
+    ,"Emoji": "Emoji"
+    ,"Image": "Bild"
+    ,"Please choose an image file.": "Bitte eine Bilddatei wählen."
+    ,"Image too large after compression. Choose a smaller image.": "Bild nach Kompression zu groß. Bitte ein kleineres Bild wählen."
+    ,"Could not process image.": "Bild konnte nicht verarbeitet werden."
+    ,"Invalid encrypted payload.": "Ungültige verschlüsselte Nutzlast."
+    ,"Message cannot be empty.": "Nachricht darf nicht leer sein."
+    ,"Invalid image type.": "Ungültiger Bildtyp."
+    ,"Image too large.": "Bild zu groß."
+    ,"Invalid message format.": "Ungültiges Nachrichtenformat."
+}

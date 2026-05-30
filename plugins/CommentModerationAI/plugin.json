@@ -1,0 +1,19 @@
+{
+  "slug": "comment-moderation-ai",
+  "name": "Comment Moderation AI",
+  "description": "Automatische Moderationsbewertung fuer Kommentare mit Admin-Queue.",
+  "version": "1.0.0",
+  "enabled": true,
+  "provider_file": "src/CommentModerationServiceProvider.php",
+  "provider": "Plugins\\CommentModerationAI\\CommentModerationServiceProvider",
+  "routes_file": "routes/web.php",
+  "admin_nav": [
+    {
+      "route": "admin.comment-moderation.index",
+      "label": "Comment Moderation AI",
+      "icon": "fas fa-shield-alt",
+      "active_pattern": "admin.comment-moderation.*",
+      "permission": "news"
+    }
+  ]
+}

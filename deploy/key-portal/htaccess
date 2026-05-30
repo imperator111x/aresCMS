@@ -1,0 +1,14 @@
+# Auf dem Server: nach .htaccess umbenennen → ins Webroot (neben key-portal/)
+#
+# Kein „Options“-Block: Viele Hoster erlauben in .htaccess kein Options/FollowSymLinks → sonst HTTP 500.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteRule ^$ key-portal/public/index.php [L]
+    RewriteRule ^validate-license\.php$ key-portal/public/validate-license.php [L]
+    RewriteRule ^install\.php$ key-portal/public/install.php [L]
+    RewriteRule ^admin/?$ key-portal/public/admin/index.php [L]
+    RewriteRule ^admin/(.+)$ key-portal/public/admin/$1 [L]
+</IfModule>
