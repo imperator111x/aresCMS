@@ -1,0 +1,19 @@
+{
+  "slug": "breaking-news-mode",
+  "name": "Banner",
+  "description": "Zeigt einen globalen Hinweis-Banner auf der Website (z. B. für Wartung, Infos oder Eilmeldungen).",
+  "version": "1.0.0",
+  "enabled": true,
+  "provider_file": "src/BreakingNewsModeServiceProvider.php",
+  "provider": "Plugins\\BreakingNewsMode\\BreakingNewsModeServiceProvider",
+  "routes_file": "routes/web.php",
+  "admin_nav": [
+    {
+      "route": "admin.breaking-news.index",
+      "label": "Banner",
+      "icon": "fas fa-bolt",
+      "active_pattern": "admin.breaking-news.*",
+      "permission": "news"
+    }
+  ]
+}

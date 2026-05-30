@@ -1,0 +1,29 @@
+# Apache – Document Root von key.luetcke.eu (Dateiname auf dem Server: .htaccess)
+# -----------------------------------------------------------------
+# PHP: key-server-validate.example.php → key-server-validate.php ins Root
+#
+# 404? → deploy/key-host/README.md (api/validate/index.php oder validate-license.php)
+
+# MultiViews verhindert falsche Auflösung von /api/validate
+Options +FollowSymLinks -Indexes -MultiViews
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    RewriteRule ^api/validate/?$ key-server-validate.php [L]
+</IfModule>
+
+<FilesMatch "^\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+</IfModule>

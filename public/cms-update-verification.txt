@@ -1,0 +1,4 @@
+News-Portal CMS-Update
+Version: 1.0.1
+Erzeugt: 2026-04-18T09:46:11+00:00
+Nach Installation sollte diese Datei unter public/ liegen.

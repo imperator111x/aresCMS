@@ -1,0 +1,9 @@
+{
+  "slug": "example-plugin",
+  "name": "Example Plugin",
+  "description": "Demonstration plugin (disabled by default).",
+  "version": "1.0.0",
+  "enabled": false,
+  "routes_file": "routes/web.php"
+}
+

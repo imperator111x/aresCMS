@@ -1,0 +1,60 @@
+<?php
+
+return [
+
+    'imprint' => [
+        'page_title' => 'Impressum',
+        'heading' => 'Impressum',
+        'section_provider' => 'Angaben gemäß § 5 TMG / Anbieterkennzeichnung',
+        'label_representative' => 'Vertretungsberechtigt',
+        'label_contact' => 'Kontakt',
+        'label_vat' => 'Umsatzsteuer',
+        'label_register' => 'Registereintrag',
+        'label_content_liability' => 'Inhaltliche Verantwortung',
+        'label_dispute' => 'Streitschlichtung',
+        'dispute_eu_text' => 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, sofern nicht gesetzlich anders vorgeschrieben.',
+    ],
+
+    'privacy' => [
+        'page_title' => 'Datenschutz',
+        'heading' => 'Datenschutzerklärung',
+        'intro' => 'Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Nachfolgend informieren wir Sie über Art, Umfang und Zweck der Verarbeitung personenbezogener Daten bei Nutzung dieses Onlineangebots (:url).',
+        'section1_title' => '1. Verantwortlicher',
+        'section1_fallback' => 'Bitte vervollständigen Sie zuerst die Anbieterangaben im Impressum (LEGAL_* in der .env), damit der Verantwortliche hier eindeutig benannt werden kann.',
+        'section2_title' => '2. Hosting und Server-Logfiles',
+        'section2_body' => 'Die von uns genutzten Systeme speichern bei jedem Aufruf dieser Website in der Regel automatisch technische Informationen in sogenannten Server-Logfiles (z. B. Browsertyp/-version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage, IP-Adresse). Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technischen Sicherheit und Stabilität des Angebots). Die Logfiles werden nach einer angemessenen Frist gelöscht, sofern keine sicherheitsrelevante Aufbewahrung erforderlich ist.',
+        'section3_title' => '3. Cloudflare (CDN, Schutz vor Missbrauch)',
+        'section3_body' => 'Zur schnellen und sicheren Auslieferung von Inhalten (z. B. Schriftarten, Skripte) kann ein Content-Delivery-Network (CDN) der Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA („Cloudflare“) eingesetzt werden. Dabei kann Ihre IP-Adresse und technische Metadaten an Server von Cloudflare übermittelt werden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an performanter und abgesicherter Website). Informationen zum Datenschutz: https://www.cloudflare.com/de-de/privacypolicy/. Sofern Cloudflare als Auftragsverarbeiter eingesetzt wird, erfolgt die Datenverarbeitung auf Grundlage eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO.',
+        'section4_title' => '4. Cloudflare Turnstile (CAPTCHA)',
+        'section4_body' => 'Bei Login und Registrierung kann zur Abwehr von automatisierten Zugriffen („Bots“) der Dienst Cloudflare Turnstile (Cloudflare, Inc., USA) eingebunden werden. Dabei wird ein JavaScript von challenges.cloudflare.com geladen; es können Cookies oder vergleichbare Technologien sowie eine Verbindung zu Servern von Cloudflare entstehen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Missbrauchsprävention). Details: https://www.cloudflare.com/application-services/products/turnstile/ und https://www.cloudflare.com/privacypolicy/.',
+        'section4_disabled' => 'Derzeit ist auf dieser Installation kein Turnstile-Schlüssel hinterlegt; der Abschnitt gilt, sobald der Dienst aktiviert wird.',
+        'section5_title' => '5. Google reCAPTCHA (falls eingebunden)',
+        'section5_body' => 'Wenn auf Formularen Google reCAPTCHA verwendet wird, verarbeitet die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, personenbezogene Daten (u. a. IP-Adresse, Nutzungsmuster) zum Schutz vor Missbrauch. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Hinweise: https://policies.google.com/privacy?hl=de',
+        'section6_title' => '6. Konten, Registrierung und Kommentare',
+        'section6_body' => 'Bei Registrierung und Nutzung des Nutzerkontos verarbeiten wir die von Ihnen angegebenen Daten (z. B. Name, E-Mail-Adresse), soweit dies zur Vertragserfüllung oder vorvertraglichen Maßnahmen erforderlich ist (Art. 6 Abs. 1 lit. b DSGVO). Kommentare und öffentlich sichtbare Inhalte werden zur Darstellung des Angebots verarbeitet (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO).',
+        'section7_title' => '7. Cookies und lokale Speicherung',
+        'section7_body' => 'Wir verwenden technisch notwendige Cookies bzw. den lokalen Speicher (z. B. für Spracheinstellung, Sitzung nach Login, optional Dark Mode). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO bzw. Art. 6 Abs. 1 lit. b DSGVO, soweit für Vertragsabwicklung erforderlich.',
+        'section7_consent_banner' => 'Am unteren Rand der Seite erscheint ein Hinweis zur Cookie-Einwilligung. Sie können „Nur notwendige“ (technisch erforderliche Funktionen) oder „Alle akzeptieren“ wählen, soweit optionale Dienste (z. B. Turnstile/reCAPTCHA) eingebunden sind. Die Auswahl wird im Browser (localStorage) gespeichert und zusätzlich im Cookie „cookie_consent“ (max. ein Jahr, Pfad /, SameSite=Lax) abgelegt. Über den Link „Cookie-Einstellungen“ im Seitenfuß (bzw. im mobilen Menü) können Sie die Auswahl jederzeit erneut einsehen und ändern; „Schließen“ beendet die Ansicht ohne neue Speicherung. Zum vollständigen Zurücksetzen können Sie Website-Daten in Ihrem Browser löschen.',
+        'section8_title' => '8. Ihre Rechte',
+        'section8_body' => 'Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Außerdem steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbehörde zu (Art. 77 DSGVO).',
+        'section9_title' => '9. Datenschutzbeauftragter',
+        'section9_body' => 'Sofern ein Datenschutzbeauftragter bestellt ist, erreichen Sie diese Person unter der im Impressum angegebenen Kontaktadresse mit dem Zusatz „Datenschutz“.',
+        'updated' => 'Stand: :date',
+    ],
+
+    'terms' => [
+        'page_title' => 'AGB',
+        'heading' => 'Allgemeine Geschäftsbedingungen (AGB)',
+        'section1_title' => '1. Geltungsbereich',
+        'section1_body' => 'Diese Allgemeinen Geschäftsbedingungen gelten für die Nutzung dieses Onlineangebots und der bereitgestellten Funktionen.',
+        'section2_title' => '2. Leistungen',
+        'section2_body' => 'Wir stellen Inhalte und Funktionen nach bestem Wissen bereit. Ein Anspruch auf ständige Verfügbarkeit besteht nicht.',
+        'section3_title' => '3. Nutzerpflichten',
+        'section3_body' => 'Nutzer verpflichten sich, keine rechtswidrigen, beleidigenden oder missbräuchlichen Inhalte zu übermitteln.',
+        'section4_title' => '4. Haftung',
+        'section4_body' => 'Wir haften im Rahmen der gesetzlichen Vorschriften. Für leichte Fahrlässigkeit haften wir nur bei Verletzung wesentlicher Vertragspflichten.',
+        'section5_title' => '5. Schlussbestimmungen',
+        'section5_body' => 'Es gilt das Recht der Bundesrepublik Deutschland, soweit keine zwingenden gesetzlichen Vorschriften entgegenstehen.',
+    ],
+
+];

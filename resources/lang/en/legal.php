@@ -1,0 +1,60 @@
+<?php
+
+return [
+
+    'imprint' => [
+        'page_title' => 'Legal notice',
+        'heading' => 'Legal notice (Imprint)',
+        'section_provider' => 'Information pursuant to applicable law (provider identification)',
+        'label_representative' => 'Authorised representative',
+        'label_contact' => 'Contact',
+        'label_vat' => 'VAT identification number',
+        'label_register' => 'Commercial register',
+        'label_content_liability' => 'Editorial responsibility',
+        'label_dispute' => 'Dispute resolution',
+        'dispute_eu_text' => 'The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr/. We are not obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board unless legally required.',
+    ],
+
+    'privacy' => [
+        'page_title' => 'Privacy',
+        'heading' => 'Privacy policy',
+        'intro' => 'We take the protection of your personal data seriously. Below we describe the nature, scope and purpose of processing when you use this website (:url).',
+        'section1_title' => '1. Controller',
+        'section1_fallback' => 'Please complete the provider details in the legal notice first (LEGAL_* in your .env) so the controller can be named clearly here.',
+        'section2_title' => '2. Hosting and server log files',
+        'section2_body' => 'Our systems typically store technical information in server log files for each request (e.g. browser type/version, operating system, referrer URL, hostname, time of request, IP address). Processing is based on Art. 6 (1) lit. f GDPR (legitimate interest in security and stability). Logs are deleted after an appropriate period unless longer retention is required for security reasons.',
+        'section3_title' => '3. Cloudflare (CDN, abuse protection)',
+        'section3_body' => 'To deliver content quickly and securely (e.g. fonts, scripts), a content delivery network operated by Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA (“Cloudflare”) may be used. Your IP address and technical metadata may be transmitted to Cloudflare servers. Legal basis: Art. 6 (1) lit. f GDPR. Privacy information: https://www.cloudflare.com/privacypolicy/. Where Cloudflare acts as a processor, processing is governed by a data processing agreement pursuant to Art. 28 GDPR.',
+        'section4_title' => '4. Cloudflare Turnstile (CAPTCHA)',
+        'section4_body' => 'On login and registration, Cloudflare Turnstile (Cloudflare, Inc., USA) may be used to reduce automated abuse. JavaScript is loaded from challenges.cloudflare.com; cookies or similar technologies and connections to Cloudflare servers may occur. Legal basis: Art. 6 (1) lit. f GDPR. Details: https://www.cloudflare.com/application-services/products/turnstile/ and https://www.cloudflare.com/privacypolicy/.',
+        'section4_disabled' => 'No Turnstile site key is configured on this installation; this section applies once the service is enabled.',
+        'section5_title' => '5. Google reCAPTCHA (if used)',
+        'section5_body' => 'If Google reCAPTCHA is used on forms, Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, processes personal data (including IP address and usage patterns) for abuse prevention. Legal basis: Art. 6 (1) lit. f GDPR. See https://policies.google.com/privacy',
+        'section6_title' => '6. Accounts, registration and comments',
+        'section6_body' => 'When you register and use your account, we process the data you provide (e.g. name, e-mail) as necessary to perform the contract or pre-contractual steps (Art. 6 (1) lit. b GDPR). Comments and publicly visible content are processed to operate the service (Art. 6 (1) lit. b / f GDPR).',
+        'section7_title' => '7. Cookies and local storage',
+        'section7_body' => 'We use technically necessary cookies or local storage (e.g. language preference, session after login, optional dark mode). Legal basis: Art. 6 (1) lit. f GDPR or Art. 6 (1) lit. b GDPR where required for the contract.',
+        'section7_consent_banner' => 'A cookie consent notice may appear at the bottom of the page. You can choose “Only necessary” (technically required features) or “Accept all” where optional services (e.g. Turnstile/reCAPTCHA) are integrated. Your choice is stored in the browser (localStorage) and additionally in the “cookie_consent” cookie (up to one year, path /, SameSite=Lax). Via “Cookie settings” in the footer (or mobile menu) you can review and change your choice at any time; “Close” leaves the dialog without saving a new choice. To fully reset, clear site data in your browser.',
+        'section8_title' => '8. Your rights',
+        'section8_body' => 'You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21 GDPR), as well as the right to lodge a complaint with a supervisory authority (Art. 77 GDPR).',
+        'section9_title' => '9. Data protection officer',
+        'section9_body' => 'If a data protection officer has been appointed, you can reach them using the contact details in the legal notice, marked “Data protection”.',
+        'updated' => 'Last updated: :date',
+    ],
+
+    'terms' => [
+        'page_title' => 'Terms and Conditions',
+        'heading' => 'Terms and Conditions',
+        'section1_title' => '1. Scope',
+        'section1_body' => 'These terms and conditions apply to the use of this website and its provided features.',
+        'section2_title' => '2. Services',
+        'section2_body' => 'We provide content and features to the best of our knowledge. Continuous availability is not guaranteed.',
+        'section3_title' => '3. User obligations',
+        'section3_body' => 'Users agree not to submit unlawful, abusive, or offensive content.',
+        'section4_title' => '4. Liability',
+        'section4_body' => 'Our liability is governed by applicable law. For slight negligence, we are only liable for breaches of essential contractual obligations.',
+        'section5_title' => '5. Final provisions',
+        'section5_body' => 'The law of the Federal Republic of Germany applies unless mandatory statutory provisions provide otherwise.',
+    ],
+
+];

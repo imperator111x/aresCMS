@@ -1,0 +1,10 @@
+Version 1.0.3
+
+Neu:
+- …
+
+Behoben:
+- …
+
+Hinweise:
+- Nach dem Update: …

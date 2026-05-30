@@ -1,0 +1,7 @@
+# Nur wenn mod_headers verfügbar (sonst Zeile auskommentieren / Datei leeren)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# „Options -Indexes“ bewusst weggelassen – auf manchen Hostern verursacht das in .htaccess einen 500er.
