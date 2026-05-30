@@ -1,4 +1,4 @@
-# News Portal - Laravel Application
+# aresCMS — Laravel Application
 
 A modern news portal built with Laravel featuring a dark Material Design theme.
 
