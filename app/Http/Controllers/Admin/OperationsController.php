@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Setting;
 use App\Support\ActivityLogger;
+use App\Support\PhpCliBinary;
 use Dompdf\Dompdf;
 use Illuminate\Contracts\Foundation\MaintenanceMode;
 use Illuminate\Http\Request;
@@ -667,12 +668,14 @@ class OperationsController extends Controller
 
         @set_time_limit(0);
 
+        $phpCli = PhpCliBinary::resolve();
+
         $steps = [
             'composer_update' => is_file(base_path('composer.phar'))
-                ? [PHP_BINARY, base_path('composer.phar'), 'update', '--with-all-dependencies', '--no-interaction']
+                ? [$phpCli, base_path('composer.phar'), 'update', '--with-all-dependencies', '--no-interaction']
                 : ['composer', 'update', '--with-all-dependencies', '--no-interaction'],
             'composer_audit' => is_file(base_path('composer.phar'))
-                ? [PHP_BINARY, base_path('composer.phar'), 'audit', '--no-interaction']
+                ? [$phpCli, base_path('composer.phar'), 'audit', '--no-interaction']
                 : ['composer', 'audit', '--no-interaction'],
             'npm_install' => [$this->npmBinary(), 'install'],
             'npm_audit_fix' => [$this->npmBinary(), 'audit', 'fix'],
@@ -951,6 +954,15 @@ class OperationsController extends Controller
             @mkdir($composerHome, 0755, true);
         }
         $env['COMPOSER_HOME'] = $composerHome;
+
+        // Prefer CLI php for nested composer/npm scripts (avoid php-fpm from PHP_BINARY).
+        $phpCli = PhpCliBinary::resolve();
+        $env['PHP_CLI_BINARY'] = $phpCli;
+        $phpDir = dirname($phpCli);
+        if ($phpDir !== '' && $phpDir !== '.' && is_dir($phpDir)) {
+            $path = (string) ($env['PATH'] ?? getenv('PATH') ?: '');
+            $env['PATH'] = $phpDir.PATH_SEPARATOR.$path;
+        }
 
         return array_map(static fn ($value) => (string) $value, $env);
     }

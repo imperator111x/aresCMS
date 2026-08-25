@@ -13,6 +13,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | PHP-CLI für Composer / Process (Admin → Betrieb)
+    |--------------------------------------------------------------------------
+    | Unter php-fpm zeigt PHP_BINARY oft auf php-fpm (nicht CLI-fähig).
+    | Optional festlegen, z. B. /opt/lima-php/8.5/bin/php
+    */
+
+    'php_cli_binary' => env('PHP_CLI_BINARY', ''),
+
+    /*
+    |--------------------------------------------------------------------------
     | Update-Quelle
     |--------------------------------------------------------------------------
     | HTTPS-URL zu einer JSON-Datei (Manifest). Standard: offizieller Update-Host.
