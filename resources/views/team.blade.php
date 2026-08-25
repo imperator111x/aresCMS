@@ -69,7 +69,11 @@
                                     @if($user->avatar)
                                         <img src="{{ asset('storage/' . $user->avatar) }}" alt="{{ $user->name }}" class="w-full h-full object-cover">
                                     @else
-                                        <div class="w-full h-full bg-gradient-to-br {{ $user->is_admin ? 'from-primary-400 to-purple-400' : 'from-green-400 to-blue-400' }} flex items-center justify-center">
+                                        <div @class([
+                                            'w-full h-full bg-gradient-to-br flex items-center justify-center',
+                                            'from-primary-400 to-purple-400' => $user->is_admin,
+                                            'from-sky-400 to-blue-400' => ! $user->is_admin,
+                                        ])>
                                             <span class="text-3xl font-bold text-white">{{ substr($user->name, 0, 1) }}</span>
                                         </div>
                                     @endif

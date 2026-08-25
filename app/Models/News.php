@@ -120,6 +120,11 @@ class News extends Model
         return $this->hasMany(Comment::class)->whereNull('parent_id')->orderBy('created_at');
     }
 
+    public function reactions()
+    {
+        return $this->hasMany(NewsReaction::class);
+    }
+
     /**
      * Get the excerpt of the content.
      */

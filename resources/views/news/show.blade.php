@@ -79,6 +79,12 @@
                     </div>
                 </div>
             </article>
+
+            @include('news.partials.reactions', [
+                'news' => $news,
+                'reactionCounts' => $reactionCounts ?? [],
+                'userReaction' => $userReaction ?? null,
+            ])
             
             <!-- Comments Section -->
             @if($news->commentsEnabled())

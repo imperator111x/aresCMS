@@ -94,28 +94,17 @@
                     </div>
                     @include('partials.oauth-buttons', ['oauthGoogle' => $oauthGoogle ?? false, 'oauthDiscord' => $oauthDiscord ?? false, 'mode' => 'login'])
                 @endif
-                
-                <!-- Divider -->
-                <div class="relative my-8">
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="w-full border-t border-gray-200 dark:border-dark-700"></div>
-                    </div>
-                    <div class="relative flex justify-center text-sm">
-                        <span class="px-4 bg-white dark:bg-dark-800 text-gray-500">{{ __('or') }}</span>
-                    </div>
-                </div>
-                
-                <!-- Register Link -->
-                <div class="text-center">
-                    @if(! \App\Models\Setting::getBoolValue('disable_registration', false))
+
+                @if(! \App\Models\Setting::getBoolValue('disable_registration', false))
+                    <div class="text-center mt-8">
                         <p class="text-gray-600 dark:text-gray-400">
                             {{ __("Don't have an account?") }}
                             <a href="{{ route('register') }}" class="text-primary-500 hover:text-primary-600 font-semibold ml-1">
                                 {{ __('Register') }}
                             </a>
                         </p>
-                    @endif
-                </div>
+                    </div>
+                @endif
             </div>
             
             <!-- Back to Home -->

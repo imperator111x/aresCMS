@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+@include('partials.html-source-banner')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" :class="{ 'dark': darkMode }">
 <head>
     @php
@@ -236,6 +237,7 @@
                 @endif
                 @php
                     $settingsActive = request()->routeIs('admin.settings.general*')
+                        || request()->routeIs('admin.settings.themes*')
                         || request()->routeIs('admin.settings.languages*')
                         || request()->routeIs('admin.settings.legal-imprint*');
                 @endphp
@@ -258,6 +260,10 @@
                         <a href="{{ route('admin.settings.general') }}" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm {{ request()->routeIs('admin.settings.general*') ? 'bg-primary-500 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-700' }}">
                             <i class="fas fa-globe w-4"></i>
                             <span>{{ __('General Settings') }}</span>
+                        </a>
+                        <a href="{{ route('admin.settings.themes') }}" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm {{ request()->routeIs('admin.settings.themes*') ? 'bg-primary-500 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-700' }}">
+                            <i class="fas fa-palette w-4"></i>
+                            <span>{{ __('Themes') }}</span>
                         </a>
                         <a href="{{ route('admin.settings.languages') }}" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm {{ request()->routeIs('admin.settings.languages*') ? 'bg-primary-500 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-700' }}">
                             <i class="fas fa-language w-4"></i>

@@ -14,6 +14,9 @@ CMS_UPDATE_TOKEN=geheimer-api-token
 CMS_UPDATE_ENABLED=true
 CMS_MANIFEST_CACHE_TTL=600
 CMS_BUNDLE_VERSION=1.0.0
+# Automatisches Backup vor System-Update (Standard: an, bei Fehler abbrechen)
+# CMS_UPDATE_BACKUP_BEFORE=true
+# CMS_UPDATE_BACKUP_REQUIRED=true
 ```
 
 Ohne gültige Manifest-URL (Standard überschrieben durch leeren `CMS_UPDATE_MANIFEST_URL`) erscheint im Admin der Hinweis „nicht konfiguriert“.
@@ -64,7 +67,19 @@ Nach dem Update werden ausgeführt:
 ## 4. Ablauf im Admin
 
 1. **Update verfügbar**, wenn `version` im Manifest **größer** als installierte Version ist.
-2. Button **Install update** → Download → Prüfung `sha256` (falls gesetzt) → Dateien extrahieren (Blacklist) → optional Composer → Migrationen → Cache leeren → Version in `storage/app/cms/installed_version` schreiben.
+2. Button **Install update** → **automatisches Backup** (`backup:application`: DB + optional `storage/app/public`) → Download → Prüfung `sha256` (falls gesetzt) → Dateien extrahieren (Blacklist) → optional Composer → Migrationen → Cache leeren → Version in `storage/app/cms/installed_version` schreiben.
+
+**Backup vor Update** (Standard aktiv):
+
+| `.env` | Bedeutung |
+|--------|-----------|
+| `CMS_UPDATE_BACKUP_BEFORE=true` | Backup vor dem Update (Standard) |
+| `CMS_UPDATE_BACKUP_REQUIRED=true` | Update abbrechen, wenn Backup fehlschlägt (Standard) |
+| `CMS_UPDATE_BACKUP_REQUIRED=false` | Update trotzdem starten, wenn Backup fehlschlägt |
+
+Backups liegen unter `storage/app/backups/backup_*.zip`. Es ist **kein vollständiges Code-Backup** — bei fehlgeschlagener Migration gibt es kein automatisches Datei-Rollback. **Wiederherstellung:** Admin → Betrieb → Backup wiederherstellen (oder ZIP aus dem Update-Backup).
+
+Nach jedem erfolgreichen Update läuft automatisch ein **Health-Check**; Ergebnis im **Aktivitätsprotokoll** und in der Erfolgsmeldung.
 
 ## 5. Update-Paket mit Artisan erzeugen
 
@@ -84,6 +99,6 @@ Auf allen Sites: `CMS_UPDATE_MANIFEST_URL=https://dein-update-server.de/manifest
 
 ## 6. Hinweise
 
-- Vor größeren Updates **Backup** (z. B. Admin → Betrieb).
+- Vor größeren Updates wird standardmäßig **automatisch ein Backup** erstellt (Admin → System updates). Zusätzlich manuell: Admin → Betrieb.
 - **Neue Konfigurationsschlüssel** aus einem Release musst du ggf. **manuell** in deine bestehenden Dateien unter `config/` übernehmen (werden nicht überschrieben).
 - Mehrere Domains = mehrere `.env` / Manifest-URLs möglich (z. B. anderer Kanal pro Kunde).

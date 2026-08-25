@@ -15,6 +15,8 @@
         'keyUrl' => route('profiles.e2e.key'),
         'e2eStatusUrl' => $e2eStatusUrl ?? url('/friendships/'.$friendship->id.'/e2e-status'),
         'clearMessagesUrl' => $clearMessagesUrl ?? url('/friendships/'.$friendship->id.'/messages/clear'),
+        'markReadUrl' => $markReadUrl ?? route('profiles.messages.mark-read', $friendship),
+        'inboxUrl' => $inboxUrl ?? route('profiles.inbox'),
         'csrf' => csrf_token(),
         'peerPublicKeyJwk' => $peerPublicKeyJwk,
         'myPublicKeyJwk' => $myPublicKeyJwk,
@@ -37,7 +39,8 @@
                 <p class="text-sm text-gray-500 dark:text-gray-400">{{ __('Direct messages') }}</p>
             </div>
         </div>
-        <div class="flex flex-col items-end gap-1 shrink-0">
+        <div class="flex flex-col items-end gap-1 shrink-0 text-right">
+            <a href="{{ route('profiles.inbox') }}" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-500"><i class="fas fa-inbox mr-1"></i>{{ __('All messages') }}</a>
             <a href="{{ route('profiles.show', $peer) }}" class="text-sm text-primary-500 hover:text-primary-600">{{ __('Profile') }}</a>
             <button type="button" id="clear-chat-btn" class="text-sm text-red-600 dark:text-red-400 hover:underline">{{ __('Delete conversation') }}</button>
         </div>
@@ -146,6 +149,70 @@
 
     let chatKeyPair = null;
     let pendingChatImage = null;
+    let userNearBottom = true;
+
+    function isNearBottom(el, threshold) {
+        if (!el) return true;
+        return el.scrollHeight - el.scrollTop - el.clientHeight < (threshold || 120);
+    }
+
+    if (scrollEl) {
+        scrollEl.addEventListener('scroll', function () {
+            userNearBottom = isNearBottom(scrollEl, 120);
+        });
+    }
+
+    function scrollToBottomIfNeeded(force) {
+        if (!scrollEl) return;
+        if (force || userNearBottom) {
+            scrollEl.scrollTop = scrollEl.scrollHeight;
+            userNearBottom = true;
+        }
+    }
+
+    async function markConversationRead(maxId) {
+        if (!cfg.markReadUrl) return;
+        try {
+            const fd = new FormData();
+            fd.append('_token', cfg.csrf);
+            if (maxId) fd.append('max_message_id', String(maxId));
+            await fetch(cfg.markReadUrl, {
+                method: 'POST',
+                body: fd,
+                headers: {
+                    'X-CSRF-TOKEN': cfg.csrf,
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
+                credentials: 'same-origin',
+            });
+            if (window.chatNotifyRefresh) window.chatNotifyRefresh();
+        } catch (e) { /* ignore */ }
+    }
+
+    function notifyIncomingMessage(m) {
+        if (Number(m.sender_id) === cfg.myUserId) return;
+        const title = cfg.peerName;
+        const body = m.preview || @json(__('New message'));
+        if (document.hidden && 'Notification' in window && Notification.permission === 'granted') {
+            try {
+                const n = new Notification(title, { body: body, tag: 'chat-' + cfg.friendshipId });
+                n.onclick = function () { window.focus(); n.close(); };
+            } catch (e) { /* ignore */ }
+        }
+        if (!document.hidden) return;
+        try {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+            o.connect(g);
+            g.connect(ctx.destination);
+            o.frequency.value = 880;
+            g.gain.value = 0.04;
+            o.start();
+            setTimeout(function () { o.stop(); ctx.close(); }, 120);
+        } catch (e) { /* ignore */ }
+    }
 
     (function applyStoredChatMode() {
         const rStd = form.querySelector('input[name="chat_mode"][value="standard"]');
@@ -550,6 +617,7 @@
     }
 
     function appendMessage(m, keyPair) {
+        if (scrollEl && scrollEl.querySelector('[data-msg-row="' + m.id + '"]')) return;
         const mine = Number(m.sender_id) === cfg.myUserId;
         const wrap = document.createElement('div');
         wrap.className = 'flex ' + (mine ? 'justify-end' : 'justify-start');
@@ -606,19 +674,25 @@
         bubble.appendChild(ts);
         wrap.appendChild(bubble);
         scrollEl.appendChild(wrap);
-        scrollEl.scrollTop = scrollEl.scrollHeight;
+        scrollToBottomIfNeeded(false);
     }
 
     async function poll(keyPair) {
         try {
-            const res = await fetch(cfg.fetchUrl + '?after=' + maxId, { credentials: 'same-origin', headers: { 'Accept': 'application/json' } });
+            const res = await fetch(cfg.fetchUrl + '?after=' + maxId + '&mark_read=1', { credentials: 'same-origin', headers: { 'Accept': 'application/json' } });
             if (!res.ok) return;
             const data = await res.json();
+            let hadIncoming = false;
             for (const m of data.messages || []) {
                 if (m.id > maxId) {
                     appendMessage(m, keyPair);
                     maxId = m.id;
+                    if (Number(m.sender_id) !== cfg.myUserId) hadIncoming = true;
                 }
+            }
+            if (hadIncoming) notifyIncomingMessage(data.messages[data.messages.length - 1]);
+            if ((data.messages || []).length) {
+                if (window.chatNotifyRefresh) window.chatNotifyRefresh();
             }
         } catch (e) { /* ignore */ }
     }
@@ -713,7 +787,11 @@
         } catch (e) {
             console.error(e);
         }
-        scrollEl.scrollTop = scrollEl.scrollHeight;
+        scrollToBottomIfNeeded(true);
+        markConversationRead(maxId);
+        if ('Notification' in window && Notification.permission === 'default') {
+            Notification.requestPermission().catch(function () {});
+        }
 
         form.addEventListener('submit', async function (e) {
             e.preventDefault();
@@ -762,19 +840,32 @@
                     alert(err.message || '{{ __("Could not send.") }}');
                     return;
                 }
+                const payload = await res.json().catch(() => ({}));
                 input.value = '';
                 clearPendingImage();
-                await poll(chatKeyPair);
+                if (payload.message) {
+                    appendMessage(payload.message, chatKeyPair);
+                    maxId = Math.max(maxId, Number(payload.message.id) || maxId);
+                    scrollToBottomIfNeeded(true);
+                    markConversationRead(maxId);
+                } else {
+                    await poll(chatKeyPair);
+                }
             } catch (err) {
                 console.error(err);
                 alert((err && err.message) ? err.message : '{{ __("Could not send.") }}');
             }
         });
 
-        setInterval(async () => {
+        setInterval(async function () {
             await poll(chatKeyPair);
             await refreshE2eConfig(chatKeyPair);
-        }, 3500);
+        }, 2500);
+        document.addEventListener('visibilitychange', function () {
+            if (!document.hidden) {
+                poll(chatKeyPair);
+            }
+        });
     })();
 })();
 </script>

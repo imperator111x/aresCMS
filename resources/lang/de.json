@@ -9,6 +9,19 @@
     "Latest News": "Neueste Nachrichten",
     "Read More": "Mehr lesen",
     "Comments": "Kommentare",
+    "Reactions": "Reaktionen",
+    "Like": "Gefällt mir",
+    "Love": "Liebe",
+    "Fire": "Feuer",
+    "Wow": "Wow",
+    "Sad": "Traurig",
+    "Reaction added.": "Reaktion hinzugefügt.",
+    "Reaction updated.": "Reaktion geändert.",
+    "Reaction removed.": "Reaktion entfernt.",
+    "Please login to react to this article.": "Bitte melde dich an, um auf diesen Artikel zu reagieren.",
+    "Your account cannot react to articles.": "Dein Konto kann nicht auf Artikel reagieren.",
+    "Reactions are not available yet. Please run database migrations.": "Reaktionen sind noch nicht verfügbar. Bitte Datenbank-Migrationen ausführen.",
+    "Too Many Attempts.": "Zu viele Anfragen. Bitte warte :seconds Sekunden und versuche es erneut.",
     "Add a Comment": "Kommentar hinzufügen",
     "Your Comment": "Dein Kommentar",
     "Post Comment": "Kommentar posten",
@@ -98,6 +111,7 @@
     "English": "Englisch",
     "CAPTCHA verification failed. Please try again.": "CAPTCHA-Verifizierung fehlgeschlagen. Bitte versuche es erneut.",
     "Our Team": "Unser Team",
+    "Our team": "Unser Team",
     "Team": "Team",
     "Team Members": "Teammitglieder",
     "Meet the amazing people behind our platform": "Lerne die großartigen Menschen hinter unserer Plattform kennen",
@@ -144,6 +158,7 @@
     "You cannot modify your own account": "Du kannst dein eigenes Konto nicht ändern",
     "No Team Members Yet": "Noch keine Teammitglieder",
     "Our team will appear here soon": "Unser Team wird hier bald erscheinen",
+    "Our team will appear here soon.": "Unser Team wird hier bald erscheinen.",
     "Articles": "Artikel",
     "Admins": "Admins",
     "Tell us about yourself...": "Erzähl uns etwas über dich...",
@@ -173,6 +188,8 @@
     "We are always looking for talented individuals to join our growing team.": "Wir suchen immer nach talentierten Personen, die unserem wachsenden Team beitreten.",
     "Get in Touch": "Kontakt aufnehmen",
     "Your trusted source for the latest news and updates.": "Deine vertrauenswürdige Quelle für die neuesten Nachrichten und Updates.",
+    "Your partner for refrigeration, air conditioning and ventilation.": "Ihr Partner für Kälte-, Klima- und Lüftungstechnik — Planung, Installation und Service aus einer Hand.",
+    "Legal information": "Rechtliche Informationen",
     "City, Country": "Stadt, Land",
     "Quick Links": "Schnelllinks",
     "Home": "Startseite",
@@ -247,6 +264,7 @@
     "No team members yet": "Noch keine Teammitglieder",
     "No Team Members Yet": "Noch keine Teammitglieder",
     "Our team will appear here soon": "Unser Team wird hier bald erscheinen",
+    "Our team will appear here soon.": "Unser Team wird hier bald erscheinen.",
     "Articles": "Artikel",
     "Admins": "Admins",
     "Total comments": "Kommentare gesamt",
@@ -460,6 +478,8 @@
     "Start dependency update now? This can take several minutes.": "Abhängigkeits-Update jetzt starten? Das kann mehrere Minuten dauern.",
     "I understand this updates dependency versions and rebuilds assets.": "Ich verstehe, dass dabei Abhängigkeitsversionen aktualisiert und Assets neu gebaut werden.",
     "Run dependency update": "Abhängigkeits-Update starten",
+    "Running…": "Läuft…",
+    "Dependency updates are limited to a few runs per hour per admin account. Wait before retrying if you see a rate limit error.": "Abhängigkeits-Updates sind pro Admin-Konto auf wenige Ausführungen pro Stunde begrenzt. Bei einer Ratenbegrenzung bitte warten und erneut versuchen.",
     "Dependency update output": "Ausgabe Abhängigkeits-Update",
     "Dependency update failed in step: :step": "Abhängigkeits-Update fehlgeschlagen im Schritt: :step",
     "Dependencies updated successfully.": "Abhängigkeiten erfolgreich aktualisiert.",
@@ -626,6 +646,38 @@
     "Run update now? The site may be briefly unavailable. A backup is recommended.": "Update jetzt ausführen? Die Seite kann kurz ausfallen. Ein Backup wird empfohlen.",
     "I understand that config/ and .env stay untouched; uploads in storage/app/public and backups are preserved. I have a backup.": "Ich habe verstanden, dass config/ und .env unverändert bleiben; Uploads in storage/app/public und Backups bleiben erhalten. Ich habe ein Backup.",
     "Install update": "Update installieren",
+    "Automatic backup before update": "Automatisches Backup vor dem Update",
+    "Before installing, a backup (database and uploads) is created automatically under storage/app/backups. The update is cancelled if the backup fails.": "Vor der Installation wird automatisch ein Backup (Datenbank und Uploads) unter storage/app/backups erstellt. Schlägt das Backup fehl, wird das Update abgebrochen.",
+    "Before installing, a backup (database and uploads) is attempted automatically under storage/app/backups. The update continues even if the backup fails.": "Vor der Installation wird automatisch ein Backup (Datenbank und Uploads) unter storage/app/backups versucht. Das Update läuft auch weiter, wenn das Backup fehlschlägt.",
+    "Run update now? The site may be briefly unavailable. A backup is created automatically first.": "Update jetzt ausführen? Die Seite kann kurz ausfallen. Zuerst wird automatisch ein Backup erstellt.",
+    "I understand that config/ and .env stay untouched; uploads in storage/app/public and backups are preserved. An automatic backup runs before the update.": "Ich habe verstanden, dass config/ und .env unverändert bleiben; Uploads in storage/app/public und Backups bleiben erhalten. Vor dem Update wird automatisch ein Backup erstellt.",
+    "Update completed. Installed version: :v. Backup: :backup": "Update abgeschlossen. Installierte Version: :v. Backup: :backup",
+    "Pre-update backup: :file": "Backup vor dem Update: :file",
+    "Automatic backup before update failed: :msg": "Automatisches Backup vor dem Update fehlgeschlagen: :msg",
+    "Update failed: :msg Backup before update: :backup": "Update fehlgeschlagen: :msg Backup vor dem Update: :backup",
+    "Restore backup": "Backup wiederherstellen",
+    "Restore database and public uploads from a backup ZIP. A safety backup is created automatically before restore.": "Datenbank und öffentliche Uploads aus einem Backup-ZIP wiederherstellen. Vorher wird automatisch ein Sicherheits-Backup erstellt.",
+    "This overwrites the current database and replaces files in storage/app/public. The site is briefly put in maintenance mode during restore.": "Dies überschreibt die aktuelle Datenbank und ersetzt Dateien in storage/app/public. Während der Wiederherstellung ist die Seite kurz im Wartungsmodus.",
+    "Restore backup now? Current database and uploads will be overwritten.": "Backup jetzt wiederherstellen? Aktuelle Datenbank und Uploads werden überschrieben.",
+    "Existing backup": "Vorhandenes Backup",
+    "— or upload a ZIP below —": "— oder ZIP unten hochladen —",
+    "Upload backup ZIP": "Backup-ZIP hochladen",
+    "I understand this overwrites the current database and public uploads.": "Ich habe verstanden, dass die aktuelle Datenbank und die öffentlichen Uploads überschrieben werden.",
+    "Restore :file now? Current database and uploads will be overwritten.": ":file jetzt wiederherstellen? Aktuelle Datenbank und Uploads werden überschrieben.",
+    "Actions": "Aktionen",
+    "Restore": "Wiederherstellen",
+    "Select an existing backup or upload a ZIP file.": "Wähle ein vorhandenes Backup oder lade eine ZIP-Datei hoch.",
+    "Backup restored successfully from :file.": "Backup erfolgreich wiederhergestellt aus :file.",
+    "Backup restore failed: :msg": "Backup-Wiederherstellung fehlgeschlagen: :msg",
+    "Database restored.": "Datenbank wiederhergestellt.",
+    "Public uploads restored.": "Öffentliche Uploads wiederhergestellt.",
+    "Safety backup: :file": "Sicherheits-Backup: :file",
+    "Safety backup before restore failed: :msg": "Sicherheits-Backup vor der Wiederherstellung fehlgeschlagen: :msg",
+    "Post-update health check": "Health-Check nach Update",
+    "Health check: :ok OK, :warn warnings, :fail failures": "Health-Check: :ok OK, :warn Warnungen, :fail Fehler",
+    "Some health checks failed — see Activity log or Health check page.": "Einige Health-Checks sind fehlgeschlagen — siehe Aktivitätsprotokoll oder Health-Check-Seite.",
+    "Failed checks: :list": "Fehlgeschlagene Prüfungen: :list",
+    ":ok OK, :warn warnings, :fail failures": ":ok OK, :warn Warnungen, :fail Fehler",
     "Updates are disabled (CMS_UPDATE_ENABLED=false).": "Updates sind deaktiviert (CMS_UPDATE_ENABLED=false).",
     "Manifest could not be loaded. Check URL, TLS, firewall and JSON format.": "Manifest konnte nicht geladen werden. Prüfe URL, TLS, Firewall und JSON-Format.",
     "Update completed. Installed version: :v": "Update abgeschlossen. Installierte Version: :v",
@@ -1041,7 +1093,34 @@
     ,"Breaking News Mode updated.": "Banner wurde aktualisiert."
     ,"Unknown": "Unbekannt"
     ,"Invalid": "Ungültig"
+    ,"Themes": "Themes"
+    ,"Choose the public appearance of your site. Admin area stays unchanged.": "Öffentliches Erscheinungsbild wählen. Der Admin-Bereich bleibt unverändert."
+    ,"Active": "Aktiv"
+    ,"Save theme": "Theme speichern"
+    ,"Preview website": "Website ansehen"
+    ,"Theme updated successfully. The new design is visible on the public site.": "Theme gespeichert. Das neue Design ist auf der Website sichtbar."
+    ,"Please select a valid theme.": "Bitte ein gültiges Theme wählen."
+    ,"Unknown theme: :theme": "Unbekanntes Theme: :theme"
+    ,"Active theme set to :name": "Aktives Theme: :name"
+    ,"Activate this theme": "Dieses Theme aktivieren"
+    ,"This theme is currently active.": "Dieses Theme ist gerade aktiv."
+    ,"Only one theme is installed": "Nur ein Theme ist installiert"
+    ,"Upload the folder themes/magazine/ to your server (via FTP) to enable the Magazine theme.": "Lade den Ordner themes/magazine/ per FTP auf den Server hoch, um das Magazin-Theme zu nutzen."
     ,"Members": "Mitglieder"
+    ,"Messages": "Nachrichten"
+    ,"All messages": "Alle Nachrichten"
+    ,"Your conversations with friends.": "Deine Unterhaltungen mit Freunden."
+    ,"No conversations yet.": "Noch keine Unterhaltungen."
+    ,"Send a friend request in the member directory to start chatting.": "Sende im Mitgliederverzeichnis eine Freundschaftsanfrage, um zu chatten."
+    ,"Browse members": "Mitglieder durchsuchen"
+    ,"Recent chats": "Letzte Chats"
+    ,"View all": "Alle anzeigen"
+    ,"No messages yet": "Noch keine Nachrichten"
+    ,"New message": "Neue Nachricht"
+    ,"New encrypted message": "Neue verschlüsselte Nachricht"
+    ,"Encrypted message": "Verschlüsselte Nachricht"
+    ,"Image": "Bild"
+    ,"You: :preview": "Du: :preview"
     ,"Member directory": "Mitgliederverzeichnis"
     ,"Find members and send friend requests. When a request is accepted, you can chat.": "Finde Mitglieder und sende Freundschaftsanfragen. Nach Annahme könnt ihr chatten."
     ,"Incoming friend requests": "Eingehende Freundschaftsanfragen"
@@ -1112,4 +1191,61 @@
     ,"Invalid image type.": "Ungültiger Bildtyp."
     ,"Image too large.": "Bild zu groß."
     ,"Invalid message format.": "Ungültiges Nachrichtenformat."
+    ,"Craftsmanship you can rely on": "Handwerk, auf das Sie sich verlassen können"
+    ,"Request a quote": "Angebot anfordern"
+    ,"Regional · Reliable · Fair": "Regional · Zuverlässig · Fair"
+    ,"Professional craft services for your home and business — from consultation to completion.": "Professionelle Handwerksleistungen für Zuhause und Gewerbe — von der Beratung bis zur Fertigstellung."
+    ,"On time": "Pünktlich"
+    ,"Reliable appointments": "Termine, die halten"
+    ,"Quality": "Qualität"
+    ,"Clean workmanship": "Saubere Ausführung"
+    ,"Regional": "Regional"
+    ,"Local experts": "Experten vor Ort"
+    ,"Fair": "Fair"
+    ,"Transparent pricing": "Transparente Preise"
+    ,"Our services": "Unsere Leistungen"
+    ,"Installation & repair": "Installation & Reparatur"
+    ,"Professional execution for new builds and renovations.": "Professionelle Ausführung bei Neubau und Sanierung."
+    ,"Residential projects": "Privatkunden"
+    ,"Solutions tailored to your property.": "Lösungen passend zu Ihrer Immobilie."
+    ,"Commercial clients": "Gewerbekunden"
+    ,"Maintenance contracts and project support.": "Wartungsverträge und Projektbetreuung."
+    ,"News & projects": "Neuigkeiten & Projekte"
+    ,"Insights from our daily work.": "Einblicke aus unserem Arbeitsalltag."
+    ,"Show all news": "Alle Beiträge anzeigen"
+    ,"Ready for your project?": "Bereit für Ihr Projekt?"
+    ,"Contact us for a non-binding consultation.": "Kontaktieren Sie uns für eine unverbindliche Beratung."
+    ,"Get in touch": "Kontakt aufnehmen"
+    ,"Meet the people behind our craft": "Die Menschen hinter unserem Handwerk"
+    ,"Experienced professionals for your project — from planning to handover.": "Erfahrene Profis für Ihr Projekt — von der Planung bis zur Übergabe."
+    ,"Upload additional theme folders (e.g. themes/handwerk/ or themes/magazine/) to your server via FTP.": "Laden Sie weitere Theme-Ordner (z. B. themes/handwerk/ oder themes/magazine/) per FTP auf den Server."
+    ,"Cooling · Climate · Ventilation": "Kälte · Klima · Lüftung"
+    ,"Refrigeration and HVAC specialists — planning, installation, maintenance and emergency service for commercial and residential clients.": "Spezialisten für Kälte- und Klimatechnik — Planung, Installation, Wartung und Notdienst für Gewerbe und Privatkunden."
+    ,"Request a consultation": "Beratung anfragen"
+    ,"Our strengths": "Unsere Stärken"
+    ,"Master craft business": "Meisterbetrieb"
+    ,"Certified refrigeration & HVAC": "Zertifizierte Kälte- & Klimatechnik"
+    ,"Energy efficient": "Energieeffizient"
+    ,"Modern systems, lower consumption": "Moderne Anlagen, weniger Verbrauch"
+    ,"Fast response": "Schnelle Hilfe"
+    ,"Maintenance and emergency service": "Wartung und Notdienst"
+    ,"On site in your area": "Vor Ort in Ihrer Region"
+    ,"Refrigeration & HVAC": "Kälte- & Klimatechnik"
+    ,"Air conditioning & heat pumps": "Klimaanlagen & Wärmepumpen"
+    ,"Split units, VRF systems and heat pumps — planned, installed and serviced.": "Split-Geräte, VRF-Anlagen und Wärmepumpen — geplant, installiert und gewartet."
+    ,"Commercial refrigeration": "Gewerbekälte"
+    ,"Cold rooms, refrigeration cabinets and industrial cooling to specification.": "Kühlräume, Kühlmöbel und Industriekälte nach Maß."
+    ,"Ventilation & maintenance": "Lüftung & Wartung"
+    ,"Ventilation technology, leak checks, maintenance contracts and emergency service.": "Lüftungstechnik, Dichtheitsprüfung, Wartungsverträge und Notdienst."
+    ,"References": "Referenzen"
+    ,"Projects & updates": "Projekte & Aktuelles"
+    ,"Installations, maintenance and tips from our technicians.": "Installationen, Wartung und Tipps unserer Techniker."
+    ,"Need cooling or climate control?": "Kühlung oder Klima geplant?"
+    ,"We advise on air conditioning, refrigeration and ventilation — free initial consultation.": "Beratung zu Klima, Kälte und Lüftung — unverbindliches Erstgespräch."
+    ,"Refrigeration & HVAC technicians": "Kälte- & Klimatechniker"
+    ,"Your team for cooling and climate technology": "Ihr Team für Kälte- und Klimatechnik"
+    ,"Certified specialists for installation, commissioning and service of cooling and air-conditioning systems.": "Zertifizierte Fachkräfte für Installation, Inbetriebnahme und Service von Kälte- und Klimaanlagen."
+    ,"HVAC technician": "Klimatechniker"
+    ,"Join our refrigeration & HVAC team": "Verstärken Sie unser Kälte- & Klimateam"
+    ,"We are looking for motivated refrigeration fitters and HVAC technicians.": "Wir suchen motivierte Kälteanlagenbauer und Klimatechniker."
 }

@@ -3,6 +3,7 @@ export default {
     darkMode: 'class',
     content: [
         './resources/views/**/*.blade.php',
+        './themes/**/views/**/*.blade.php',
         './resources/js/**/*.js',
         './app/View/**/*.php',
         './plugins/**/*.blade.php',

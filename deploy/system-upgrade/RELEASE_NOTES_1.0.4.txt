@@ -1,0 +1,11 @@
+Update Laravel
+
+Neu / verbessert:
+• Laravel new vers.
+
+Konfiguration (optional in .env):
+
+Nach Installation:
+• php artisan migrate --force
+• php artisan optimize:clear
+• Prüfen: public/cms-update-verification.txt

@@ -106,13 +106,46 @@ class CmsUpdateManager
 
     /**
      * @param  array<string, mixed>  $manifest
+     * @return array{backup_path: string|null, backup_basename: string|null, health_check: array{checks: list<array{name: string, status: string, message: string}>, summary: array{ok: int, warn: int, fail: int}}}
      */
-    public function applyUpdate(array $manifest): void
+    public function applyUpdate(array $manifest): array
     {
         if (! config('cms.update_enabled', true)) {
             throw new RuntimeException(__('CMS updates are disabled on this installation.'));
         }
 
+        $backupPath = null;
+        if (config('cms.update_backup_before', true)) {
+            $backupPath = $this->createPreUpdateBackup();
+        }
+
+        try {
+            $this->performUpdate($manifest);
+        } catch (\Throwable $e) {
+            if ($backupPath !== null && $backupPath !== '') {
+                throw new RuntimeException(__('Update failed: :msg Backup before update: :backup', [
+                    'msg' => $e->getMessage(),
+                    'backup' => basename($backupPath),
+                ]), 0, $e);
+            }
+
+            throw $e;
+        }
+
+        $healthCheck = app(ApplicationHealthCheckService::class)->run();
+
+        return [
+            'backup_path' => $backupPath !== '' ? $backupPath : null,
+            'backup_basename' => ($backupPath !== null && $backupPath !== '') ? basename($backupPath) : null,
+            'health_check' => $healthCheck,
+        ];
+    }
+
+    /**
+     * @param  array<string, mixed>  $manifest
+     */
+    private function performUpdate(array $manifest): void
+    {
         $remote = (string) $manifest['version'];
         $installed = $this->getInstalledVersion();
         if (! version_compare($remote, $installed, '>')) {
@@ -168,6 +201,26 @@ class CmsUpdateManager
         }
 
         $this->setInstalledVersion($remote);
+    }
+
+    /**
+     * @throws RuntimeException
+     */
+    private function createPreUpdateBackup(): ?string
+    {
+        try {
+            return app(ApplicationBackupService::class)->create();
+        } catch (RuntimeException $e) {
+            if (config('cms.update_backup_required', true)) {
+                throw new RuntimeException(__('Automatic backup before update failed: :msg', [
+                    'msg' => $e->getMessage(),
+                ]), 0, $e);
+            }
+
+            Log::warning('Pre-update backup skipped after failure', ['exception' => $e->getMessage()]);
+
+            return null;
+        }
     }
 
     private function downloadFile(string $url, string $destination): void
@@ -349,9 +402,10 @@ class CmsUpdateManager
     {
         $composerPhar = base_path('composer.phar');
         $composerBin = 'composer';
+        $phpCli = \App\Support\PhpCliBinary::resolve();
 
         if (is_file($composerPhar)) {
-            $cmd = [PHP_BINARY, $composerPhar, 'install', '--no-dev', '--no-interaction', '--optimize-autoloader'];
+            $cmd = [$phpCli, $composerPhar, 'install', '--no-dev', '--no-interaction', '--optimize-autoloader'];
         } else {
             $cmd = [$composerBin, 'install', '--no-dev', '--no-interaction', '--optimize-autoloader'];
         }

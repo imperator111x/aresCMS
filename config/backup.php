@@ -22,6 +22,8 @@ return [
 
     'mysqldump_path' => env('BACKUP_MYSQLDUMP_PATH', 'mysqldump'),
 
+    'mysql_path' => env('BACKUP_MYSQL_PATH', 'mysql'),
+
     /*
     |--------------------------------------------------------------------------
     | Inhalt
@@ -37,5 +39,15 @@ return [
     */
 
     'keep_days' => (int) env('BACKUP_KEEP_DAYS', 14),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Wiederherstellung
+    |--------------------------------------------------------------------------
+    */
+
+    'restore_safety_backup' => filter_var(env('BACKUP_RESTORE_SAFETY_BACKUP', true), FILTER_VALIDATE_BOOLEAN),
+
+    'restore_max_upload_mb' => (int) env('BACKUP_RESTORE_MAX_UPLOAD_MB', 512),
 
 ];

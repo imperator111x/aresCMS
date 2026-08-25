@@ -38,7 +38,44 @@ class RouteServiceProvider extends ServiceProvider
         });
 
         RateLimiter::for('comments', function (Request $request) {
-            return Limit::perMinute(6)->by($request->user()?->id ?: $request->ip());
+            return [
+                Limit::perMinute(6)->by($request->user()?->id ?: $request->ip()),
+                Limit::perHour(60)->by($request->user()?->id ?: $request->ip()),
+            ];
+        });
+
+        RateLimiter::for('reactions', function (Request $request) {
+            return [
+                Limit::perMinute(30)->by($request->user()?->id ?: $request->ip()),
+                Limit::perHour(200)->by($request->user()?->id ?: $request->ip()),
+            ];
+        });
+
+        RateLimiter::for('register', function (Request $request) {
+            return [
+                Limit::perMinute(3)->by($request->ip()),
+                Limit::perHour(10)->by($request->ip()),
+            ];
+        });
+
+        RateLimiter::for('password-reset', function (Request $request) {
+            $email = strtolower((string) $request->input('email', ''));
+
+            return [
+                Limit::perMinute(3)->by($email !== '' ? 'pw:'.$email : $request->ip()),
+                Limit::perHour(8)->by($request->ip()),
+            ];
+        });
+
+        RateLimiter::for('forms', function (Request $request) {
+            return [
+                Limit::perMinute(5)->by($request->ip()),
+                Limit::perHour(30)->by($request->ip()),
+            ];
+        });
+
+        RateLimiter::for('account', function (Request $request) {
+            return Limit::perMinute(20)->by($request->user()?->id ?: $request->ip());
         });
 
         RateLimiter::for('two-factor', function (Request $request) {
@@ -53,6 +90,14 @@ class RouteServiceProvider extends ServiceProvider
 
         RateLimiter::for('oauth', function (Request $request) {
             return Limit::perMinute(20)->by($request->ip());
+        });
+
+        RateLimiter::for('operations-dependencies', function (Request $request) {
+            $key = $request->user()?->id
+                ? 'admin:'.$request->user()->id
+                : $request->ip();
+
+            return Limit::perHour(3)->by($key);
         });
 
         $this->routes(function () {

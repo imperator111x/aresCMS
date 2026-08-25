@@ -124,6 +124,46 @@
                     {{ __('Create backup now') }}
                 </button>
             </form>
+
+            <div class="mt-8 pt-6 border-t border-gray-200 dark:border-dark-700">
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                    <i class="fas fa-undo text-amber-500"></i>
+                    {{ __('Restore backup') }}
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                    {{ __('Restore database and public uploads from a backup ZIP. A safety backup is created automatically before restore.') }}
+                </p>
+                <p class="text-xs text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-md px-3 py-2 mt-3">
+                    {{ __('This overwrites the current database and replaces files in storage/app/public. The site is briefly put in maintenance mode during restore.') }}
+                </p>
+
+                <form method="POST" action="{{ route('admin.operations.backup.restore') }}" enctype="multipart/form-data" class="mt-5 space-y-4" onsubmit="return confirm(@json(__('Restore backup now? Current database and uploads will be overwritten.')));">
+                    @csrf
+                    @if($backups !== [])
+                        <div>
+                            <label for="backup_name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{{ __('Existing backup') }}</label>
+                            <select name="backup_name" id="backup_name" class="w-full rounded-lg border-gray-300 dark:border-dark-600 dark:bg-dark-900 text-sm">
+                                <option value="">{{ __('— or upload a ZIP below —') }}</option>
+                                @foreach($backups as $b)
+                                    <option value="{{ $b['name'] }}">{{ $b['name'] }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    @endif
+                    <div>
+                        <label for="backup_upload" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{{ __('Upload backup ZIP') }}</label>
+                        <input type="file" name="backup_upload" id="backup_upload" accept=".zip,application/zip" class="block w-full text-sm text-gray-600 dark:text-gray-300 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary-50 file:text-primary-700 dark:file:bg-primary-900/30 dark:file:text-primary-300">
+                    </div>
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+                        <input type="checkbox" name="confirm_restore" value="1" class="mt-1 rounded border-gray-300 dark:border-dark-600 text-primary-600 focus:ring-primary-500" required>
+                        <span>{{ __('I understand this overwrites the current database and public uploads.') }}</span>
+                    </label>
+                    <button type="submit" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium">
+                        <i class="fas fa-undo"></i>
+                        {{ __('Restore backup') }}
+                    </button>
+                </form>
+            </div>
         </div>
 
         <div class="bg-white dark:bg-dark-800 rounded-xl border border-gray-200 dark:border-dark-700 p-6">
@@ -230,17 +270,29 @@
             <p class="text-xs text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-md px-3 py-2 mt-3">
                 {{ __('This may take several minutes and can temporarily increase server load. Use only as admin during low-traffic periods.') }}
             </p>
-            <form method="POST" action="{{ route('admin.operations.dependencies.update') }}" class="mt-5 space-y-4" onsubmit="return confirm(@json(__('Start dependency update now? This can take several minutes.')));">
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                {{ __('Dependency updates are limited to a few runs per hour per admin account. Wait before retrying if you see a rate limit error.') }}
+            </p>
+            <form method="POST" action="{{ route('admin.operations.dependencies.update') }}" class="mt-5 space-y-4" id="dependency-update-form" onsubmit="return confirm(@json(__('Start dependency update now? This can take several minutes.')));">
                 @csrf
                 <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
                     <input type="checkbox" name="confirm_dependency_update" value="1" class="mt-1 rounded border-gray-300 dark:border-dark-600 text-primary-600 focus:ring-primary-500" required>
                     <span>{{ __('I understand this updates dependency versions and rebuilds assets.') }}</span>
                 </label>
-                <button type="submit" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium">
+                <button type="submit" id="dependency-update-btn" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed">
                     <i class="fas fa-download"></i>
                     {{ __('Run dependency update') }}
                 </button>
             </form>
+            <script>
+                document.getElementById('dependency-update-form')?.addEventListener('submit', function () {
+                    var btn = document.getElementById('dependency-update-btn');
+                    if (btn) {
+                        btn.disabled = true;
+                        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> {{ __('Running…') }}';
+                    }
+                });
+            </script>
         </div>
     </div>
 
@@ -256,6 +308,7 @@
                         <th class="px-4 py-3">{{ __('File') }}</th>
                         <th class="px-4 py-3">{{ __('Size') }}</th>
                         <th class="px-4 py-3">{{ __('Date') }}</th>
+                        <th class="px-4 py-3 text-right">{{ __('Actions') }}</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 dark:divide-dark-700">
@@ -277,10 +330,21 @@
                             <td class="px-4 py-3 text-gray-600 dark:text-gray-300 whitespace-nowrap">
                                 {{ $b['mtime'] ? \Carbon\Carbon::createFromTimestamp($b['mtime'])->timezone(config('app.timezone'))->format('d.m.Y H:i') : '—' }}
                             </td>
+                            <td class="px-4 py-3 text-right">
+                                <form method="POST" action="{{ route('admin.operations.backup.restore') }}" class="inline" onsubmit="return confirm(@json(__('Restore :file now? Current database and uploads will be overwritten.', ['file' => $b['name']])));">
+                                    @csrf
+                                    <input type="hidden" name="backup_name" value="{{ $b['name'] }}">
+                                    <input type="hidden" name="confirm_restore" value="1">
+                                    <button type="submit" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 text-xs font-medium hover:bg-amber-200 dark:hover:bg-amber-900/50">
+                                        <i class="fas fa-undo"></i>
+                                        {{ __('Restore') }}
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="3" class="px-4 py-10 text-center text-gray-500 dark:text-gray-400">{{ __('No backups yet. Run a backup above or use the scheduler.') }}</td>
+                            <td colspan="4" class="px-4 py-10 text-center text-gray-500 dark:text-gray-400">{{ __('No backups yet. Run a backup above or use the scheduler.') }}</td>
                         </tr>
                     @endforelse
                 </tbody>

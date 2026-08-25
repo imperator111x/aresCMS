@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Setting;
+use App\Services\ApplicationBackupService;
+use App\Services\ApplicationHealthCheckService;
 use App\Support\ActivityLogger;
+use App\Support\PhpCliBinary;
 use Dompdf\Dompdf;
 use Illuminate\Contracts\Foundation\MaintenanceMode;
 use Illuminate\Http\Request;
@@ -12,6 +15,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
@@ -189,6 +193,90 @@ class OperationsController extends Controller
         return back()
             ->with('success', __('Backup created successfully.'))
             ->with('backup_cli_output', $output !== '' ? $output : null);
+    }
+
+    public function restoreBackup(Request $request, ApplicationBackupService $backupService)
+    {
+        $maxKb = max(1, (int) config('backup.restore_max_upload_mb', 512)) * 1024;
+
+        $request->validate([
+            'confirm_restore' => ['required', 'accepted'],
+            'backup_name' => ['nullable', 'string', 'max:255'],
+            'backup_upload' => ['nullable', 'file', 'mimes:zip', 'max:'.$maxKb],
+        ]);
+
+        if (! $request->hasFile('backup_upload') && trim((string) $request->input('backup_name')) === '') {
+            return back()->with('error', __('Select an existing backup or upload a ZIP file.'));
+        }
+
+        @set_time_limit(0);
+
+        $zipPath = null;
+        $sourceLabel = null;
+        $uploadedTemp = null;
+
+        try {
+            if ($request->hasFile('backup_upload')) {
+                $uploaded = $request->file('backup_upload');
+                $uploadedTemp = storage_path('app/backups/_upload_'.now()->format('Y-m-d_His').'.zip');
+                $uploaded->move(dirname($uploadedTemp), basename($uploadedTemp));
+                $zipPath = $uploadedTemp;
+                $sourceLabel = basename($uploadedTemp);
+            } else {
+                $basename = basename((string) $request->input('backup_name'));
+                $zipPath = $backupService->resolveExistingBackupPath($basename);
+                $sourceLabel = $basename;
+            }
+
+            $wasDown = app()->isDownForMaintenance();
+            if (! $wasDown) {
+                Artisan::call('down', ['--retry' => 60]);
+            }
+
+            try {
+                $result = $backupService->restore($zipPath);
+            } finally {
+                if (! $wasDown) {
+                    Artisan::call('up');
+                }
+            }
+
+            try {
+                Artisan::call('optimize:clear');
+            } catch (\Throwable $e) {
+                Log::warning('Cache clear after backup restore failed', ['exception' => $e->getMessage()]);
+            }
+
+            $details = [];
+            if ($result['database']) {
+                $details[] = __('Database restored.');
+            }
+            if ($result['public_storage']) {
+                $details[] = __('Public uploads restored.');
+            }
+            if (! empty($result['safety_backup'])) {
+                $details[] = __('Safety backup: :file', ['file' => basename((string) $result['safety_backup'])]);
+            }
+
+            $message = __('Backup restored successfully from :file.', ['file' => $sourceLabel]);
+            if ($details !== []) {
+                $message .= ' '.implode(' ', $details);
+            }
+
+            ActivityLogger::log('operations.backup.restored', Str::limit($message, 500));
+
+            return back()->with('success', $message);
+        } catch (\Throwable $e) {
+            ActivityLogger::log('operations.backup.restore.failed', Str::limit($e->getMessage(), 450));
+
+            return back()->with('error', __('Backup restore failed: :msg', [
+                'msg' => Str::limit($e->getMessage(), 220),
+            ]));
+        } finally {
+            if ($uploadedTemp !== null && is_file($uploadedTemp)) {
+                @unlink($uploadedTemp);
+            }
+        }
     }
 
     public function runMigrate(Request $request)
@@ -667,12 +755,14 @@ class OperationsController extends Controller
 
         @set_time_limit(0);
 
+        $phpCli = PhpCliBinary::resolve();
+
         $steps = [
             'composer_update' => is_file(base_path('composer.phar'))
-                ? [PHP_BINARY, base_path('composer.phar'), 'update', '--with-all-dependencies', '--no-interaction']
+                ? [$phpCli, base_path('composer.phar'), 'update', '--with-all-dependencies', '--no-interaction']
                 : ['composer', 'update', '--with-all-dependencies', '--no-interaction'],
             'composer_audit' => is_file(base_path('composer.phar'))
-                ? [PHP_BINARY, base_path('composer.phar'), 'audit', '--no-interaction']
+                ? [$phpCli, base_path('composer.phar'), 'audit', '--no-interaction']
                 : ['composer', 'audit', '--no-interaction'],
             'npm_install' => [$this->npmBinary(), 'install'],
             'npm_audit_fix' => [$this->npmBinary(), 'audit', 'fix'],
@@ -756,140 +846,14 @@ class OperationsController extends Controller
         return view('admin.operations.server-info', compact('info', 'extensions'));
     }
 
-    public function healthCheck()
+    public function healthCheck(ApplicationHealthCheckService $healthCheck)
     {
-        $checks = [];
+        $result = $healthCheck->run();
 
-        // Database connection
-        try {
-            DB::selectOne('select 1 as ok');
-            $checks[] = [
-                'name' => __('Database connection'),
-                'status' => 'ok',
-                'message' => __('Connection successful.'),
-            ];
-        } catch (\Throwable $e) {
-            $checks[] = [
-                'name' => __('Database connection'),
-                'status' => 'fail',
-                'message' => __('Connection failed: :msg', ['msg' => Str::limit($e->getMessage(), 140)]),
-            ];
-        }
-
-        // Cache write/read
-        try {
-            $cacheDriver = (string) (
-                config('cache.default')
-                ?: env('CACHE_STORE')
-                ?: env('CACHE_DRIVER')
-                ?: 'unknown'
-            );
-
-            if (strtolower($cacheDriver) === 'file') {
-                File::ensureDirectoryExists(storage_path('framework/cache/data'));
-            }
-
-            $key = 'healthcheck:'.Str::random(12);
-            Cache::put($key, 'ok', now()->addMinutes(1));
-            $readBack = Cache::get($key) === 'ok';
-            Cache::forget($key);
-
-            $status = $readBack ? 'ok' : 'fail';
-            $message = $readBack
-                ? __('Read/write successful. Driver: :driver', ['driver' => $cacheDriver])
-                : __('Read/write failed. Driver: :driver', ['driver' => $cacheDriver]);
-
-            if (! $readBack && in_array(strtolower($cacheDriver), ['null', 'noop'], true)) {
-                $status = 'warn';
-                $message = __('Cache driver ":driver" does not persist values (expected behavior).', ['driver' => $cacheDriver]);
-            }
-
-            $checks[] = [
-                'name' => __('Cache store'),
-                'status' => $status,
-                'message' => $message,
-            ];
-        } catch (\Throwable $e) {
-            $cacheDriver = (string) (
-                config('cache.default')
-                ?: env('CACHE_STORE')
-                ?: env('CACHE_DRIVER')
-                ?: 'unknown'
-            );
-            $cachePath = storage_path('framework/cache/data');
-            $pathHint = '';
-            if (strtolower($cacheDriver) === 'file') {
-                $pathHint = ' | '.__('Path: :path | exists: :exists | writable: :writable', [
-                    'path' => $cachePath,
-                    'exists' => is_dir($cachePath) ? 'yes' : 'no',
-                    'writable' => is_writable($cachePath) ? 'yes' : 'no',
-                ]);
-            }
-
-            $checks[] = [
-                'name' => __('Cache store'),
-                'status' => 'fail',
-                'message' => __('Read/write failed: :msg', ['msg' => Str::limit($e->getMessage(), 140)]).$pathHint,
-            ];
-        }
-
-        // Storage write/read (public disk)
-        try {
-            $path = 'health/check-'.Str::random(12).'.txt';
-            Storage::disk('public')->put($path, 'ok');
-            $exists = Storage::disk('public')->exists($path);
-            Storage::disk('public')->delete($path);
-            $checks[] = [
-                'name' => __('Public storage disk'),
-                'status' => $exists ? 'ok' : 'fail',
-                'message' => $exists ? __('Read/write successful.') : __('Read/write failed.'),
-            ];
-        } catch (\Throwable $e) {
-            $checks[] = [
-                'name' => __('Public storage disk'),
-                'status' => 'fail',
-                'message' => __('Read/write failed: :msg', ['msg' => Str::limit($e->getMessage(), 140)]),
-            ];
-        }
-
-        // Public storage link/route fallback indicator
-        $publicStorageLink = public_path('storage');
-        $hasStorageAccess = is_link($publicStorageLink) || is_dir($publicStorageLink);
-        $checks[] = [
-            'name' => __('Public storage path'),
-            'status' => $hasStorageAccess ? 'ok' : 'warn',
-            'message' => $hasStorageAccess
-                ? __('public/storage is available.')
-                : __('public/storage is missing. Fallback route is active, but a symlink is recommended.'),
-        ];
-
-        // App debug
-        $isDebug = (bool) config('app.debug');
-        $checks[] = [
-            'name' => __('App debug mode'),
-            'status' => $isDebug ? 'warn' : 'ok',
-            'message' => $isDebug
-                ? __('APP_DEBUG is enabled. Disable it in production.')
-                : __('APP_DEBUG is disabled.'),
-        ];
-
-        // Queue mode hint
-        $queueConnection = (string) config('queue.default');
-        $checks[] = [
-            'name' => __('Queue connection'),
-            'status' => $queueConnection === 'sync' ? 'warn' : 'ok',
-            'message' => $queueConnection === 'sync'
-                ? __('Queue is set to sync. For production, a worker queue is recommended.')
-                : __('Queue driver: :driver', ['driver' => $queueConnection]),
-        ];
-
-        $summary = [
-            'ok' => collect($checks)->where('status', 'ok')->count(),
-            'warn' => collect($checks)->where('status', 'warn')->count(),
-            'fail' => collect($checks)->where('status', 'fail')->count(),
-        ];
-
-        return view('admin.operations.health-check', compact('checks', 'summary'));
+        return view('admin.operations.health-check', [
+            'checks' => $result['checks'],
+            'summary' => $result['summary'],
+        ]);
     }
 
     private function npmBinary(): string
@@ -951,6 +915,15 @@ class OperationsController extends Controller
             @mkdir($composerHome, 0755, true);
         }
         $env['COMPOSER_HOME'] = $composerHome;
+
+        // Prefer CLI php for nested composer/npm scripts (avoid php-fpm from PHP_BINARY).
+        $phpCli = PhpCliBinary::resolve();
+        $env['PHP_CLI_BINARY'] = $phpCli;
+        $phpDir = dirname($phpCli);
+        if ($phpDir !== '' && $phpDir !== '.' && is_dir($phpDir)) {
+            $path = (string) ($env['PATH'] ?? getenv('PATH') ?: '');
+            $env['PATH'] = $phpDir.PATH_SEPARATOR.$path;
+        }
 
         return array_map(static fn ($value) => (string) $value, $env);
     }

@@ -2,8 +2,12 @@
 
 namespace Plugins\UserProfiles\Http\Controllers;
 
+require_once dirname(__DIR__, 2).'/bootstrap.php';
+
 use App\Http\Controllers\Controller;
+use App\Models\ProfileChatReadCursor;
 use App\Models\User;
+use App\Services\ProfileChatUnreadService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
@@ -36,10 +40,66 @@ class ProfileController extends Controller
             ->orderByDesc('created_at')
             ->get();
 
+        $conversations = ProfileChatUnreadService::isAvailable()
+            ? ProfileChatUnreadService::conversationsFor($request->user())
+            : collect();
+
         return view()->file(
             base_path('plugins/UserProfiles/resources/views/index.blade.php'),
-            compact('users', 'incoming', 'search')
+            compact('users', 'incoming', 'search', 'conversations')
         );
+    }
+
+    public function inbox(Request $request)
+    {
+        $this->ensureTables();
+
+        $conversations = ProfileChatUnreadService::isAvailable()
+            ? ProfileChatUnreadService::conversationsFor($request->user())
+            : collect();
+
+        return view()->file(
+            base_path('plugins/UserProfiles/resources/views/inbox.blade.php'),
+            [
+                'conversations' => $conversations,
+                'totalUnread' => ProfileChatUnreadService::totalUnreadCount($request->user()),
+            ]
+        );
+    }
+
+    public function unreadSummary(Request $request): JsonResponse
+    {
+        $this->ensureTables();
+
+        if (! ProfileChatUnreadService::isAvailable()) {
+            return response()->json([
+                'total_unread' => 0,
+                'conversations' => [],
+            ]);
+        }
+
+        return response()->json([
+            'total_unread' => ProfileChatUnreadService::totalUnreadCount($request->user()),
+            'conversations' => ProfileChatUnreadService::unreadSummaryPayload($request->user()),
+        ]);
+    }
+
+    public function markRead(Request $request, Friendship $friendship): JsonResponse
+    {
+        $this->ensureTables();
+        $this->authorizeFriendship($request, $friendship);
+
+        if (! $friendship->isAccepted()) {
+            abort(403);
+        }
+
+        $maxId = (int) $request->input('max_message_id', 0);
+        ProfileChatUnreadService::markAsRead($request->user(), $friendship, $maxId > 0 ? $maxId : null);
+
+        return response()->json([
+            'ok' => true,
+            'total_unread' => ProfileChatUnreadService::totalUnreadCount($request->user()),
+        ]);
     }
 
     public function show(Request $request, User $user)
@@ -153,6 +213,8 @@ class ProfileController extends Controller
             ->limit(200)
             ->get();
 
+        ProfileChatUnreadService::markAsRead($request->user(), $friendship);
+
         $myKey = E2ePublicKey::query()->where('user_id', $request->user()->id)->value('public_key_jwk');
         $peerKey = E2ePublicKey::query()->where('user_id', $peer->id)->value('public_key_jwk');
 
@@ -167,6 +229,8 @@ class ProfileController extends Controller
                 // Direkte URL: funktioniert auch wenn Routen-Cache Plugin-Routen ohne Namen enthält
                 'e2eStatusUrl' => url('/friendships/'.$friendship->id.'/e2e-status'),
                 'clearMessagesUrl' => url('/friendships/'.$friendship->id.'/messages/clear'),
+                'markReadUrl' => route('profiles.messages.mark-read', $friendship),
+                'inboxUrl' => route('profiles.inbox'),
             ]
         );
     }
@@ -181,6 +245,12 @@ class ProfileController extends Controller
         }
 
         ChatMessage::query()->where('friendship_id', $friendship->id)->delete();
+
+        if (ProfileChatUnreadService::isAvailable()) {
+            ProfileChatReadCursor::query()
+                ->where('friendship_id', $friendship->id)
+                ->update(['last_read_message_id' => 0]);
+        }
 
         return response()->json(['ok' => true]);
     }
@@ -224,17 +294,16 @@ class ProfileController extends Controller
             ->limit(100)
             ->get();
 
+        if ($request->boolean('mark_read')) {
+            $latestId = $messages->isNotEmpty()
+                ? (int) $messages->max('id')
+                : (int) ChatMessage::query()->where('friendship_id', $friendship->id)->max('id');
+            ProfileChatUnreadService::markAsRead($request->user(), $friendship, $latestId);
+        }
+
         return response()->json([
-            'messages' => $messages->map(static function (ChatMessage $m) {
-                return [
-                    'id' => $m->id,
-                    'sender_id' => $m->sender_id,
-                    'body' => $m->body,
-                    'is_e2e' => $m->is_e2e,
-                    'created_at' => $m->created_at?->toIso8601String(),
-                    'sender_name' => $m->sender?->name,
-                ];
-            }),
+            'messages' => $messages->map(static fn (ChatMessage $m) => self::formatMessagePayload($m)),
+            'total_unread' => ProfileChatUnreadService::totalUnreadCount($request->user()),
         ]);
     }
 
@@ -287,18 +356,44 @@ class ProfileController extends Controller
             $body = $this->normalizeStandardChatBody($body);
         }
 
-        ChatMessage::query()->create([
+        $message = ChatMessage::query()->create([
             'friendship_id' => $friendship->id,
             'sender_id' => $request->user()->id,
             'body' => $body,
             'is_e2e' => $isE2e,
         ]);
 
+        $message->load('sender');
+        ProfileChatUnreadService::markAsRead($request->user(), $friendship, (int) $message->id);
+
         if ($request->expectsJson()) {
-            return response()->json(['ok' => true]);
+            return response()->json([
+                'ok' => true,
+                'message' => self::formatMessagePayload($message),
+            ]);
         }
 
         return back();
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    protected static function formatMessagePayload(ChatMessage $m): array
+    {
+        return [
+            'id' => $m->id,
+            'sender_id' => $m->sender_id,
+            'body' => $m->body,
+            'is_e2e' => $m->is_e2e,
+            'created_at' => $m->created_at?->toIso8601String(),
+            'sender_name' => $m->sender?->name,
+            'preview' => ChatMessage::notificationPreview(
+                (string) $m->body,
+                (bool) $m->is_e2e,
+                auth()->check() && (int) $m->sender_id === (int) auth()->id()
+            ),
+        ];
     }
 
     public function storePublicKey(Request $request): JsonResponse

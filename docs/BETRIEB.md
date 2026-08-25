@@ -11,6 +11,7 @@ Siehe **[docs/UPDATES.md](UPDATES.md)** — Manifest-URL in `.env`, Admin-Menü 
 Als eingeloggter Admin unter **Admin → Betrieb** (`/admin/operations`):
 
 - **Backup jetzt** – führt `php artisan backup:application` aus (ZIP unter `storage/app/backups`).
+- **Backup wiederherstellen** – ZIP aus der Liste oder Upload: stellt **Datenbank** und **`storage/app/public`** wieder her. Vorher wird automatisch ein **Sicherheits-Backup** erstellt; während der Wiederherstellung kurz **Wartungsmodus**.
 - **Wartungsmodus ein/aus** – entspricht `php artisan down` / `up` (ohne `--render`). Die Seite **`errors.maintenance`** wird bei jedem Request **dynamisch** von der Middleware gerendert – inkl. aktuellem Link zur Admin-Anmeldung.
 
 Hinweis: **Eingeloggte Admins** können die ganze Seite nutzen; **Gäste** sehen die Wartungsseite. **„Administrator-Anmeldung“** → **`/wartung/admin-anmeldung`**. Optional: **Bypass-URL** mit `--secret` zum Testen der öffentlichen Ansicht.
@@ -31,7 +32,7 @@ Der Befehl `php artisan backup:application` erstellt unter **`storage/app/backup
 php artisan backup:application
 ```
 
-### Windows (XAMPP) – Pfad zu mysqldump
+### Windows (XAMPP) – Pfad zu mysqldump / mysql
 
 Ohne Eintrag in `.env` versucht das Backup nacheinander u. a.:
 
@@ -43,6 +44,9 @@ Wenn es trotzdem scheitert, in `.env` festlegen:
 
 ```env
 BACKUP_MYSQLDUMP_PATH="C:\xampp\mysql\bin\mysqldump.exe"
+BACKUP_MYSQL_PATH="C:\xampp\mysql\bin\mysql.exe"
+BACKUP_RESTORE_SAFETY_BACKUP=true
+BACKUP_RESTORE_MAX_UPLOAD_MB=512
 ```
 
 ### Geplante Ausführung (Cron / Task Scheduler)
