@@ -349,9 +349,10 @@ class CmsUpdateManager
     {
         $composerPhar = base_path('composer.phar');
         $composerBin = 'composer';
+        $phpCli = \App\Support\PhpCliBinary::resolve();
 
         if (is_file($composerPhar)) {
-            $cmd = [PHP_BINARY, $composerPhar, 'install', '--no-dev', '--no-interaction', '--optimize-autoloader'];
+            $cmd = [$phpCli, $composerPhar, 'install', '--no-dev', '--no-interaction', '--optimize-autoloader'];
         } else {
             $cmd = [$composerBin, 'install', '--no-dev', '--no-interaction', '--optimize-autoloader'];
         }
