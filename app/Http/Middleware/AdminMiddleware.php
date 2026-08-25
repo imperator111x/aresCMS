@@ -35,6 +35,7 @@ class AdminMiddleware
         'admin.operations.cli' => 'operations',
         'admin.operations.cli.execute' => 'operations',
         'admin.operations.backup' => 'operations',
+        'admin.operations.backup.restore' => 'operations',
         'admin.operations.migrate' => 'operations',
         'admin.operations.cache-clear' => 'operations',
         'admin.operations.maintenance.*' => 'operations',

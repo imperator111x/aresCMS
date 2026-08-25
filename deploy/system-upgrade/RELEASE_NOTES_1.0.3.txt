@@ -1,0 +1,11 @@
+aresCMS 1.0.3 — System-Update
+
+Neu / verbessert:
+• laravel update
+
+Konfiguration (optional in .env):
+
+Nach Installation:
+• php artisan migrate --force
+• php artisan optimize:clear
+• Prüfen: public/cms-update-verification.txt

@@ -1,11 +1,17 @@
 <?php
 
+require_once __DIR__.'/../src/bootstrap.php';
+
 use Illuminate\Support\Facades\Route;
 use Plugins\UserProfiles\Http\Controllers\ProfileController;
 
 Route::middleware(['web', 'auth'])
     ->group(function (): void {
         Route::get('/members', [ProfileController::class, 'index'])->name('profiles.index');
+        Route::get('/messages', [ProfileController::class, 'inbox'])->name('profiles.inbox');
+        Route::get('/messages/unread-summary', [ProfileController::class, 'unreadSummary'])
+            ->middleware('throttle:60,1')
+            ->name('profiles.unread-summary');
         Route::get('/members/{user}', [ProfileController::class, 'show'])->whereNumber('user')->name('profiles.show');
         Route::post('/members/{user}/friend-request', [ProfileController::class, 'sendFriendRequest'])
             ->whereNumber('user')
@@ -25,6 +31,9 @@ Route::middleware(['web', 'auth'])
         Route::get('/friendships/{friendship}/messages', [ProfileController::class, 'fetchMessages'])
             ->whereNumber('friendship')
             ->name('profiles.messages.fetch');
+        Route::post('/friendships/{friendship}/messages/read', [ProfileController::class, 'markRead'])
+            ->whereNumber('friendship')
+            ->name('profiles.messages.mark-read');
         Route::post('/friendships/{friendship}/messages/clear', [ProfileController::class, 'clearMessages'])
             ->whereNumber('friendship')
             ->name('profiles.messages.clear');

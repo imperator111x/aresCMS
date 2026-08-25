@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Models\NewsCategory;
 use App\Models\News;
+use App\Models\NewsReaction;
 use App\Models\User;
 use App\Support\ActivityLogger;
+use App\Services\ThemeManager;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
@@ -36,7 +38,54 @@ class NewsController extends Controller
 
         $news = $query->limit(3)->get();
 
-        return view('news.home', compact('news'));
+        return view('news.home', [
+            'news' => $news,
+            'homeServices' => $this->homeServiceCards(),
+        ]);
+    }
+
+    /**
+     * @return list<array{icon: string, title: string, text: string}>
+     */
+    protected function homeServiceCards(): array
+    {
+        if (app(ThemeManager::class)->activeSlug() === 'handwerk') {
+            return [
+                [
+                    'icon' => 'fa-snowflake',
+                    'title' => __('Air conditioning & heat pumps'),
+                    'text' => __('Split units, VRF systems and heat pumps — planned, installed and serviced.'),
+                ],
+                [
+                    'icon' => 'fa-temperature-low',
+                    'title' => __('Commercial refrigeration'),
+                    'text' => __('Cold rooms, refrigeration cabinets and industrial cooling to specification.'),
+                ],
+                [
+                    'icon' => 'fa-fan',
+                    'title' => __('Ventilation & maintenance'),
+                    'text' => __('Ventilation technology, leak checks, maintenance contracts and emergency service.'),
+                ],
+            ];
+        }
+
+        return [
+            [
+                'icon' => 'fa-wrench',
+                'title' => __('Installation & repair'),
+                'text' => __('Professional execution for new builds and renovations.'),
+            ],
+            [
+                'icon' => 'fa-house-chimney',
+                'title' => __('Residential projects'),
+                'text' => __('Solutions tailored to your property.'),
+            ],
+            [
+                'icon' => 'fa-building',
+                'title' => __('Commercial clients'),
+                'text' => __('Maintenance contracts and project support.'),
+            ],
+        ];
     }
 
     public function allNews(Request $request)
@@ -127,7 +176,12 @@ class NewsController extends Controller
             ->limit(6)
             ->get(['id', 'title', 'image', 'content', 'created_at', 'published_at']);
 
-        return view('news.show', compact('news', 'teamMembers', 'latestNews'));
+        $reactionCounts = NewsReaction::countsForNews($news->id);
+        $userReaction = auth()->check()
+            ? NewsReaction::userReactionType($news->id, (int) auth()->id())
+            : null;
+
+        return view('news.show', compact('news', 'teamMembers', 'latestNews', 'reactionCounts', 'userReaction'));
     }
 
     /**

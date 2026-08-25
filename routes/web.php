@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\NewsReactionController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\MaintenanceAdminLoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -19,6 +20,7 @@ use App\Http\Controllers\Admin\PageController as AdminPageController;
 use App\Http\Controllers\Admin\PluginController as AdminPluginController;
 use App\Http\Controllers\Admin\SearchController as AdminSearchController;
 use App\Http\Controllers\Admin\SystemUpdateController as AdminSystemUpdateController;
+use App\Http\Controllers\Admin\ThemeController as AdminThemeController;
 use App\Http\Controllers\Admin\TwoFactorSecurityController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\FormController as AdminFormController;
@@ -125,14 +127,19 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 // Registration Routes
 Route::middleware('registration.enabled')->group(function () {
     Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-    Route::post('/register', [RegisterController::class, 'register']);
+    Route::post('/register', [RegisterController::class, 'register'])
+        ->middleware('throttle:register');
 });
 
 // Password Reset Routes
 Route::get('/password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
-Route::post('/password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::post('/password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])
+    ->middleware('throttle:password-reset')
+    ->name('password.email');
 Route::get('/password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
-Route::post('/password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+Route::post('/password/reset', [ResetPasswordController::class, 'reset'])
+    ->middleware('throttle:password-reset')
+    ->name('password.update');
 
 // Email Verification Routes
 Route::get('/email/verify', [VerificationController::class, 'show'])->name('verification.notice');
@@ -160,7 +167,7 @@ Route::middleware(['auth', 'throttle:oauth'])->group(function () {
         ->name('oauth.redirect.link');
 });
 
-Route::middleware('auth')->prefix('account')->name('account.')->group(function () {
+Route::middleware(['auth', 'throttle:account'])->prefix('account')->name('account.')->group(function () {
     Route::get('/', [AccountController::class, 'show'])->name('dashboard');
     Route::post('/avatar', [AccountController::class, 'updateAvatar'])->name('avatar.update');
     Route::post('/avatar/discord', [AccountController::class, 'avatarFromDiscord'])->name('avatar.discord');
@@ -175,10 +182,13 @@ Route::middleware('auth')->prefix('account')->name('account.')->group(function (
 Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
 Route::get('/page/{slug}', [PageController::class, 'show'])->name('page.show');
 Route::post('/forms/{slug}/submit', [FormSubmissionController::class, 'store'])
-    ->middleware('throttle:6,1')
+    ->middleware('throttle:forms')
     ->name('forms.submit');
+Route::post('/news/{news}/reactions', [NewsReactionController::class, 'toggle'])
+    ->name('news.reactions.toggle')
+    ->middleware(['auth', 'throttle:reactions']);
 Route::post('/news/{news}/comments', [NewsController::class, 'storeComment'])->name('news.comments.store')->middleware(['auth', 'throttle:comments']);
-Route::delete('/news/{news}/comments/{comment}', [NewsController::class, 'destroyComment'])->name('news.comments.destroy')->middleware('auth');
+Route::delete('/news/{news}/comments/{comment}', [NewsController::class, 'destroyComment'])->name('news.comments.destroy')->middleware(['auth', 'throttle:comments']);
 
 // Admin Routes
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
@@ -208,6 +218,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
     Route::post('/operations/backup', [AdminOperationsController::class, 'runBackup'])
         ->middleware('throttle:6,60')
         ->name('operations.backup');
+    Route::post('/operations/backup/restore', [AdminOperationsController::class, 'restoreBackup'])
+        ->middleware('throttle:3,60')
+        ->name('operations.backup.restore');
     Route::post('/operations/migrate', [AdminOperationsController::class, 'runMigrate'])
         ->middleware('throttle:3,60')
         ->name('operations.migrate');
@@ -218,7 +231,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
         ->middleware('throttle:2,30')
         ->name('operations.frontend-build');
     Route::post('/operations/dependencies/update', [AdminOperationsController::class, 'updateDependencies'])
-        ->middleware('throttle:1,30')
+        ->middleware('throttle:operations-dependencies')
         ->name('operations.dependencies.update');
     Route::post('/operations/maintenance/enable', [AdminOperationsController::class, 'maintenanceEnable'])
         ->middleware('throttle:12,60')
@@ -276,6 +289,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
     Route::put('/settings', [App\Http\Controllers\Admin\SettingController::class, 'update'])->name('settings.update');
     Route::get('/settings/general', [App\Http\Controllers\Admin\SettingController::class, 'general'])->name('settings.general');
     Route::put('/settings/general', [App\Http\Controllers\Admin\SettingController::class, 'updateGeneral'])->name('settings.general.update');
+    Route::get('/settings/themes', [AdminThemeController::class, 'index'])->name('settings.themes');
+    Route::match(['put', 'post'], '/settings/themes', [AdminThemeController::class, 'update'])->name('settings.themes.update');
     Route::get('/settings/logo', [App\Http\Controllers\Admin\SettingController::class, 'logo'])->name('settings.logo');
     Route::put('/settings/logo', [App\Http\Controllers\Admin\SettingController::class, 'updateLogo'])->name('settings.logo.update');
     Route::get('/settings/registration', [App\Http\Controllers\Admin\SettingController::class, 'registration'])->name('settings.registration');

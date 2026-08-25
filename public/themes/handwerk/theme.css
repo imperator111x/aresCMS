@@ -1,0 +1,1147 @@
+/* aresCMS — Handwerk: Kälte- & Klimatechnik · kühl · technisch */
+.theme-handwerk {
+    --hw-copper: #1e88b8;
+    --hw-copper-dark: #156d94;
+    --hw-copper-deep: #0c4a6e;
+    --hw-copper-light: #e3f4fa;
+    --hw-copper-muted: #b8d9ec;
+    --hw-ice: #38bdf8;
+    --hw-sand: #f2f9fc;
+    --hw-cream: #ffffff;
+    --hw-stone: #0f2940;
+    --hw-stone-muted: #4a6b85;
+    color-scheme: light;
+    font-family: 'DM Sans', 'Figtree', system-ui, sans-serif;
+}
+
+/* Immer hell — Dark-Mode & globales app.css neutralisieren */
+html.theme-handwerk,
+html.dark.theme-handwerk {
+    color-scheme: light;
+}
+
+.theme-handwerk.hw-light-page,
+.theme-handwerk.hw-light-page body,
+html.dark .theme-handwerk.hw-light-page body {
+    background-color: var(--hw-sand) !important;
+    color: var(--hw-stone) !important;
+}
+
+.theme-handwerk main {
+    background-color: var(--hw-sand) !important;
+}
+
+.theme-handwerk .dark\:bg-dark-900,
+.theme-handwerk .dark\:bg-dark-800,
+.theme-handwerk .dark\:bg-dark-700 {
+    background-color: var(--hw-cream) !important;
+}
+
+.theme-handwerk .dark\:text-white {
+    color: var(--hw-stone) !important;
+}
+
+.theme-handwerk .dark\:text-gray-100,
+.theme-handwerk .dark\:text-gray-200,
+.theme-handwerk .dark\:text-gray-300,
+.theme-handwerk .dark\:text-gray-400 {
+    color: var(--hw-stone-muted) !important;
+}
+
+.theme-handwerk .dark\:border-dark-700,
+.theme-handwerk .dark\:border-dark-600 {
+    border-color: var(--hw-copper-muted) !important;
+}
+
+.theme-handwerk nav.site-nav {
+    background: rgba(255, 255, 255, 0.97) !important;
+}
+
+.theme-handwerk .text-gray-900 {
+    color: var(--hw-stone) !important;
+}
+
+.theme-handwerk .text-gray-600,
+.theme-handwerk .text-gray-500 {
+    color: var(--hw-stone-muted) !important;
+}
+
+.theme-handwerk .bg-gray-50 {
+    background-color: #e6f4fa !important;
+}
+
+.theme-handwerk .bg-white {
+    background-color: var(--hw-cream) !important;
+}
+
+/* Primärfarben (Tailwind primary-*) → Babyblau */
+.theme-handwerk .text-primary-500,
+.theme-handwerk .text-primary-600,
+.theme-handwerk .text-primary-700,
+.theme-handwerk .dark .text-primary-400 {
+    color: var(--hw-copper) !important;
+}
+
+.theme-handwerk .bg-primary-500,
+.theme-handwerk .bg-primary-600 {
+    background-color: var(--hw-copper) !important;
+}
+
+.theme-handwerk .hover\:bg-primary-600:hover,
+.theme-handwerk .hover\:bg-primary-700:hover {
+    background-color: var(--hw-copper-dark) !important;
+}
+
+.theme-handwerk .from-primary-500,
+.theme-handwerk .from-primary-500\/10,
+.theme-handwerk .from-primary-500\/20 {
+    --tw-gradient-from: var(--hw-copper) var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: rgb(30 136 184 / 0) var(--tw-gradient-to-position) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.theme-handwerk .from-primary-500\/10 {
+    --tw-gradient-from: rgb(30 136 184 / 0.12) var(--tw-gradient-from-position) !important;
+}
+
+.theme-handwerk .from-primary-500\/20 {
+    --tw-gradient-from: rgb(30 136 184 / 0.18) var(--tw-gradient-from-position) !important;
+}
+
+.theme-handwerk .to-purple-500,
+.theme-handwerk .to-purple-500\/10,
+.theme-handwerk .to-purple-500\/20,
+.theme-handwerk .to-purple-600 {
+    --tw-gradient-to: var(--hw-copper-muted) var(--tw-gradient-to-position) !important;
+}
+
+.theme-handwerk .to-purple-500\/10 {
+    --tw-gradient-to: rgb(197 223 240 / 0.35) var(--tw-gradient-to-position) !important;
+}
+
+.theme-handwerk .to-purple-500\/20 {
+    --tw-gradient-to: rgb(197 223 240 / 0.5) var(--tw-gradient-to-position) !important;
+}
+
+.theme-handwerk .bg-gradient-to-br.from-primary-500\/20 {
+    background-image: linear-gradient(to bottom right, rgb(30 136 184 / 0.15), rgb(197 223 240 / 0.4)) !important;
+}
+
+.theme-handwerk .bg-gradient-to-r.from-primary-600 {
+    background-image: linear-gradient(to right, var(--hw-copper), var(--hw-copper-dark)) !important;
+}
+
+.theme-handwerk .border-primary-500,
+.theme-handwerk .border-primary-500\/20,
+.theme-handwerk .hover\:border-primary-500\/40:hover,
+.theme-handwerk .hover\:border-primary-500\/50:hover {
+    border-color: var(--hw-copper) !important;
+}
+
+.theme-handwerk .hover\:border-primary-500\/40:hover,
+.theme-handwerk .hover\:border-primary-500\/50:hover {
+    border-color: var(--hw-copper) !important;
+}
+
+.theme-handwerk .bg-primary-500\/10 {
+    background-color: rgb(30 136 184 / 0.1) !important;
+}
+
+.theme-handwerk .bg-primary-100,
+.theme-handwerk .dark .bg-primary-900\/30 {
+    background-color: var(--hw-copper-light) !important;
+}
+
+.dark .theme-handwerk .dark\:bg-primary-900\/30 {
+    background-color: rgb(12 74 110 / 0.35) !important;
+}
+
+.theme-handwerk .shadow-primary-500\/25,
+.theme-handwerk .shadow-primary-500\/20 {
+    --tw-shadow-color: rgb(30 136 184 / 0.28) !important;
+}
+
+.theme-handwerk .ring-primary-500,
+.theme-handwerk .focus\:ring-primary-500:focus {
+    --tw-ring-color: rgb(184 217 240 / 0.65) !important;
+}
+
+.theme-handwerk .group-hover\:text-primary-500:hover,
+.theme-handwerk .group:hover .group-hover\:text-primary-500 {
+    color: var(--hw-copper) !important;
+}
+
+.theme-handwerk nav.site-nav {
+    border-bottom: 3px solid var(--hw-copper);
+}
+
+.theme-handwerk .site-nav__logo-mark {
+    transition: transform 0.35s ease;
+}
+
+.theme-handwerk .site-nav__brand:hover .site-nav__logo-mark {
+    animation: hw-logo-snowflake-spin 1.1s linear infinite;
+}
+
+.theme-handwerk .site-nav__brand:not(:hover) .site-nav__logo-mark {
+    animation: none;
+    transform: rotate(0deg);
+}
+
+@keyframes hw-logo-snowflake-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.theme-handwerk .handwerk-brand {
+    font-family: 'Inter', 'Figtree', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.theme-handwerk footer.site-footer {
+    background: #fff !important;
+    color: var(--hw-stone-muted) !important;
+    border-top: 1px solid var(--hw-copper-muted) !important;
+    box-shadow: 0 -4px 24px rgb(30 136 184 / 0.06);
+}
+
+.theme-handwerk footer.site-footer .text-gray-900,
+.theme-handwerk footer.site-footer .text-xl {
+    color: var(--hw-stone) !important;
+}
+
+.theme-handwerk footer.site-footer a {
+    color: var(--hw-copper) !important;
+}
+
+.theme-handwerk footer.site-footer a:hover {
+    color: var(--hw-copper-dark) !important;
+}
+
+/* Hero */
+.theme-handwerk .hw-hero-panel {
+    position: relative;
+    background: linear-gradient(155deg, var(--hw-sand) 0%, #fff 42%, var(--hw-copper-light) 100%);
+}
+
+.theme-handwerk .hw-hero-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgb(30 136 184 / 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(30 136 184 / 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+    mask-image: linear-gradient(180deg, #000 0%, transparent 92%);
+}
+
+.theme-handwerk .hw-hero-panel__glow {
+    background:
+        radial-gradient(ellipse 70% 55% at 85% 15%, rgb(56 189 248 / 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 10% 80%, rgb(30 136 184 / 0.1) 0%, transparent 50%) !important;
+}
+
+.theme-handwerk .hw-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 9999px;
+    background: rgb(30 136 184 / 0.1);
+    border: 1px solid rgb(30 136 184 / 0.2);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--hw-copper);
+}
+
+.theme-handwerk .hw-hero-panel__title {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--hw-stone) !important;
+    margin: 0 0 1rem;
+}
+
+.theme-handwerk .hw-hero-panel__lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--hw-stone-muted);
+    max-width: 36rem;
+}
+
+.theme-handwerk .hw-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    background: #fff;
+    border: 1px solid var(--hw-copper-muted);
+    color: var(--hw-stone);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.theme-handwerk .hw-btn-secondary:hover {
+    background: var(--hw-copper-light);
+    border-color: var(--hw-copper);
+}
+
+.theme-handwerk .hw-section-eyebrow {
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--hw-copper) !important;
+    margin: 0 0 0.5rem;
+}
+
+.theme-handwerk .hw-section-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--hw-stone) !important;
+    margin: 0 0 2.5rem;
+}
+
+.theme-handwerk .hw-trust-strip {
+    border-bottom: 1px solid var(--hw-copper-muted);
+    background: #fff;
+}
+
+.theme-handwerk .hw-trust-strip__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 1.25rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .theme-handwerk .hw-trust-strip__grid {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1.5rem 1rem;
+    }
+}
+
+.theme-handwerk .hw-trust-strip__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
+    color: var(--hw-stone-muted);
+}
+
+.theme-handwerk .hw-trust-strip__item i {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: var(--hw-copper-light);
+    color: var(--hw-copper);
+    font-size: 1rem;
+}
+
+.theme-handwerk .hw-trust-strip__item strong {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--hw-stone);
+    margin-bottom: 0.125rem;
+}
+
+/* Leistungs-Karten */
+.theme-handwerk .hw-services-section {
+    background: var(--hw-sand);
+    border-bottom: 1px solid var(--hw-copper-muted);
+}
+
+/* Neuigkeiten & Projekte — immer sichtbar */
+.theme-handwerk .hw-news-section {
+    background: #fff !important;
+    border-top: 1px solid var(--hw-copper-muted);
+    border-bottom: 1px solid var(--hw-copper-muted);
+}
+
+.theme-handwerk .hw-news-section__head {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--hw-copper-light);
+}
+
+@media (min-width: 640px) {
+    .theme-handwerk .hw-news-section__head {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
+
+.theme-handwerk .hw-news-section__eyebrow {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--hw-copper) !important;
+    margin: 0 0 0.5rem;
+}
+
+.theme-handwerk .hw-news-section__title {
+    display: block;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--hw-stone) !important;
+    margin: 0;
+}
+
+.theme-handwerk .hw-news-section__lead {
+    display: block;
+    margin: 0.75rem 0 0;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--hw-stone-muted) !important;
+    max-width: 36rem;
+}
+
+.theme-handwerk .hw-news-section__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    padding: 0.625rem 1.125rem;
+    border-radius: 0.5rem;
+    background: var(--hw-copper-light);
+    color: var(--hw-copper-dark) !important;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none !important;
+    transition: background 0.15s, color 0.15s;
+}
+
+.theme-handwerk .hw-news-section__link:hover {
+    background: var(--hw-copper);
+    color: #fff !important;
+}
+
+.theme-handwerk .hw-news-empty {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--hw-sand);
+    border-radius: 1rem;
+    border: 1px dashed var(--hw-copper-muted);
+}
+
+.theme-handwerk .hw-news-empty i {
+    font-size: 3rem;
+    color: var(--hw-copper-muted);
+    margin-bottom: 1rem;
+}
+
+.theme-handwerk .hw-news-empty h3 {
+    color: var(--hw-stone) !important;
+    margin: 0 0 0.5rem;
+}
+
+.theme-handwerk .hw-news-empty p {
+    color: var(--hw-stone-muted);
+    margin: 0;
+}
+
+.theme-handwerk .hw-news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .theme-handwerk .hw-news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .theme-handwerk .hw-news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.theme-handwerk .hw-news-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 22rem;
+    background: #fff !important;
+    border: 2px solid var(--hw-copper-muted) !important;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow:
+        0 4px 14px rgb(12 74 110 / 0.08),
+        0 1px 3px rgb(12 74 110 / 0.06);
+    transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.theme-handwerk .hw-news-card:hover {
+    border-color: var(--hw-copper) !important;
+    box-shadow: 0 12px 28px rgb(12 74 110 / 0.1);
+    transform: translateY(-4px);
+}
+
+.theme-handwerk .hw-news-card__media {
+    display: block;
+    height: 12rem;
+    overflow: hidden;
+    background: var(--hw-copper-light);
+}
+
+.theme-handwerk .hw-news-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.theme-handwerk .hw-news-card:hover .hw-news-card__media img {
+    transform: scale(1.05);
+}
+
+.theme-handwerk .hw-news-card__media--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--hw-copper-muted);
+}
+
+.theme-handwerk .hw-news-card__body {
+    padding: 1.25rem 1.25rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-handwerk .hw-news-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
+    color: var(--hw-stone-muted);
+    margin-bottom: 0.5rem;
+}
+
+.theme-handwerk .hw-news-card__category {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--hw-copper) !important;
+}
+
+.theme-handwerk .hw-news-card__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    line-height: 1.35;
+}
+
+.theme-handwerk .hw-news-card__title a {
+    color: var(--hw-stone) !important;
+    text-decoration: none;
+}
+
+.theme-handwerk .hw-news-card__title a:hover {
+    color: var(--hw-copper) !important;
+}
+
+.theme-handwerk .hw-news-card__excerpt {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--hw-stone-muted);
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.theme-handwerk .hw-news-card__more {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--hw-copper) !important;
+    text-decoration: none !important;
+}
+
+.theme-handwerk .hw-news-card__more:hover {
+    text-decoration: underline !important;
+}
+
+/* News-Übersicht Filter */
+.theme-handwerk .hw-filter-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #fff;
+    border: 2px solid var(--hw-copper-muted);
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgb(12 74 110 / 0.05);
+}
+
+@media (min-width: 640px) {
+    .theme-handwerk .hw-filter-panel {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+.theme-handwerk .hw-filter-panel__label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--hw-stone);
+    margin-bottom: 0.5rem;
+}
+
+.theme-handwerk .hw-filter-panel__select {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--hw-copper-muted);
+    background: var(--hw-sand);
+    color: var(--hw-stone);
+    font-size: 0.9375rem;
+}
+
+/* Einzelner News-Artikel */
+.theme-handwerk .hw-article-panel {
+    background: #fff !important;
+    border: 2px solid var(--hw-copper-muted) !important;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgb(12 74 110 / 0.1);
+}
+
+.theme-handwerk .hw-article-panel__media {
+    height: 16rem;
+    overflow: hidden;
+    background: var(--hw-copper-light);
+}
+
+@media (min-width: 768px) {
+    .theme-handwerk .hw-article-panel__media {
+        height: 22rem;
+    }
+}
+
+.theme-handwerk .hw-article-panel__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.theme-handwerk .hw-article-panel__body {
+    padding: 1.5rem 1.5rem 2rem;
+}
+
+@media (min-width: 768px) {
+    .theme-handwerk .hw-article-panel__body {
+        padding: 2rem 2.5rem 2.5rem;
+    }
+}
+
+.theme-handwerk .hw-article-panel__title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--hw-stone) !important;
+    margin: 0 0 1.25rem;
+}
+
+.theme-handwerk .hw-article-panel__content {
+    color: var(--hw-stone-muted);
+    line-height: 1.65;
+}
+
+.theme-handwerk .hw-panel-box {
+    background: #fff !important;
+    border: 2px solid var(--hw-copper-muted) !important;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 2px 10px rgb(12 74 110 / 0.05);
+}
+
+.theme-handwerk .hw-panel-box--warning {
+    background: #fffbeb !important;
+    border-color: #fcd34d !important;
+}
+
+.theme-handwerk .hw-panel-box .bg-white,
+.theme-handwerk .hw-panel-box .dark\:bg-dark-800 {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Impressum, Datenschutz, AGB */
+.theme-handwerk .hw-legal-panel {
+    background: #fff !important;
+    border: 2px solid var(--hw-copper-muted) !important;
+    border-radius: 1rem;
+    box-shadow: 0 8px 28px rgb(12 74 110 / 0.1);
+}
+
+.theme-handwerk .hw-legal-prose {
+    padding: 1.5rem 1.5rem 2rem;
+    color: var(--hw-stone-muted);
+    line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+    .theme-handwerk .hw-legal-prose {
+        padding: 2rem 2.5rem 2.5rem;
+    }
+}
+
+.theme-handwerk .hw-legal-prose > section,
+.theme-handwerk .hw-legal-prose > p {
+    margin: 0;
+}
+
+.theme-handwerk .hw-legal-prose > section + section,
+.theme-handwerk .hw-legal-prose > p + section,
+.theme-handwerk .hw-legal-prose > section + p {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--hw-copper-light);
+}
+
+.theme-handwerk .hw-legal-prose h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--hw-stone) !important;
+    margin: 0 0 0.75rem;
+}
+
+.theme-handwerk .hw-legal-prose p {
+    margin: 0 0 0.75rem;
+    color: var(--hw-stone-muted);
+}
+
+.theme-handwerk .hw-legal-prose p:last-child {
+    margin-bottom: 0;
+}
+
+.theme-handwerk .hw-legal-prose a {
+    color: var(--hw-copper) !important;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.theme-handwerk .hw-legal-prose a:hover {
+    color: var(--hw-copper-dark) !important;
+}
+
+.theme-handwerk .hw-legal-prose ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.theme-handwerk .hw-legal-prose li {
+    margin-bottom: 0.35rem;
+}
+
+.theme-handwerk .hw-legal-prose .font-semibold,
+.theme-handwerk .hw-legal-prose .font-medium,
+.theme-handwerk .hw-legal-prose .text-slate-900 {
+    color: var(--hw-stone) !important;
+}
+
+.theme-handwerk .hw-legal-prose .text-slate-500,
+.theme-handwerk .hw-legal-prose .text-gray-500 {
+    color: var(--hw-stone-muted) !important;
+}
+
+/* Login, Registrierung, Passwort */
+.theme-handwerk .hw-auth-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-handwerk .hw-auth-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+}
+
+.theme-handwerk .hw-auth-page__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--hw-stone) !important;
+    margin: 0;
+}
+
+.theme-handwerk .hw-auth-page__lead {
+    margin: 0.5rem 0 0;
+    font-size: 0.9375rem;
+    color: var(--hw-stone-muted);
+}
+
+.theme-handwerk .hw-auth-card {
+    background: #fff !important;
+    border: 2px solid var(--hw-copper-muted) !important;
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem 1.75rem;
+    box-shadow: 0 8px 28px rgb(12 74 110 / 0.1);
+}
+
+.theme-handwerk .hw-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.theme-handwerk .hw-auth-field {
+    margin-bottom: 1.25rem;
+}
+
+.theme-handwerk .hw-auth-field label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--hw-stone) !important;
+    margin-bottom: 0.5rem;
+}
+
+.theme-handwerk .hw-auth-field__icon-wrap {
+    position: relative;
+}
+
+.theme-handwerk .hw-auth-field__icon-wrap > i {
+    position: absolute;
+    left: 0.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--hw-stone-muted);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.theme-handwerk .hw-auth-field input[type="text"],
+.theme-handwerk .hw-auth-field input[type="email"],
+.theme-handwerk .hw-auth-field input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border-radius: 0.625rem;
+    border: 1px solid var(--hw-copper-muted) !important;
+    background: var(--hw-sand) !important;
+    color: var(--hw-stone) !important;
+    font-size: 0.9375rem;
+}
+
+.theme-handwerk .hw-auth-field input:focus {
+    outline: none;
+    border-color: var(--hw-copper) !important;
+    box-shadow: 0 0 0 3px rgb(30 136 184 / 0.15);
+}
+
+.theme-handwerk .hw-auth-field input.hw-auth-input--error {
+    border-color: #ef4444 !important;
+}
+
+.theme-handwerk .hw-auth-field__error {
+    margin: 0.35rem 0 0;
+    font-size: 0.8125rem;
+    color: #dc2626;
+}
+
+.theme-handwerk .hw-auth-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.theme-handwerk .hw-auth-remember {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--hw-stone-muted);
+    cursor: pointer;
+}
+
+.theme-handwerk .hw-auth-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--hw-copper) !important;
+    text-decoration: none;
+}
+
+.theme-handwerk .hw-auth-link:hover {
+    color: var(--hw-copper-dark) !important;
+    text-decoration: underline;
+}
+
+.theme-handwerk .hw-auth-link--strong {
+    font-weight: 700;
+}
+
+.theme-handwerk .hw-auth-btn {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: var(--hw-copper) !important;
+    color: #fff !important;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgb(30 136 184 / 0.35);
+    transition: background 0.15s, transform 0.15s;
+}
+
+.theme-handwerk .hw-auth-btn:hover {
+    background: var(--hw-copper-dark) !important;
+    transform: translateY(-1px);
+}
+
+.theme-handwerk .hw-auth-alert {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+    border-radius: 0.625rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.theme-handwerk .hw-auth-alert--error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.theme-handwerk .hw-auth-divider {
+    position: relative;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.theme-handwerk .hw-auth-divider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 1px solid var(--hw-copper-muted);
+}
+
+.theme-handwerk .hw-auth-divider span {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.75rem;
+    background: #fff;
+    font-size: 0.8125rem;
+    color: var(--hw-stone-muted);
+}
+
+.theme-handwerk .hw-auth-footer-text {
+    margin: 1.25rem 0 0;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--hw-stone-muted);
+}
+
+.theme-handwerk .hw-auth-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--hw-stone-muted) !important;
+    text-decoration: none;
+}
+
+.theme-handwerk .hw-auth-back:hover {
+    color: var(--hw-copper) !important;
+}
+
+.theme-handwerk .hw-auth-card a.flex.items-center.justify-center {
+    border-color: var(--hw-copper-muted) !important;
+    border-radius: 0.625rem !important;
+}
+
+.theme-handwerk .hw-auth-card a.bg-white,
+.theme-handwerk .hw-auth-card a.dark\:bg-dark-700 {
+    background: var(--hw-sand) !important;
+    color: var(--hw-stone) !important;
+}
+
+/* Fallback: Standard-Auth-Views ohne Handwerk-Override */
+.theme-handwerk .hw-auth-main > .min-h-screen {
+    min-height: auto !important;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem 2rem;
+    width: 100%;
+}
+
+.theme-handwerk .hw-auth-main > .min-h-screen > .max-w-md {
+    width: 100%;
+    max-width: 28rem;
+}
+
+.theme-handwerk .hw-auth-main .rounded-2xl.border.border-gray-200,
+.theme-handwerk .hw-auth-main .dark\:bg-dark-800.rounded-2xl {
+    background: #fff !important;
+    border: 2px solid var(--hw-copper-muted) !important;
+    box-shadow: 0 8px 28px rgb(12 74 110 / 0.1) !important;
+}
+
+.theme-handwerk .hw-auth-main input.bg-gray-50,
+.theme-handwerk .hw-auth-main input.dark\:bg-dark-700 {
+    background: var(--hw-sand) !important;
+    border-color: var(--hw-copper-muted) !important;
+    color: var(--hw-stone) !important;
+}
+
+.theme-handwerk .hw-service-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--hw-copper-muted);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    transition:
+        transform 0.28s cubic-bezier(0.34, 1.2, 0.64, 1),
+        box-shadow 0.28s ease,
+        border-color 0.2s ease;
+}
+
+.theme-handwerk .hw-service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--hw-copper-deep), var(--hw-ice));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.theme-handwerk .hw-service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--hw-copper);
+    box-shadow:
+        0 16px 32px rgb(12 74 110 / 0.12),
+        0 4px 12px rgb(12 74 110 / 0.08);
+}
+
+.theme-handwerk .hw-service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.theme-handwerk .hw-service-card__icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    background: var(--hw-copper-light);
+    color: var(--hw-copper);
+    transition: transform 0.28s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.theme-handwerk .hw-service-card:hover .hw-service-card__icon {
+    transform: scale(1.08) rotate(-3deg);
+    background: var(--hw-copper);
+    color: #fff;
+}
+
+.theme-handwerk .hw-service-card__title {
+    font-weight: 700;
+    color: var(--hw-stone);
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.theme-handwerk .hw-service-card:hover .hw-service-card__title {
+    color: var(--hw-copper-dark);
+}
+
+.theme-handwerk .hw-service-card__text {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--hw-stone-muted);
+}
+
+/* CTA-Band */
+.theme-handwerk .hw-cta-band {
+    background: linear-gradient(115deg, var(--hw-copper-deep) 0%, var(--hw-copper) 45%, var(--hw-ice) 100%) !important;
+    color: #fff;
+}
+
+.theme-handwerk .hw-cta-band h2 {
+    color: #fff !important;
+}
+
+.theme-handwerk .hw-cta-band__btn {
+    background: #fff !important;
+    color: var(--hw-copper-deep) !important;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-handwerk .hw-cta-band__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.2);
+}
+
+/* Cookie */
+.theme-handwerk #cookie-consent-root .cc-btn-primary {
+    background: var(--hw-copper) !important;
+}
+
+.theme-handwerk #cookie-consent-root .cc-banner-link a {
+    color: #c5e3f7 !important;
+}

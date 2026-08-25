@@ -1,0 +1,77 @@
+/* aresCMS — Magazin-Theme (öffentliche Seite) */
+.theme-magazine {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+}
+
+.theme-magazine nav.site-nav {
+    border-bottom: 3px solid #be123c;
+    background: #fffaf5;
+}
+
+.dark .theme-magazine nav.site-nav {
+    background: rgba(28, 25, 23, 0.95);
+    border-bottom-color: #fb7185;
+}
+
+.theme-magazine .magazine-brand {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    letter-spacing: -0.02em;
+}
+
+.theme-magazine .text-primary-500,
+.theme-magazine .text-primary-600,
+.theme-magazine .dark .text-primary-400 {
+    color: #be123c !important;
+}
+
+.theme-magazine .bg-primary-500,
+.theme-magazine .bg-primary-600,
+.theme-magazine .from-primary-500 {
+    --tw-gradient-from: #be123c var(--tw-gradient-from-position) !important;
+}
+
+.theme-magazine .to-purple-500,
+.theme-magazine .to-purple-600 {
+    --tw-gradient-to: #9f1239 var(--tw-gradient-to-position) !important;
+}
+
+.theme-magazine .bg-primary-500 {
+    background-color: #be123c !important;
+}
+
+.theme-magazine .hover\:bg-primary-600:hover {
+    background-color: #9f1239 !important;
+}
+
+.theme-magazine .border-primary-500,
+.theme-magazine .hover\:border-primary-500\/50:hover {
+    border-color: #be123c !important;
+}
+
+.theme-magazine .bg-primary-100,
+.theme-magazine .dark .bg-primary-900\/30 {
+    background-color: rgba(190, 18, 60, 0.12) !important;
+}
+
+.theme-magazine .shadow-primary-500\/25 {
+    --tw-shadow-color: rgba(190, 18, 60, 0.25) !important;
+}
+
+.theme-magazine .site-nav a.nav-active {
+    color: #be123c;
+    font-weight: 700;
+}
+
+.theme-magazine footer.site-footer {
+    background: #1c1917;
+    color: #e7e5e4;
+    border-top: 4px solid #be123c;
+}
+
+.theme-magazine footer.site-footer a {
+    color: #fda4af;
+}
+
+.theme-magazine footer.site-footer a:hover {
+    color: #fff;
+}

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+@include('partials.html-source-banner')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">

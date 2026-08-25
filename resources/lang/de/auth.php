@@ -10,6 +10,6 @@ return [
 
     'failed' => 'Die eingegebenen Zugangsdaten stimmen nicht mit unseren Daten überein.',
     'password' => 'Das angegebene Passwort ist falsch.',
-    'throttle' => 'Zu viele Anmeldeversuche. Bitte versuchen Sie es in :seconds Sekunden erneut.',
+    'throttle' => 'Zu viele Anfragen. Bitte versuche es in :seconds Sekunden erneut.',
 
 ];

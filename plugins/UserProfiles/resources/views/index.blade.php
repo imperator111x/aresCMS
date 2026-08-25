@@ -4,10 +4,53 @@
 
 @section('content')
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <div class="mb-8">
-        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">{{ __('Member directory') }}</h1>
-        <p class="mt-2 text-gray-600 dark:text-gray-400">{{ __('Find members and send friend requests. When a request is accepted, you can chat.') }}</p>
+    <div class="mb-8 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900 dark:text-white">{{ __('Member directory') }}</h1>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">{{ __('Find members and send friend requests. When a request is accepted, you can chat.') }}</p>
+        </div>
+        @if(\Illuminate\Support\Facades\Route::has('profiles.inbox'))
+            <a href="{{ route('profiles.inbox') }}" id="profiles-inbox-link" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-dark-600 bg-white dark:bg-dark-800 text-gray-800 dark:text-white font-medium hover:border-primary-500/50 relative">
+                <i class="fas fa-comments text-primary-500"></i>
+                {{ __('Messages') }}
+                <span data-chat-unread-badge class="hidden absolute -top-1.5 -right-1.5 min-w-[1.25rem] h-5 px-1.5 rounded-full bg-red-500 text-white text-[10px] font-bold items-center justify-center"></span>
+            </a>
+        @endif
     </div>
+
+    @if(isset($conversations) && $conversations->isNotEmpty())
+        <div class="mb-10">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                    <i class="fas fa-comments text-primary-500"></i> {{ __('Recent chats') }}
+                </h2>
+                <a href="{{ route('profiles.inbox') }}" class="text-sm text-primary-600 dark:text-primary-400 hover:underline">{{ __('View all') }}</a>
+            </div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                @foreach($conversations->take(4) as $row)
+                    @php $peer = $row['peer']; $unread = (int) $row['unread_count']; @endphp
+                    <li>
+                        <a href="{{ $row['chat_url'] }}" class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-dark-700 bg-white dark:bg-dark-800 hover:border-primary-500/40 {{ $unread > 0 ? 'ring-1 ring-primary-500/30' : '' }}">
+                            @if($peer->avatar)
+                                <img src="{{ asset('storage/'.$peer->avatar) }}" alt="" class="w-10 h-10 rounded-lg object-cover shrink-0" loading="lazy">
+                            @else
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center text-white font-bold shrink-0 text-sm">
+                                    {{ strtoupper(substr($peer->name, 0, 1)) }}
+                                </div>
+                            @endif
+                            <div class="min-w-0 flex-1">
+                                <p class="font-medium text-gray-900 dark:text-white truncate text-sm">{{ $peer->name }}</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 truncate">{{ $row['preview'] }}</p>
+                            </div>
+                            @if($unread > 0)
+                                <span class="shrink-0 w-5 h-5 rounded-full bg-primary-500 text-white text-[10px] font-bold flex items-center justify-center">{{ $unread > 9 ? '9+' : $unread }}</span>
+                            @endif
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     @if($incoming->isNotEmpty())
         <div class="mb-10 rounded-2xl border border-amber-200 dark:border-amber-800/60 bg-amber-50/80 dark:bg-amber-950/30 p-6">

@@ -1,0 +1,7 @@
+{
+    "version": "1.0.4",
+    "min_php": "8.1.0",
+    "package_url": "https://update.luetcke.eu/news-portal-update-1.0.4.zip",
+    "sha256": "8be316af8ab34ee040b8fc8066a4085b0913866fe122da476c4af007bfcc480f",
+    "notes": "Update Laravel\n\nNeu / verbessert:\n• Laravel new vers.\n\nKonfiguration (optional in .env):\n\nNach Installation:\n• php artisan migrate --force\n• php artisan optimize:clear\n• Prüfen: public/cms-update-verification.txt\n"
+}
