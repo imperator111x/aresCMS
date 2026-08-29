@@ -203,6 +203,7 @@ function shouldIncludeRelativePath(string $relative, bool $isDirectory): bool
         '.idea/',
         '.vscode/',
         '.cursor/',
+        '.claude/',
         'storage/logs/',
         'storage/app/public/',
         'storage/app/backups/',
@@ -227,7 +228,17 @@ function shouldIncludeRelativePath(string $relative, bool $isDirectory): bool
         }
     }
 
-    $blockedExact = ['.env', '.env.backup', 'htdocs.lnk', 'mkdir', 'public/hot', 'php'];
+    $blockedExact = [
+        '.env',
+        '.env.backup',
+        'htdocs.lnk',
+        'mkdir',
+        'public/hot',
+        'php',
+        '.cursorignore',
+        '.cursorrules',
+        'agents.md',
+    ];
     foreach ($blockedExact as $name) {
         if ($rel === $name) {
             return false;
