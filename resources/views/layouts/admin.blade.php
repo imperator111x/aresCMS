@@ -245,7 +245,8 @@
                     $settingsActive = request()->routeIs('admin.settings.general*')
                         || request()->routeIs('admin.settings.themes*')
                         || request()->routeIs('admin.settings.languages*')
-                        || request()->routeIs('admin.settings.legal-imprint*');
+                        || request()->routeIs('admin.settings.legal-imprint*')
+                        || request()->routeIs('admin.settings.cookie-consent*');
                 @endphp
                 @if(optional($adminUser)->hasAdminPermission('settings'))
                     <a href="{{ route('admin.plugins.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg {{ request()->routeIs('admin.plugins.*') ? 'bg-primary-500 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-700' }}">
@@ -278,6 +279,10 @@
                         <a href="{{ route('admin.settings.legal-imprint') }}" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm {{ request()->routeIs('admin.settings.legal-imprint*') ? 'bg-primary-500 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-700' }}">
                             <i class="fas fa-balance-scale w-4"></i>
                             <span>{{ __('Legal notice (Imprint)') }}</span>
+                        </a>
+                        <a href="{{ route('admin.settings.cookie-consent') }}" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm {{ request()->routeIs('admin.settings.cookie-consent*') ? 'bg-primary-500 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-700' }}">
+                            <i class="fas fa-cookie-bite w-4"></i>
+                            <span>{{ __('Cookie consent') }}</span>
                         </a>
                     </div>
                 </details>
