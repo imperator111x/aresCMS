@@ -31,11 +31,10 @@
     "You are logged in!": "Du bist eingeloggt!",
     "You have admin privileges": "Du hast Admin-Rechte",
     "Go to Admin Dashboard": "Zum Admin-Dashboard",
-    "View News": "Nachrichten anzeigen",
+    "View News": "Nachricht anzeigen",
     "News Management": "Nachrichtenverwaltung",
     "Create News": "Nachricht erstellen",
     "Edit News": "Nachricht bearbeiten",
-    "View News": "Nachricht anzeigen",
     "Back to List": "Zurück zur Liste",
     "Title": "Titel",
     "Content": "Inhalt",
@@ -54,7 +53,6 @@
     "Status": "Status",
     "Joined": "Beigetreten",
     "Actions": "Aktionen",
-    "Admin": "Admin",
     "User": "Benutzer",
     "Active": "Aktiv",
     "Banned": "Gesperrt",
@@ -126,7 +124,6 @@
     "View all": "Alle anzeigen",
     "Total comments": "Kommentare gesamt",
     "Manage users": "Benutzer verwalten",
-    "Create News": "Nachricht erstellen",
     "View Team": "Team anzeigen",
     "Recent Activity": "Letzte Aktivitäten",
     "No recent activity": "Keine letzten Aktivitäten",
@@ -137,7 +134,6 @@
     "Created": "Erstellt",
     "Updated": "Aktualisiert",
     "View on Site": "Auf der Seite anzeigen",
-    "User": "Benutzer",
     "Upload a file": "Datei hochladen",
     "or drag and drop": "oder ziehen und ablegen",
     "PNG, JPG, GIF up to 2MB": "PNG, JPG, GIF bis zu 2MB",
@@ -192,94 +188,10 @@
     "Legal information": "Rechtliche Informationen",
     "City, Country": "Stadt, Land",
     "Quick Links": "Schnelllinks",
-    "Home": "Startseite",
-    "Team": "Team",
-    "Login": "Anmelden",
-    "Register": "Registrieren",
-    "Contact": "Kontakt",
-    "News": "Nachrichten",
-    "Admin": "Admin",
-    "Logout": "Abmelden",
-    "View Site": "Seite anzeigen",
-    "Search...": "Suchen...",
-    "Dashboard": "Dashboard",
-    "User Management": "Benutzerverwaltung",
     "Edit User": "Benutzer bearbeiten",
     "Edit user details": "Benutzerdetails bearbeiten",
-    "News Management": "Nachrichtenverwaltung",
-    "Create News": "Nachricht erstellen",
-    "Edit": "Bearbeiten",
-    "Delete": "Löschen",
-    "View": "Anzeigen",
-    "Back to List": "Zurück zur Liste",
-    "Save": "Speichern",
-    "Update": "Aktualisieren",
     "Cancel": "Abbrechen",
-    "Actions": "Aktionen",
-    "Status": "Status",
-    "Published": "Veröffentlicht",
-    "Draft": "Entwurf",
-    "Yes": "Ja",
-    "No": "Nein",
-    "Active": "Aktiv",
-    "Banned": "Gesperrt",
-    "Admin": "Admin",
-    "User": "Benutzer",
-    "Name": "Name",
-    "Email": "E-Mail",
-    "Role": "Rolle",
-    "Joined": "Beigetreten",
-    "Last Updated": "Zuletzt aktualisiert",
-    "Email Verified": "E-Mail verifiziert",
-    "Not verified": "Nicht verifiziert",
-    "Task": "Aufgabe",
-    "Bio": "Biografie",
-    "Member since": "Mitglied seit",
     "Avatar": "Avatar",
-    "Current Avatar": "Aktueller Avatar",
-    "Upload New Avatar": "Neuen Avatar hochladen",
-    "Upload a file": "Datei hochladen",
-    "or drag and drop": "oder ziehen und ablegen",
-    "PNG, JPG, GIF up to 2MB": "PNG, JPG, GIF bis zu 2MB",
-    "Replace Image": "Bild ersetzen",
-    "Current Image": "Aktuelles Bild",
-    "Title": "Titel",
-    "Content": "Inhalt",
-    "Image": "Bild",
-    "Publish immediately": "Sofort veröffentlichen",
-    "Article will be visible to everyone": "Der Artikel wird für alle sichtbar sein",
-    "Article will be saved as draft": "Der Artikel wird als Entwurf gespeichert",
-    "Update News": "Nachricht aktualisieren",
-    "Update User": "Benutzer aktualisieren",
-    "User Details": "Benutzerdetails",
-    "ID": "ID",
-    "Author": "Autor",
-    "Date": "Datum",
-    "Created": "Erstellt",
-    "Updated": "Aktualisiert",
-    "View on Site": "Auf der Seite anzeigen",
-    "Article Info": "Artikel-Informationen",
-    "No news articles yet": "Noch keine Nachrichtenartikel",
-    "No comments yet": "Noch keine Kommentare",
-    "No team members yet": "Noch keine Teammitglieder",
-    "No Team Members Yet": "Noch keine Teammitglieder",
-    "Our team will appear here soon": "Unser Team wird hier bald erscheinen",
-    "Our team will appear here soon.": "Unser Team wird hier bald erscheinen.",
-    "Articles": "Artikel",
-    "Admins": "Admins",
-    "Total comments": "Kommentare gesamt",
-    "Recent Activity": "Letzte Aktivitäten",
-    "No recent activity": "Keine letzten Aktivitäten",
-    "View all": "Alle anzeigen",
-    "Manage users": "Benutzer verwalten",
-    "View Team": "Team anzeigen",
-    "Tell us about yourself...": "Erzähl uns etwas über dich...",
-    "e.g., Developer, Designer, Manager": "z.B., Entwickler, Designer, Manager",
-    "You cannot modify your own account": "Du kannst dein eigenes Konto nicht ändern",
-    "Are you sure you want to delete this news article?": "Bist du sicher, dass du diesen Nachrichtenartikel löschen möchtest?",
-    "User will have admin privileges": "Der Benutzer wird Admin-Rechte haben",
-    "User will be banned from the platform": "Der Benutzer wird von der Plattform gesperrt",
-    "Please fix the following errors:": "Bitte behebe die folgenden Fehler:",
     "Stay Updated with": "Bleiben Sie auf dem Laufenden mit",
     "Our News": "Unseren Nachrichten",
     "Discover the latest stories, insights, and updates from our platform.": "Entdecken Sie die neuesten Geschichten, Einblicke und Updates von unserer Plattform.",
@@ -331,7 +243,7 @@
     "Manage all users": "Alle Benutzer verwalten",
     "Users": "Benutzer",
     "View all team members": "Alle Teammitglieder anzeigen",
-    "Search": "Suche",
+    "Search": "Suchen",
     "Search results": "Suchergebnisse",
     "Search for:": "Suche nach:",
     "Enter at least :count characters to search.": "Bitte mindestens :count Zeichen eingeben, um zu suchen.",
@@ -345,7 +257,6 @@
     "New comments": "Neue Kommentare",
     "New registrations": "Neue Registrierungen",
     "No posts yet": "Noch keine Beiträge",
-    "No comments yet": "Noch keine Kommentare",
     "No registrations yet": "Noch keine Registrierungen",
     "New": "Neu",
     "Loading...": "Laden …",
@@ -410,7 +321,7 @@
     "Scheduled": "Geplant",
     "Password must be at least :length characters and meet the complexity requirements.": "Das Passwort muss mindestens :length Zeichen haben und die Komplexitätsregeln erfüllen.",
     "From": "Von",
-    "To": "Bis",
+    "To": "Nach",
     "Email / login": "E-Mail / Login",
     "Maintenance": "Wartung",
     "We are performing maintenance": "Wir führen gerade Wartungsarbeiten durch",
@@ -555,7 +466,7 @@
     "Warnings": "Warnungen",
     "Failures": "Fehler",
     "Checks": "Prüfungen",
-    "Warning": "Warnung",
+    "Warning": "Hinweis",
     "Failure": "Fehler",
     "Connection successful.": "Verbindung erfolgreich.",
     "Connection failed: :msg": "Verbindung fehlgeschlagen: :msg",
@@ -664,7 +575,6 @@
     "Upload backup ZIP": "Backup-ZIP hochladen",
     "I understand this overwrites the current database and public uploads.": "Ich habe verstanden, dass die aktuelle Datenbank und die öffentlichen Uploads überschrieben werden.",
     "Restore :file now? Current database and uploads will be overwritten.": ":file jetzt wiederherstellen? Aktuelle Datenbank und Uploads werden überschrieben.",
-    "Actions": "Aktionen",
     "Restore": "Wiederherstellen",
     "Select an existing backup or upload a ZIP file.": "Wähle ein vorhandenes Backup oder lade eine ZIP-Datei hoch.",
     "Backup restored successfully from :file.": "Backup erfolgreich wiederhergestellt aus :file.",
@@ -758,7 +668,6 @@
     "New password": "Neues Passwort",
     "Update password": "Passwort ändern",
     "Password updated.": "Passwort wurde geändert.",
-    "Current password": "Aktuelles Passwort",
     "Linked accounts": "Verknüpfte Konten",
     "Connect Google or Discord to sign in with one click. Unlinking requires your current password.": "Verknüpfe Google oder Discord für die Anmeldung mit einem Klick. Zum Aufheben der Verknüpfung ist dein aktuelles Passwort nötig.",
     "Connected": "Verbunden",
@@ -856,7 +765,7 @@
     "Browse all news": "Alle Nachrichten durchsuchen",
     "All categories": "Alle Kategorien",
     "More news": "Mehr lesen",
-    "Show all news": "Alle News anzeigen",
+    "Show all news": "Alle Beiträge anzeigen",
     "Filter by category and discover all published articles.": "Nach Kategorien filtern und alle veröffentlichten Artikel entdecken.",
     "PDF export is currently unavailable. Please install dompdf via Composer.": "PDF-Export ist derzeit nicht verfügbar. Bitte installiere dompdf per Composer.",
     "Export Excel": "Excel exportieren",
@@ -909,343 +818,371 @@
     "Versions": "Versionen",
     "Saved at": "Gespeichert am",
     "Restore version": "Version wiederherstellen",
-    "Revision restored successfully.": "Version erfolgreich wiederhergestellt."
-    ,"Block width": "Block-Breite"
-    ,"Full width": "Volle Breite"
-    ,"Half width (2 per row)": "Halbe Breite (2 pro Zeile)"
-    ,"Image size": "Bildgröße"
-    ,"Button in text: [Label](https://example.com)": "Button im Text: [Label](https://example.com)"
-    ,"Insert button": "Button einfügen"
-    ,"Button size": "Button-Größe"
-    ,"Button size in text: [Label|sm](https://example.com), [Label|md](...), [Label|lg](...)": "Button-Größe im Text: [Label|sm](https://example.com), [Label|md](...), [Label|lg](...)"
-    ,"Button color": "Button-Farbe"
-    ,"Outline": "Kontur"
-    ,"No background": "Kein Hintergrund"
-    ,"Button color in text: [Label|primary](...), [Label|secondary](...), [Label|outline](...)": "Button-Farbe im Text: [Label|primary](...), [Label|secondary](...), [Label|outline](...)"
-    ,"Button label": "Button-Beschriftung"
-    ,"Button size (sm, md, lg)": "Button-Größe (sm, md, lg)"
-    ,"Button color (primary, secondary, outline)": "Button-Farbe (primary, secondary, outline)"
-    ,"Button color (primary, secondary, outline, none)": "Button-Farbe (primary, secondary, outline, none)"
-    ,"Navigation icon": "Navigations-Icon"
-    ,"Default": "Standard"
-    ,"Highlight": "Hervorhebung"
-    ,"Services": "Leistungen"
-    ,"Gallery": "Galerie"
-    ,"FAQ": "FAQ"
-    ,"Icon": "Icon"
-    ,"Insert image": "Bild einfügen"
-    ,"Image in text: ![img|sm](https://example.com), ![img|md](...), ![img|lg](...)": "Bild im Text: ![img|sm](https://example.com), ![img|md](...), ![img|lg](...)"
-    ,"Registration is currently disabled.": "Registrierung ist derzeit deaktiviert."
-    ,"Current status: :status": "Aktueller Status: :status"
-    ,"Disabled": "Deaktiviert"
-    ,"Forms": "Formulare"
-    ,"Create Form": "Formular erstellen"
-    ,"Edit Form": "Formular bearbeiten"
-    ,"Create reusable forms and embed them in pages.": "Erstelle wiederverwendbare Formulare und binde sie in Seiten ein."
-    ,"Build a reusable contact or inquiry form.": "Erstelle ein wiederverwendbares Kontakt- oder Anfrageformular."
-    ,"Recipient email": "Empfänger-E-Mail"
-    ,"Success message": "Erfolgsmeldung"
-    ,"Fields": "Felder"
-    ,"Add field": "Feld hinzufügen"
-    ,"Field key": "Feld-Schlüssel"
-    ,"Type": "Typ"
-    ,"Textarea": "Textbereich"
-    ,"Required": "Pflichtfeld"
-    ,"No forms created yet.": "Noch keine Formulare erstellt."
-    ,"Submissions": "Einsendungen"
-    ,"Create Form Block": "Formular-Block hinzufügen"
-    ,"Select form": "Formular auswählen"
-    ,"Submit button label": "Text des Absende-Buttons"
-    ,"Send message": "Nachricht senden"
-    ,"Upload image file": "Bilddatei hochladen"
-    ,"Uploading...": "Wird hochgeladen..."
-    ,"Selected form is not available.": "Das ausgewählte Formular ist nicht verfügbar."
-    ,"Manage JSON translations and add new language files.": "JSON-Übersetzungen verwalten und neue Sprachdateien hinzufügen."
-    ,"Manage all news articles": "Alle News-Artikel verwalten"
-    ,"Form created successfully.": "Formular erfolgreich erstellt."
-    ,"Form updated successfully.": "Formular erfolgreich aktualisiert."
-    ,"Form deleted successfully.": "Formular erfolgreich gelöscht."
-    ,"Delete this form?": "Dieses Formular löschen?"
-    ,"Thank you! Your message has been sent.": "Danke! Deine Nachricht wurde gesendet."
-    ,":label is required.": ":label ist erforderlich."
-    ,"Read all submitted form entries.": "Alle eingesendeten Formular-Einträge lesen."
-    ,"No submissions yet.": "Noch keine Einsendungen vorhanden."
-    ,"Back": "Zurück"
-    ,"Clear submissions": "Einsendungen leeren"
-    ,"Submissions cleared successfully.": "Einsendungen erfolgreich geleert."
-    ,"Clear all submissions for this form?": "Alle Einsendungen für dieses Formular wirklich löschen?"
-    ,"I accept the": "Ich akzeptiere die"
-    ,"Please accept the terms and conditions.": "Bitte akzeptiere die AGB."
-    ,"Show hero header": "Hero-Header anzeigen"
-    ,"Hero badge": "Hero-Badge"
-    ,"Hero heading": "Hero-Überschrift"
-    ,"Hero subheading": "Hero-Unterüberschrift"
-    ,"Hero color theme": "Hero-Farbthema"
-    ,"Blue": "Blau"
-    ,"Green": "Grün"
-    ,"Purple": "Lila"
-    ,"Orange": "Orange"
-    ,"Hero background image URL": "Hero-Hintergrundbild-URL"
-    ,"Hero overlay strength": "Hero-Overlay-Stärke"
-    ,"Light": "Leicht"
-    ,"Strong": "Stark"
-    ,"Hero height": "Hero-Höhe"
-    ,"Full screen": "Vollbild"
-    ,"Hero primary button text": "Hero Primär-Button Text"
-    ,"Hero primary button URL": "Hero Primär-Button URL"
-    ,"Hero secondary button text": "Hero Sekundär-Button Text"
-    ,"Hero secondary button URL": "Hero Sekundär-Button URL"
-    ,"Learn more": "Mehr erfahren"
-    ,"Contact": "Kontakt"
-    ,"Apply template": "Vorlage anwenden"
-    ,"Select page template": "Seitenvorlage auswählen"
-    ,"Template will replace hero settings and all content blocks.": "Die Vorlage ersetzt Hero-Einstellungen und alle Inhaltsblöcke."
-    ,"Template applied.": "Vorlage wurde angewendet."
-    ,"Template preview": "Vorlagenvorschau"
-    ,"No template selected yet.": "Noch keine Vorlage ausgewählt."
-    ,"Hero": "Hero"
-    ,"Blocks: :count": "Blöcke: :count"
-    ,"Preview blocks": "Vorschau-Blöcke"
-    ,"No preview available.": "Keine Vorschau verfügbar."
-    ,"Template placeholder values": "Template-Platzhalterwerte"
-    ,"Fill values for placeholders from the selected template.": "Werte für Platzhalter aus der gewählten Vorlage eintragen."
-    ,"No placeholders in this template.": "Diese Vorlage enthält keine Platzhalter."
-    ,"Dynamic tokens for text blocks:": "Dynamische Tokens für Textblöcke:"
-    ,"No news articles available.": "Keine News-Artikel verfügbar."
-    ,"Insert token": "Token einfügen"
-    ,"Select token": "Token auswählen"
-    ,"Team list": "Teamliste"
-    ,"News boxes (3)": "News-Boxen (3)"
-    ,"News boxes (6)": "News-Boxen (6)"
-    ,"Current user name (or visitor)": "Aktueller Benutzername (oder Besucher)"
-    ,"Visitor": "Besucher"
-    ,"CMS info": "CMS-Info"
-    ,"CMS version": "CMS-Version"
-    ,"MySQL version": "MySQL-Version"
-    ,"Laravel version": "Laravel-Version"
-    ,"PHP version": "PHP-Version"
-    ,"Environment": "Umgebung"
-    ,"Developer": "Entwickler"
-    ,"Build release": "Build-Release"
-    ,"Database": "Datenbank"
-    ,"License status": "Lizenzstatus"
-    ,"Copy info": "Infos kopieren"
-    ,"Copied": "Kopiert"
-    ,"Comment Moderation AI": "Kommentar-Moderation KI"
-    ,"Review comments flagged by AI before publishing.": "Von der KI markierte Kommentare vor der Veroeffentlichung pruefen."
-    ,"No pending comments right now.": "Aktuell sind keine Kommentare in der Moderationswarteschlange."
-    ,"Score": "Score"
-    ,"Approve": "Freigeben"
-    ,"Reject": "Ablehnen"
-    ,"Comment approved.": "Kommentar wurde freigegeben."
-    ,"Comment rejected.": "Kommentar wurde abgelehnt."
-    ,"Your comment is awaiting moderation.": "Dein Kommentar wartet auf die Moderationsfreigabe."
-    ,"Run migrations to enable comment moderation columns.": "Fuehre Migrationen aus, um die Moderationsspalten zu aktivieren."
-    ,"Rule tuning": "Regeln feinjustieren"
-    ,"Pending threshold": "Schwelle fuer Warteschlange"
-    ,"Auto reject threshold": "Schwelle fuer Auto-Ablehnung"
-    ,"Max links allowed": "Maximal erlaubte Links"
-    ,"Blocked words (comma or newline separated)": "Blockierte Woerter (Komma oder neue Zeile)"
-    ,"Save moderation rules": "Moderationsregeln speichern"
-    ,"Comment moderation settings updated.": "Moderationseinstellungen wurden aktualisiert."
-    ,"Your comment was rejected by moderation.": "Dein Kommentar wurde von der Moderation abgelehnt."
-    ,"Sponsor / Ad Slots": "Sponsoren / Werbeslots"
-    ,"Manage sponsor banners with impressions and clicks.": "Sponsor-Banner mit Impressionen und Klicks verwalten."
-    ,"Create ad slot": "Werbeslot erstellen"
-    ,"Optional HTML banner code": "Optionaler HTML-Banner-Code"
-    ,"Run migrations to enable ad slots table.": "Fuehre Migrationen aus, um die Tabelle fuer Werbeslots zu aktivieren."
-    ,"Ad slot created.": "Werbeslot wurde erstellt."
-    ,"Ad slot updated.": "Werbeslot wurde aktualisiert."
-    ,"Ad slot deleted.": "Werbeslot wurde geloescht."
-    ,"Delete this ad slot?": "Diesen Werbeslot wirklich loeschen?"
-    ,"No ad slots yet.": "Noch keine Werbeslots vorhanden."
-    ,"Available slot keys": "Verfügbare Slot-Keys"
-    ,"No predefined slot keys available.": "Keine vordefinierten Slot-Keys verfügbar."
-    ,"Use one of the predefined slot keys shown above.": "Verwende einen der oben gezeigten vordefinierten Slot-Keys."
-    ,"Field info": "Feld-Infos"
-    ,"Internal name shown in admin only.": "Interner Name, der nur im Admin angezeigt wird."
-    ,"Defines where the ad appears on the site.": "Legt fest, an welcher Position die Werbung auf der Website erscheint."
-    ,"Destination when users click the ad.": "Zielseite, die beim Klick auf die Werbung geöffnet wird."
-    ,"External image URL for the banner (optional).": "Externe Bild-URL für den Banner (optional)."
-    ,"Upload a local image file; preferred over image_url.": "Lokale Bilddatei hochladen; wird gegenüber image_url bevorzugt."
-    ,"Priority": "Priorität"
-    ,"Default 100. Lower number = shown first (e.g. 10 before 100).": "Standard ist 100. Kleinere Zahl = wird zuerst angezeigt (z. B. 10 vor 100)."
-    ,"Only active ad slots can be displayed.": "Nur aktive Werbeslots können angezeigt werden."
-    ,"Optional time window for automatic start/stop.": "Optionales Zeitfenster für automatischen Start/Stopp."
-    ,"Fallback if no image is set (use trusted HTML only).": "Fallback, wenn kein Bild gesetzt ist (nur vertrauenswürdiges HTML verwenden)."
-    ,"Upload banner image (optional)": "Banner-Bild hochladen (optional)"
-    ,"PNG, JPG, GIF, WebP up to 5MB": "PNG, JPG, GIF, WebP bis zu 5MB"
-    ,"Impressions": "Impressionen"
-    ,"Clicks": "Klicks"
-    ,"Breaking News Mode": "Banner"
-    ,"Show a prominent breaking-news banner across the website.": "Zeigt einen globalen Hinweis-Banner auf der gesamten Website (z. B. für Wartung, Infos oder Eilmeldungen)."
-    ,"Enable breaking news banner": "Banner aktivieren"
-    ,"Badge text": "Badge-Text"
-    ,"Theme": "Farbthema"
-    ,"Display mode": "Anzeigemodus"
-    ,"Banner (top bar)": "Banner (oben)"
-    ,"Popup (dismissible)": "Popup (wegklickbar)"
-    ,"Popup text (optional)": "Popup-Text (optional)"
-    ,"Displayed only in popup mode as normal body text.": "Wird nur im Popup-Modus als normaler Fließtext angezeigt."
-    ,"Headline": "Überschrift"
-    ,"Target URL (optional)": "Ziel-URL (optional)"
-    ,"Amber": "Amber"
-    ,"Breaking News Mode updated.": "Banner wurde aktualisiert."
-    ,"Unknown": "Unbekannt"
-    ,"Invalid": "Ungültig"
-    ,"Themes": "Themes"
-    ,"Choose the public appearance of your site. Admin area stays unchanged.": "Öffentliches Erscheinungsbild wählen. Der Admin-Bereich bleibt unverändert."
-    ,"Active": "Aktiv"
-    ,"Save theme": "Theme speichern"
-    ,"Preview website": "Website ansehen"
-    ,"Theme updated successfully. The new design is visible on the public site.": "Theme gespeichert. Das neue Design ist auf der Website sichtbar."
-    ,"Please select a valid theme.": "Bitte ein gültiges Theme wählen."
-    ,"Unknown theme: :theme": "Unbekanntes Theme: :theme"
-    ,"Active theme set to :name": "Aktives Theme: :name"
-    ,"Activate this theme": "Dieses Theme aktivieren"
-    ,"This theme is currently active.": "Dieses Theme ist gerade aktiv."
-    ,"Only one theme is installed": "Nur ein Theme ist installiert"
-    ,"Upload the folder themes/magazine/ to your server (via FTP) to enable the Magazine theme.": "Lade den Ordner themes/magazine/ per FTP auf den Server hoch, um das Magazin-Theme zu nutzen."
-    ,"Members": "Mitglieder"
-    ,"Messages": "Nachrichten"
-    ,"All messages": "Alle Nachrichten"
-    ,"Your conversations with friends.": "Deine Unterhaltungen mit Freunden."
-    ,"No conversations yet.": "Noch keine Unterhaltungen."
-    ,"Send a friend request in the member directory to start chatting.": "Sende im Mitgliederverzeichnis eine Freundschaftsanfrage, um zu chatten."
-    ,"Browse members": "Mitglieder durchsuchen"
-    ,"Recent chats": "Letzte Chats"
-    ,"View all": "Alle anzeigen"
-    ,"No messages yet": "Noch keine Nachrichten"
-    ,"New message": "Neue Nachricht"
-    ,"New encrypted message": "Neue verschlüsselte Nachricht"
-    ,"Encrypted message": "Verschlüsselte Nachricht"
-    ,"Image": "Bild"
-    ,"You: :preview": "Du: :preview"
-    ,"Member directory": "Mitgliederverzeichnis"
-    ,"Find members and send friend requests. When a request is accepted, you can chat.": "Finde Mitglieder und sende Freundschaftsanfragen. Nach Annahme könnt ihr chatten."
-    ,"Incoming friend requests": "Eingehende Freundschaftsanfragen"
-    ,"Accept": "Annehmen"
-    ,"Decline": "Ablehnen"
-    ,"Search by name…": "Nach Namen suchen…"
-    ,"Search": "Suchen"
-    ,"No members found.": "Keine Mitglieder gefunden."
-    ,"Back to directory": "Zurück zum Verzeichnis"
-    ,"Open chat": "Chat öffnen"
-    ,"Accept request": "Anfrage annehmen"
-    ,"Friend request pending": "Freundschaftsanfrage ausstehend"
-    ,"Send friend request": "Freundschaftsanfrage senden"
-    ,"Chat with :name": "Chat mit :name"
-    ,"Direct messages": "Direktnachrichten"
-    ,"Profile": "Profil"
-    ,"Standard chat": "Standard-Chat"
-    ,"End-to-end encrypted": "Ende-zu-Ende verschlüsselt"
-    ,"End-to-end mode encrypts in your browser. The server only stores ciphertext; register keys once per browser.": "Ende-zu-Ende wird im Browser verschlüsselt. Der Server speichert nur Geheimtext; Schlüssel je Browser einmalig registrieren."
-    ,"Write a message…": "Nachricht schreiben…"
-    ,"Decrypting…": "Entschlüsseln…"
-    ,"Could not decrypt.": "Entschlüsselung nicht möglich."
-    ,"Waiting for encryption keys…": "Warte auf Verschlüsselungsschlüssel…"
-    ,"Your contact has not registered end-to-end encryption in the browser yet. Encrypted messages are disabled until both sides have opened the chat.": "Dein Kontakt hat die Ende-zu-Ende-Verschlüsselung im Browser noch nicht aktiviert. Verschlüsselte Nachrichten sind erst möglich, wenn beide den Chat geöffnet haben."
-    ,"Generating your encryption key…": "Verschlüsselungsschlüssel wird erzeugt…"
-    ,"Friend request sent.": "Freundschaftsanfrage gesendet."
-    ,"You are already friends.": "Ihr seid bereits befreundet."
-    ,"Friend request already sent.": "Freundschaftsanfrage bereits gesendet."
-    ,"This user has already sent you a request — accept it from your member directory.": "Diese Person hat dir bereits eine Anfrage gesendet — bitte im Mitgliederverzeichnis annehmen."
-    ,"You are now friends. Open the chat to message each other.": "Ihr seid jetzt befreundet. Im Chat könnt ihr euch schreiben."
-    ,"Request is no longer pending.": "Die Anfrage ist nicht mehr offen."
-    ,"Friend request declined.": "Freundschaftsanfrage abgelehnt."
-    ,"User profiles plugin database tables are missing. Run migrations.": "Datenbanktabellen für Benutzerprofile fehlen. Bitte Migrationen ausführen."
-    ,"End-to-end encryption requires both users to register encryption keys (open the chat once in this browser).": "Ende-zu-Ende erfordert, dass beide Nutzer ihre Schlüssel registrieren (Chat in diesem Browser einmal öffnen)."
-    ,"Invalid public key format.": "Ungültiges Format des öffentlichen Schlüssels."
-    ,"Could not send.": "Senden fehlgeschlagen."
-    ,"End-to-end encryption requires both users to have opened this chat in the browser.": "Ende-zu-Ende erfordert, dass beide diesen Chat im Browser geöffnet haben."
-    ,"Waiting for the other user to publish an encryption key on the server (usually a few seconds after they open this chat).": "Warte auf den Verschlüsselungsschlüssel der anderen Person auf dem Server (meist wenige Sekunden, nachdem sie den Chat geöffnet hat)."
-    ,"Syncing your encryption key to the server…": "Synchronisiere deinen Verschlüsselungsschlüssel mit dem Server…"
-    ,"End-to-end encryption is not ready yet: wait until both keys appear on the server (this page updates automatically).": "Ende-zu-Ende ist noch nicht bereit: Bitte warten, bis beide Schlüssel auf dem Server registriert sind (diese Seite aktualisiert sich automatisch)."
-    ,"Only the public key may be uploaded, not the private key.": "Es darf nur der öffentliche Schlüssel hochgeladen werden, nicht der private Schlüssel."
-    ,"Delete conversation": "Konversation löschen"
-    ,"Delete the entire conversation for both users? This cannot be undone.": "Den gesamten Chat-Verlauf für beide Nutzer löschen? Das kann nicht rückgängig gemacht werden."
-    ,"Conversation deleted.": "Konversation wurde gelöscht."
-    ,"Could not delete chat.": "Chat konnte nicht gelöscht werden."
-    ,"Anyone can open this chat. End-to-end sending needs the other person's key too — they must open this chat once. Standard chat always works.": "Jeder kann diesen Chat öffnen. Zum Senden mit Ende-zu-Ende brauchst du auch den Schlüssel der anderen Person — sie muss diesen Chat einmal öffnen. Der Standard-Chat funktioniert jederzeit."
-    ,"Open this chat once in your browser so your encryption key is saved — then you can use end-to-end mode.": "Öffne diesen Chat einmal in deinem Browser, damit dein Verschlüsselungsschlüssel gespeichert wird — danach kannst du den Ende-zu-Ende-Modus nutzen."
-    ,"To send encrypted messages, the other person must open this chat once in their browser. Until then, use standard chat.": "Um verschlüsselt zu senden, muss die andere Person diesen Chat einmal in ihrem Browser öffnen. Bis dahin nutze bitte den Standard-Chat."
-    ,"End-to-end send is not ready: the other user has not published an encryption key yet. Use standard chat, or wait until they open this chat (this page updates automatically).": "Ende-zu-Ende-Senden ist noch nicht möglich: Die andere Person hat noch keinen Verschlüsselungsschlüssel veröffentlicht. Nutze den Standard-Chat oder warte, bis sie den Chat öffnet (diese Seite aktualisiert sich automatisch)."
-    ,"Import backup…": "Backup importieren…"
-    ,"Export encryption backup…": "Verschlüsselungs-Backup exportieren…"
-    ,"Create new encryption key": "Neuen Verschlüsselungsschlüssel erstellen"
-    ,"This creates a new encryption key on this device. End-to-end messages encrypted with your previous key will remain unreadable here. Continue?": "Damit wird auf diesem Gerät ein neuer Verschlüsselungsschlüssel erzeugt. Ältere Ende-zu-Ende-Nachrichten bleiben hier unlesbar. Fortfahren?"
-    ,"Invalid backup file.": "Ungültige Backup-Datei."
-    ,"This backup is for a different user account.": "Dieses Backup gehört zu einem anderen Benutzerkonto."
-    ,"No local encryption key to export.": "Kein lokaler Verschlüsselungsschlüssel zum Exportieren."
-    ,"Your encryption key is not stored on this browser. Import the backup file you exported on another device, or create a new key (then older E2E messages cannot be read here).": "Dein Verschlüsselungsschlüssel liegt in diesem Browser nicht vor. Importiere die Backup-Datei von einem anderen Gerät, oder erstelle einen neuen Schlüssel (dann sind ältere E2E-Nachrichten hier nicht lesbar)."
-    ,"Set up encryption on this device first: import a backup or create a new key.": "Richte zuerst die Verschlüsselung auf diesem Gerät ein: Backup importieren oder neuen Schlüssel erstellen."
-    ,"Encrypted messages need your key on this device — use Import backup.": "Verschlüsselte Nachrichten brauchen deinen Schlüssel auf diesem Gerät — nutze „Backup importieren“."
-    ,"Remove image": "Bild entfernen"
-    ,"Emoji": "Emoji"
-    ,"Image": "Bild"
-    ,"Please choose an image file.": "Bitte eine Bilddatei wählen."
-    ,"Image too large after compression. Choose a smaller image.": "Bild nach Kompression zu groß. Bitte ein kleineres Bild wählen."
-    ,"Could not process image.": "Bild konnte nicht verarbeitet werden."
-    ,"Invalid encrypted payload.": "Ungültige verschlüsselte Nutzlast."
-    ,"Message cannot be empty.": "Nachricht darf nicht leer sein."
-    ,"Invalid image type.": "Ungültiger Bildtyp."
-    ,"Image too large.": "Bild zu groß."
-    ,"Invalid message format.": "Ungültiges Nachrichtenformat."
-    ,"Craftsmanship you can rely on": "Handwerk, auf das Sie sich verlassen können"
-    ,"Request a quote": "Angebot anfordern"
-    ,"Regional · Reliable · Fair": "Regional · Zuverlässig · Fair"
-    ,"Professional craft services for your home and business — from consultation to completion.": "Professionelle Handwerksleistungen für Zuhause und Gewerbe — von der Beratung bis zur Fertigstellung."
-    ,"On time": "Pünktlich"
-    ,"Reliable appointments": "Termine, die halten"
-    ,"Quality": "Qualität"
-    ,"Clean workmanship": "Saubere Ausführung"
-    ,"Regional": "Regional"
-    ,"Local experts": "Experten vor Ort"
-    ,"Fair": "Fair"
-    ,"Transparent pricing": "Transparente Preise"
-    ,"Our services": "Unsere Leistungen"
-    ,"Installation & repair": "Installation & Reparatur"
-    ,"Professional execution for new builds and renovations.": "Professionelle Ausführung bei Neubau und Sanierung."
-    ,"Residential projects": "Privatkunden"
-    ,"Solutions tailored to your property.": "Lösungen passend zu Ihrer Immobilie."
-    ,"Commercial clients": "Gewerbekunden"
-    ,"Maintenance contracts and project support.": "Wartungsverträge und Projektbetreuung."
-    ,"News & projects": "Neuigkeiten & Projekte"
-    ,"Insights from our daily work.": "Einblicke aus unserem Arbeitsalltag."
-    ,"Show all news": "Alle Beiträge anzeigen"
-    ,"Ready for your project?": "Bereit für Ihr Projekt?"
-    ,"Contact us for a non-binding consultation.": "Kontaktieren Sie uns für eine unverbindliche Beratung."
-    ,"Get in touch": "Kontakt aufnehmen"
-    ,"Meet the people behind our craft": "Die Menschen hinter unserem Handwerk"
-    ,"Experienced professionals for your project — from planning to handover.": "Erfahrene Profis für Ihr Projekt — von der Planung bis zur Übergabe."
-    ,"Upload additional theme folders (e.g. themes/handwerk/ or themes/magazine/) to your server via FTP.": "Laden Sie weitere Theme-Ordner (z. B. themes/handwerk/ oder themes/magazine/) per FTP auf den Server."
-    ,"Cooling · Climate · Ventilation": "Kälte · Klima · Lüftung"
-    ,"Refrigeration and HVAC specialists — planning, installation, maintenance and emergency service for commercial and residential clients.": "Spezialisten für Kälte- und Klimatechnik — Planung, Installation, Wartung und Notdienst für Gewerbe und Privatkunden."
-    ,"Request a consultation": "Beratung anfragen"
-    ,"Our strengths": "Unsere Stärken"
-    ,"Master craft business": "Meisterbetrieb"
-    ,"Certified refrigeration & HVAC": "Zertifizierte Kälte- & Klimatechnik"
-    ,"Energy efficient": "Energieeffizient"
-    ,"Modern systems, lower consumption": "Moderne Anlagen, weniger Verbrauch"
-    ,"Fast response": "Schnelle Hilfe"
-    ,"Maintenance and emergency service": "Wartung und Notdienst"
-    ,"On site in your area": "Vor Ort in Ihrer Region"
-    ,"Refrigeration & HVAC": "Kälte- & Klimatechnik"
-    ,"Air conditioning & heat pumps": "Klimaanlagen & Wärmepumpen"
-    ,"Split units, VRF systems and heat pumps — planned, installed and serviced.": "Split-Geräte, VRF-Anlagen und Wärmepumpen — geplant, installiert und gewartet."
-    ,"Commercial refrigeration": "Gewerbekälte"
-    ,"Cold rooms, refrigeration cabinets and industrial cooling to specification.": "Kühlräume, Kühlmöbel und Industriekälte nach Maß."
-    ,"Ventilation & maintenance": "Lüftung & Wartung"
-    ,"Ventilation technology, leak checks, maintenance contracts and emergency service.": "Lüftungstechnik, Dichtheitsprüfung, Wartungsverträge und Notdienst."
-    ,"References": "Referenzen"
-    ,"Projects & updates": "Projekte & Aktuelles"
-    ,"Installations, maintenance and tips from our technicians.": "Installationen, Wartung und Tipps unserer Techniker."
-    ,"Need cooling or climate control?": "Kühlung oder Klima geplant?"
-    ,"We advise on air conditioning, refrigeration and ventilation — free initial consultation.": "Beratung zu Klima, Kälte und Lüftung — unverbindliches Erstgespräch."
-    ,"Refrigeration & HVAC technicians": "Kälte- & Klimatechniker"
-    ,"Your team for cooling and climate technology": "Ihr Team für Kälte- und Klimatechnik"
-    ,"Certified specialists for installation, commissioning and service of cooling and air-conditioning systems.": "Zertifizierte Fachkräfte für Installation, Inbetriebnahme und Service von Kälte- und Klimaanlagen."
-    ,"HVAC technician": "Klimatechniker"
-    ,"Join our refrigeration & HVAC team": "Verstärken Sie unser Kälte- & Klimateam"
-    ,"We are looking for motivated refrigeration fitters and HVAC technicians.": "Wir suchen motivierte Kälteanlagenbauer und Klimatechniker."
+    "Revision restored successfully.": "Version erfolgreich wiederhergestellt.",
+    "Block width": "Block-Breite",
+    "Full width": "Volle Breite",
+    "Half width (2 per row)": "Halbe Breite (2 pro Zeile)",
+    "Image size": "Bildgröße",
+    "Button in text: [Label](https://example.com)": "Button im Text: [Label](https://example.com)",
+    "Insert button": "Button einfügen",
+    "Button size": "Button-Größe",
+    "Button size in text: [Label|sm](https://example.com), [Label|md](...), [Label|lg](...)": "Button-Größe im Text: [Label|sm](https://example.com), [Label|md](...), [Label|lg](...)",
+    "Button color": "Button-Farbe",
+    "Outline": "Kontur",
+    "No background": "Kein Hintergrund",
+    "Button color in text: [Label|primary](...), [Label|secondary](...), [Label|outline](...)": "Button-Farbe im Text: [Label|primary](...), [Label|secondary](...), [Label|outline](...)",
+    "Button label": "Button-Beschriftung",
+    "Button size (sm, md, lg)": "Button-Größe (sm, md, lg)",
+    "Button color (primary, secondary, outline)": "Button-Farbe (primary, secondary, outline)",
+    "Button color (primary, secondary, outline, none)": "Button-Farbe (primary, secondary, outline, none)",
+    "Navigation icon": "Navigations-Icon",
+    "Default": "Standard",
+    "Highlight": "Hervorhebung",
+    "Services": "Leistungen",
+    "Gallery": "Galerie",
+    "FAQ": "FAQ",
+    "Icon": "Icon",
+    "Insert image": "Bild einfügen",
+    "Image in text: ![img|sm](https://example.com), ![img|md](...), ![img|lg](...)": "Bild im Text: ![img|sm](https://example.com), ![img|md](...), ![img|lg](...)",
+    "Registration is currently disabled.": "Registrierung ist derzeit deaktiviert.",
+    "Current status: :status": "Aktueller Status: :status",
+    "Disabled": "Deaktiviert",
+    "Forms": "Formulare",
+    "Create Form": "Formular erstellen",
+    "Edit Form": "Formular bearbeiten",
+    "Create reusable forms and embed them in pages.": "Erstelle wiederverwendbare Formulare und binde sie in Seiten ein.",
+    "Build a reusable contact or inquiry form.": "Erstelle ein wiederverwendbares Kontakt- oder Anfrageformular.",
+    "Recipient email": "Empfänger-E-Mail",
+    "Success message": "Erfolgsmeldung",
+    "Fields": "Felder",
+    "Add field": "Feld hinzufügen",
+    "Field key": "Feld-Schlüssel",
+    "Type": "Typ",
+    "Textarea": "Textbereich",
+    "Required": "Pflichtfeld",
+    "No forms created yet.": "Noch keine Formulare erstellt.",
+    "Submissions": "Einsendungen",
+    "Create Form Block": "Formular-Block hinzufügen",
+    "Select form": "Formular auswählen",
+    "Submit button label": "Text des Absende-Buttons",
+    "Send message": "Nachricht senden",
+    "Upload image file": "Bilddatei hochladen",
+    "Uploading...": "Wird hochgeladen...",
+    "Selected form is not available.": "Das ausgewählte Formular ist nicht verfügbar.",
+    "Manage JSON translations and add new language files.": "JSON-Übersetzungen verwalten und neue Sprachdateien hinzufügen.",
+    "Manage all news articles": "Alle News-Artikel verwalten",
+    "Form created successfully.": "Formular erfolgreich erstellt.",
+    "Form updated successfully.": "Formular erfolgreich aktualisiert.",
+    "Form deleted successfully.": "Formular erfolgreich gelöscht.",
+    "Delete this form?": "Dieses Formular löschen?",
+    "Thank you! Your message has been sent.": "Danke! Deine Nachricht wurde gesendet.",
+    ":label is required.": ":label ist erforderlich.",
+    "Read all submitted form entries.": "Alle eingesendeten Formular-Einträge lesen.",
+    "No submissions yet.": "Noch keine Einsendungen vorhanden.",
+    "Back": "Zurück",
+    "Clear submissions": "Einsendungen leeren",
+    "Submissions cleared successfully.": "Einsendungen erfolgreich geleert.",
+    "Clear all submissions for this form?": "Alle Einsendungen für dieses Formular wirklich löschen?",
+    "I accept the": "Ich akzeptiere die",
+    "Please accept the terms and conditions.": "Bitte akzeptiere die AGB.",
+    "Show hero header": "Hero-Header anzeigen",
+    "Hero badge": "Hero-Badge",
+    "Hero heading": "Hero-Überschrift",
+    "Hero subheading": "Hero-Unterüberschrift",
+    "Hero color theme": "Hero-Farbthema",
+    "Blue": "Blau",
+    "Green": "Grün",
+    "Purple": "Lila",
+    "Orange": "Orange",
+    "Hero background image URL": "Hero-Hintergrundbild-URL",
+    "Hero overlay strength": "Hero-Overlay-Stärke",
+    "Light": "Leicht",
+    "Strong": "Stark",
+    "Hero height": "Hero-Höhe",
+    "Full screen": "Vollbild",
+    "Hero primary button text": "Hero Primär-Button Text",
+    "Hero primary button URL": "Hero Primär-Button URL",
+    "Hero secondary button text": "Hero Sekundär-Button Text",
+    "Hero secondary button URL": "Hero Sekundär-Button URL",
+    "Learn more": "Mehr erfahren",
+    "Apply template": "Vorlage anwenden",
+    "Select page template": "Seitenvorlage auswählen",
+    "Template will replace hero settings and all content blocks.": "Die Vorlage ersetzt Hero-Einstellungen und alle Inhaltsblöcke.",
+    "Template applied.": "Vorlage wurde angewendet.",
+    "Template preview": "Vorlagenvorschau",
+    "No template selected yet.": "Noch keine Vorlage ausgewählt.",
+    "Hero": "Hero",
+    "Blocks: :count": "Blöcke: :count",
+    "Preview blocks": "Vorschau-Blöcke",
+    "No preview available.": "Keine Vorschau verfügbar.",
+    "Template placeholder values": "Template-Platzhalterwerte",
+    "Fill values for placeholders from the selected template.": "Werte für Platzhalter aus der gewählten Vorlage eintragen.",
+    "No placeholders in this template.": "Diese Vorlage enthält keine Platzhalter.",
+    "Dynamic tokens for text blocks:": "Dynamische Tokens für Textblöcke:",
+    "No news articles available.": "Keine News-Artikel verfügbar.",
+    "Insert token": "Token einfügen",
+    "Select token": "Token auswählen",
+    "Team list": "Teamliste",
+    "News boxes (3)": "News-Boxen (3)",
+    "News boxes (6)": "News-Boxen (6)",
+    "Current user name (or visitor)": "Aktueller Benutzername (oder Besucher)",
+    "Visitor": "Besucher",
+    "CMS info": "CMS-Info",
+    "CMS version": "CMS-Version",
+    "MySQL version": "MySQL-Version",
+    "PHP version": "PHP-Version",
+    "Environment": "Umgebung",
+    "Developer": "Entwickler",
+    "Build release": "Build-Release",
+    "Database": "Datenbank",
+    "License status": "Lizenzstatus",
+    "Copy info": "Infos kopieren",
+    "Copied": "Kopiert",
+    "Comment Moderation AI": "Kommentar-Moderation KI",
+    "Review comments flagged by AI before publishing.": "Von der KI markierte Kommentare vor der Veroeffentlichung pruefen.",
+    "No pending comments right now.": "Aktuell sind keine Kommentare in der Moderationswarteschlange.",
+    "Score": "Score",
+    "Approve": "Freigeben",
+    "Reject": "Ablehnen",
+    "Comment approved.": "Kommentar wurde freigegeben.",
+    "Comment rejected.": "Kommentar wurde abgelehnt.",
+    "Your comment is awaiting moderation.": "Dein Kommentar wartet auf die Moderationsfreigabe.",
+    "Run migrations to enable comment moderation columns.": "Fuehre Migrationen aus, um die Moderationsspalten zu aktivieren.",
+    "Rule tuning": "Regeln feinjustieren",
+    "Pending threshold": "Schwelle fuer Warteschlange",
+    "Auto reject threshold": "Schwelle fuer Auto-Ablehnung",
+    "Max links allowed": "Maximal erlaubte Links",
+    "Blocked words (comma or newline separated)": "Blockierte Woerter (Komma oder neue Zeile)",
+    "Save moderation rules": "Moderationsregeln speichern",
+    "Comment moderation settings updated.": "Moderationseinstellungen wurden aktualisiert.",
+    "Your comment was rejected by moderation.": "Dein Kommentar wurde von der Moderation abgelehnt.",
+    "Sponsor / Ad Slots": "Sponsoren / Werbeslots",
+    "Manage sponsor banners with impressions and clicks.": "Sponsor-Banner mit Impressionen und Klicks verwalten.",
+    "Create ad slot": "Werbeslot erstellen",
+    "Optional HTML banner code": "Optionaler HTML-Banner-Code",
+    "Run migrations to enable ad slots table.": "Fuehre Migrationen aus, um die Tabelle fuer Werbeslots zu aktivieren.",
+    "Ad slot created.": "Werbeslot wurde erstellt.",
+    "Ad slot updated.": "Werbeslot wurde aktualisiert.",
+    "Ad slot deleted.": "Werbeslot wurde geloescht.",
+    "Delete this ad slot?": "Diesen Werbeslot wirklich loeschen?",
+    "No ad slots yet.": "Noch keine Werbeslots vorhanden.",
+    "Available slot keys": "Verfügbare Slot-Keys",
+    "No predefined slot keys available.": "Keine vordefinierten Slot-Keys verfügbar.",
+    "Use one of the predefined slot keys shown above.": "Verwende einen der oben gezeigten vordefinierten Slot-Keys.",
+    "Field info": "Feld-Infos",
+    "Internal name shown in admin only.": "Interner Name, der nur im Admin angezeigt wird.",
+    "Defines where the ad appears on the site.": "Legt fest, an welcher Position die Werbung auf der Website erscheint.",
+    "Destination when users click the ad.": "Zielseite, die beim Klick auf die Werbung geöffnet wird.",
+    "External image URL for the banner (optional).": "Externe Bild-URL für den Banner (optional).",
+    "Upload a local image file; preferred over image_url.": "Lokale Bilddatei hochladen; wird gegenüber image_url bevorzugt.",
+    "Priority": "Priorität",
+    "Default 100. Lower number = shown first (e.g. 10 before 100).": "Standard ist 100. Kleinere Zahl = wird zuerst angezeigt (z. B. 10 vor 100).",
+    "Only active ad slots can be displayed.": "Nur aktive Werbeslots können angezeigt werden.",
+    "Optional time window for automatic start/stop.": "Optionales Zeitfenster für automatischen Start/Stopp.",
+    "Fallback if no image is set (use trusted HTML only).": "Fallback, wenn kein Bild gesetzt ist (nur vertrauenswürdiges HTML verwenden).",
+    "Upload banner image (optional)": "Banner-Bild hochladen (optional)",
+    "PNG, JPG, GIF, WebP up to 5MB": "PNG, JPG, GIF, WebP bis zu 5MB",
+    "Impressions": "Impressionen",
+    "Clicks": "Klicks",
+    "Breaking News Mode": "Banner",
+    "Show a prominent breaking-news banner across the website.": "Zeigt einen globalen Hinweis-Banner auf der gesamten Website (z. B. für Wartung, Infos oder Eilmeldungen).",
+    "Enable breaking news banner": "Banner aktivieren",
+    "Badge text": "Badge-Text",
+    "Theme": "Farbthema",
+    "Display mode": "Anzeigemodus",
+    "Banner (top bar)": "Banner (oben)",
+    "Popup (dismissible)": "Popup (wegklickbar)",
+    "Popup text (optional)": "Popup-Text (optional)",
+    "Displayed only in popup mode as normal body text.": "Wird nur im Popup-Modus als normaler Fließtext angezeigt.",
+    "Headline": "Überschrift",
+    "Target URL (optional)": "Ziel-URL (optional)",
+    "Amber": "Amber",
+    "Breaking News Mode updated.": "Banner wurde aktualisiert.",
+    "Unknown": "Unbekannt",
+    "Invalid": "Ungültig",
+    "Themes": "Themes",
+    "Choose the public appearance of your site. Admin area stays unchanged.": "Öffentliches Erscheinungsbild wählen. Der Admin-Bereich bleibt unverändert.",
+    "Save theme": "Theme speichern",
+    "Preview website": "Website ansehen",
+    "Theme updated successfully. The new design is visible on the public site.": "Theme gespeichert. Das neue Design ist auf der Website sichtbar.",
+    "Please select a valid theme.": "Bitte ein gültiges Theme wählen.",
+    "Unknown theme: :theme": "Unbekanntes Theme: :theme",
+    "Active theme set to :name": "Aktives Theme: :name",
+    "Activate this theme": "Dieses Theme aktivieren",
+    "This theme is currently active.": "Dieses Theme ist gerade aktiv.",
+    "Only one theme is installed": "Nur ein Theme ist installiert",
+    "Upload the folder themes/magazine/ to your server (via FTP) to enable the Magazine theme.": "Lade den Ordner themes/magazine/ per FTP auf den Server hoch, um das Magazin-Theme zu nutzen.",
+    "Members": "Mitglieder",
+    "Messages": "Nachrichten",
+    "All messages": "Alle Nachrichten",
+    "Your conversations with friends.": "Deine Unterhaltungen mit Freunden.",
+    "No conversations yet.": "Noch keine Unterhaltungen.",
+    "Send a friend request in the member directory to start chatting.": "Sende im Mitgliederverzeichnis eine Freundschaftsanfrage, um zu chatten.",
+    "Browse members": "Mitglieder durchsuchen",
+    "Recent chats": "Letzte Chats",
+    "No messages yet": "Noch keine Nachrichten",
+    "New message": "Neue Nachricht",
+    "New encrypted message": "Neue verschlüsselte Nachricht",
+    "Encrypted message": "Verschlüsselte Nachricht",
+    "You: :preview": "Du: :preview",
+    "Member directory": "Mitgliederverzeichnis",
+    "Find members and send friend requests. When a request is accepted, you can chat.": "Finde Mitglieder und sende Freundschaftsanfragen. Nach Annahme könnt ihr chatten.",
+    "Incoming friend requests": "Eingehende Freundschaftsanfragen",
+    "Accept": "Annehmen",
+    "Decline": "Ablehnen",
+    "Search by name…": "Nach Namen suchen…",
+    "No members found.": "Keine Mitglieder gefunden.",
+    "Back to directory": "Zurück zum Verzeichnis",
+    "Open chat": "Chat öffnen",
+    "Accept request": "Anfrage annehmen",
+    "Friend request pending": "Freundschaftsanfrage ausstehend",
+    "Send friend request": "Freundschaftsanfrage senden",
+    "Chat with :name": "Chat mit :name",
+    "Direct messages": "Direktnachrichten",
+    "Profile": "Profil",
+    "Standard chat": "Standard-Chat",
+    "End-to-end encrypted": "Ende-zu-Ende verschlüsselt",
+    "End-to-end mode encrypts in your browser. The server only stores ciphertext; register keys once per browser.": "Ende-zu-Ende wird im Browser verschlüsselt. Der Server speichert nur Geheimtext; Schlüssel je Browser einmalig registrieren.",
+    "Write a message…": "Nachricht schreiben…",
+    "Decrypting…": "Entschlüsseln…",
+    "Could not decrypt.": "Entschlüsselung nicht möglich.",
+    "Waiting for encryption keys…": "Warte auf Verschlüsselungsschlüssel…",
+    "Your contact has not registered end-to-end encryption in the browser yet. Encrypted messages are disabled until both sides have opened the chat.": "Dein Kontakt hat die Ende-zu-Ende-Verschlüsselung im Browser noch nicht aktiviert. Verschlüsselte Nachrichten sind erst möglich, wenn beide den Chat geöffnet haben.",
+    "Generating your encryption key…": "Verschlüsselungsschlüssel wird erzeugt…",
+    "Friend request sent.": "Freundschaftsanfrage gesendet.",
+    "You are already friends.": "Ihr seid bereits befreundet.",
+    "Friend request already sent.": "Freundschaftsanfrage bereits gesendet.",
+    "This user has already sent you a request — accept it from your member directory.": "Diese Person hat dir bereits eine Anfrage gesendet — bitte im Mitgliederverzeichnis annehmen.",
+    "You are now friends. Open the chat to message each other.": "Ihr seid jetzt befreundet. Im Chat könnt ihr euch schreiben.",
+    "Request is no longer pending.": "Die Anfrage ist nicht mehr offen.",
+    "Friend request declined.": "Freundschaftsanfrage abgelehnt.",
+    "User profiles plugin database tables are missing. Run migrations.": "Datenbanktabellen für Benutzerprofile fehlen. Bitte Migrationen ausführen.",
+    "End-to-end encryption requires both users to register encryption keys (open the chat once in this browser).": "Ende-zu-Ende erfordert, dass beide Nutzer ihre Schlüssel registrieren (Chat in diesem Browser einmal öffnen).",
+    "Invalid public key format.": "Ungültiges Format des öffentlichen Schlüssels.",
+    "Could not send.": "Senden fehlgeschlagen.",
+    "End-to-end encryption requires both users to have opened this chat in the browser.": "Ende-zu-Ende erfordert, dass beide diesen Chat im Browser geöffnet haben.",
+    "Waiting for the other user to publish an encryption key on the server (usually a few seconds after they open this chat).": "Warte auf den Verschlüsselungsschlüssel der anderen Person auf dem Server (meist wenige Sekunden, nachdem sie den Chat geöffnet hat).",
+    "Syncing your encryption key to the server…": "Synchronisiere deinen Verschlüsselungsschlüssel mit dem Server…",
+    "End-to-end encryption is not ready yet: wait until both keys appear on the server (this page updates automatically).": "Ende-zu-Ende ist noch nicht bereit: Bitte warten, bis beide Schlüssel auf dem Server registriert sind (diese Seite aktualisiert sich automatisch).",
+    "Only the public key may be uploaded, not the private key.": "Es darf nur der öffentliche Schlüssel hochgeladen werden, nicht der private Schlüssel.",
+    "Delete conversation": "Konversation löschen",
+    "Delete the entire conversation for both users? This cannot be undone.": "Den gesamten Chat-Verlauf für beide Nutzer löschen? Das kann nicht rückgängig gemacht werden.",
+    "Conversation deleted.": "Konversation wurde gelöscht.",
+    "Could not delete chat.": "Chat konnte nicht gelöscht werden.",
+    "Anyone can open this chat. End-to-end sending needs the other person's key too — they must open this chat once. Standard chat always works.": "Jeder kann diesen Chat öffnen. Zum Senden mit Ende-zu-Ende brauchst du auch den Schlüssel der anderen Person — sie muss diesen Chat einmal öffnen. Der Standard-Chat funktioniert jederzeit.",
+    "Open this chat once in your browser so your encryption key is saved — then you can use end-to-end mode.": "Öffne diesen Chat einmal in deinem Browser, damit dein Verschlüsselungsschlüssel gespeichert wird — danach kannst du den Ende-zu-Ende-Modus nutzen.",
+    "To send encrypted messages, the other person must open this chat once in their browser. Until then, use standard chat.": "Um verschlüsselt zu senden, muss die andere Person diesen Chat einmal in ihrem Browser öffnen. Bis dahin nutze bitte den Standard-Chat.",
+    "End-to-end send is not ready: the other user has not published an encryption key yet. Use standard chat, or wait until they open this chat (this page updates automatically).": "Ende-zu-Ende-Senden ist noch nicht möglich: Die andere Person hat noch keinen Verschlüsselungsschlüssel veröffentlicht. Nutze den Standard-Chat oder warte, bis sie den Chat öffnet (diese Seite aktualisiert sich automatisch).",
+    "Import backup…": "Backup importieren…",
+    "Export encryption backup…": "Verschlüsselungs-Backup exportieren…",
+    "Create new encryption key": "Neuen Verschlüsselungsschlüssel erstellen",
+    "This creates a new encryption key on this device. End-to-end messages encrypted with your previous key will remain unreadable here. Continue?": "Damit wird auf diesem Gerät ein neuer Verschlüsselungsschlüssel erzeugt. Ältere Ende-zu-Ende-Nachrichten bleiben hier unlesbar. Fortfahren?",
+    "Invalid backup file.": "Ungültige Backup-Datei.",
+    "This backup is for a different user account.": "Dieses Backup gehört zu einem anderen Benutzerkonto.",
+    "No local encryption key to export.": "Kein lokaler Verschlüsselungsschlüssel zum Exportieren.",
+    "Your encryption key is not stored on this browser. Import the backup file you exported on another device, or create a new key (then older E2E messages cannot be read here).": "Dein Verschlüsselungsschlüssel liegt in diesem Browser nicht vor. Importiere die Backup-Datei von einem anderen Gerät, oder erstelle einen neuen Schlüssel (dann sind ältere E2E-Nachrichten hier nicht lesbar).",
+    "Set up encryption on this device first: import a backup or create a new key.": "Richte zuerst die Verschlüsselung auf diesem Gerät ein: Backup importieren oder neuen Schlüssel erstellen.",
+    "Encrypted messages need your key on this device — use Import backup.": "Verschlüsselte Nachrichten brauchen deinen Schlüssel auf diesem Gerät — nutze „Backup importieren“.",
+    "Remove image": "Bild entfernen",
+    "Emoji": "Emoji",
+    "Please choose an image file.": "Bitte eine Bilddatei wählen.",
+    "Image too large after compression. Choose a smaller image.": "Bild nach Kompression zu groß. Bitte ein kleineres Bild wählen.",
+    "Could not process image.": "Bild konnte nicht verarbeitet werden.",
+    "Invalid encrypted payload.": "Ungültige verschlüsselte Nutzlast.",
+    "Message cannot be empty.": "Nachricht darf nicht leer sein.",
+    "Invalid image type.": "Ungültiger Bildtyp.",
+    "Image too large.": "Bild zu groß.",
+    "Invalid message format.": "Ungültiges Nachrichtenformat.",
+    "Craftsmanship you can rely on": "Handwerk, auf das Sie sich verlassen können",
+    "Request a quote": "Angebot anfordern",
+    "Regional · Reliable · Fair": "Regional · Zuverlässig · Fair",
+    "Professional craft services for your home and business — from consultation to completion.": "Professionelle Handwerksleistungen für Zuhause und Gewerbe — von der Beratung bis zur Fertigstellung.",
+    "On time": "Pünktlich",
+    "Reliable appointments": "Termine, die halten",
+    "Quality": "Qualität",
+    "Clean workmanship": "Saubere Ausführung",
+    "Regional": "Regional",
+    "Local experts": "Experten vor Ort",
+    "Fair": "Fair",
+    "Transparent pricing": "Transparente Preise",
+    "Our services": "Unsere Leistungen",
+    "Installation & repair": "Installation & Reparatur",
+    "Professional execution for new builds and renovations.": "Professionelle Ausführung bei Neubau und Sanierung.",
+    "Residential projects": "Privatkunden",
+    "Solutions tailored to your property.": "Lösungen passend zu Ihrer Immobilie.",
+    "Commercial clients": "Gewerbekunden",
+    "Maintenance contracts and project support.": "Wartungsverträge und Projektbetreuung.",
+    "News & projects": "Neuigkeiten & Projekte",
+    "Insights from our daily work.": "Einblicke aus unserem Arbeitsalltag.",
+    "Ready for your project?": "Bereit für Ihr Projekt?",
+    "Contact us for a non-binding consultation.": "Kontaktieren Sie uns für eine unverbindliche Beratung.",
+    "Get in touch": "Kontakt aufnehmen",
+    "Meet the people behind our craft": "Die Menschen hinter unserem Handwerk",
+    "Experienced professionals for your project — from planning to handover.": "Erfahrene Profis für Ihr Projekt — von der Planung bis zur Übergabe.",
+    "Upload additional theme folders (e.g. themes/handwerk/ or themes/magazine/) to your server via FTP.": "Laden Sie weitere Theme-Ordner (z. B. themes/handwerk/ oder themes/magazine/) per FTP auf den Server.",
+    "Cooling · Climate · Ventilation": "Kälte · Klima · Lüftung",
+    "Refrigeration and HVAC specialists — planning, installation, maintenance and emergency service for commercial and residential clients.": "Spezialisten für Kälte- und Klimatechnik — Planung, Installation, Wartung und Notdienst für Gewerbe und Privatkunden.",
+    "Request a consultation": "Beratung anfragen",
+    "Our strengths": "Unsere Stärken",
+    "Master craft business": "Meisterbetrieb",
+    "Certified refrigeration & HVAC": "Zertifizierte Kälte- & Klimatechnik",
+    "Energy efficient": "Energieeffizient",
+    "Modern systems, lower consumption": "Moderne Anlagen, weniger Verbrauch",
+    "Fast response": "Schnelle Hilfe",
+    "Maintenance and emergency service": "Wartung und Notdienst",
+    "On site in your area": "Vor Ort in Ihrer Region",
+    "Refrigeration & HVAC": "Kälte- & Klimatechnik",
+    "Air conditioning & heat pumps": "Klimaanlagen & Wärmepumpen",
+    "Split units, VRF systems and heat pumps — planned, installed and serviced.": "Split-Geräte, VRF-Anlagen und Wärmepumpen — geplant, installiert und gewartet.",
+    "Commercial refrigeration": "Gewerbekälte",
+    "Cold rooms, refrigeration cabinets and industrial cooling to specification.": "Kühlräume, Kühlmöbel und Industriekälte nach Maß.",
+    "Ventilation & maintenance": "Lüftung & Wartung",
+    "Ventilation technology, leak checks, maintenance contracts and emergency service.": "Lüftungstechnik, Dichtheitsprüfung, Wartungsverträge und Notdienst.",
+    "References": "Referenzen",
+    "Projects & updates": "Projekte & Aktuelles",
+    "Installations, maintenance and tips from our technicians.": "Installationen, Wartung und Tipps unserer Techniker.",
+    "Need cooling or climate control?": "Kühlung oder Klima geplant?",
+    "We advise on air conditioning, refrigeration and ventilation — free initial consultation.": "Beratung zu Klima, Kälte und Lüftung — unverbindliches Erstgespräch.",
+    "Refrigeration & HVAC technicians": "Kälte- & Klimatechniker",
+    "Your team for cooling and climate technology": "Ihr Team für Kälte- und Klimatechnik",
+    "Certified specialists for installation, commissioning and service of cooling and air-conditioning systems.": "Zertifizierte Fachkräfte für Installation, Inbetriebnahme und Service von Kälte- und Klimaanlagen.",
+    "HVAC technician": "Klimatechniker",
+    "Join our refrigeration & HVAC team": "Verstärken Sie unser Kälte- & Klimateam",
+    "We are looking for motivated refrigeration fitters and HVAC technicians.": "Wir suchen motivierte Kälteanlagenbauer und Klimatechniker.",
+    "Redirect Manager": "Redirect-Manager",
+    "Redirects": "Redirects",
+    "Map old URLs to new ones (301/302) for SEO after relaunches or slug changes.": "Alte URLs auf neue umleiten (301/302) — wichtig für SEO nach Umbau oder Slug-Änderungen.",
+    "Add redirect": "Redirect hinzufügen",
+    "From path": "Von-Pfad",
+    "To URL or path": "Ziel-URL oder Pfad",
+    "Status code": "Statuscode",
+    "Permanent": "Permanent",
+    "Temporary": "Temporär",
+    "Notes": "Notizen",
+    "Code": "Code",
+    "Hits": "Treffer",
+    "No redirects yet.": "Noch keine Redirects.",
+    "Delete this redirect?": "Diesen Redirect löschen?",
+    "Redirect saved.": "Redirect gespeichert.",
+    "Redirect updated.": "Redirect aktualisiert.",
+    "Redirect deleted.": "Redirect gelöscht.",
+    "Redirect created: :from": "Redirect erstellt: :from",
+    "Redirect updated: :from": "Redirect aktualisiert: :from",
+    "Redirect deleted: :from": "Redirect gelöscht: :from",
+    "The source path cannot be the homepage root alone in a conflicting way; use a specific old path.": "Bitte einen konkreten alten Pfad angeben (nicht nur /).",
+    "System status": "Systemstatus",
+    "OK": "OK",
+    "Attention": "Achtung",
+    "Open": "Öffnen",
+    "Running PHP :version": "PHP :version aktiv",
+    "PHP :version is below recommended 8.1+": "PHP :version liegt unter der empfohlenen 8.1+",
+    "No backup found.": "Kein Backup gefunden.",
+    "Last backup: :when (:file)": "Letztes Backup: :when (:file)",
+    "System update": "System-Update",
+    "Could not check updates (:msg). Installed: :version": "Update-Check fehlgeschlagen (:msg). Installiert: :version",
+    "Update available: :remote (installed :installed)": "Update verfügbar: :remote (installiert :installed)",
+    "Up to date (:version)": "Aktuell (:version)",
+    "Disk space": "Speicherplatz",
+    "Could not determine free disk space.": "Freier Speicherplatz konnte nicht ermittelt werden.",
+    ":free free of :total (:pct%)": ":free frei von :total (:pct%)"
 }

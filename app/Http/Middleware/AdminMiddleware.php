@@ -24,6 +24,7 @@ class AdminMiddleware
         'admin.news-categories.*' => 'news',
         'admin.pages.*' => 'pages',
         'admin.forms.*' => 'forms',
+        'admin.redirects.*' => 'settings',
         'admin.users.*' => 'users',
         'admin.team' => 'team',
         'admin.settings.*' => 'settings',
