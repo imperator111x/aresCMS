@@ -19,6 +19,8 @@ class ContactFormServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'contact-form');
+
         Blade::directive('contactForm', static function ($expression): string {
             $expr = trim((string) $expression);
             if ($expr === '') {
