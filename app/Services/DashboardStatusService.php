@@ -10,6 +10,7 @@ class DashboardStatusService
 {
     public function __construct(
         private readonly CmsUpdateManager $updates,
+        private readonly LaravelReleaseService $laravelRelease,
     ) {
     }
 
@@ -20,6 +21,7 @@ class DashboardStatusService
     {
         return [
             $this->phpIndicator(),
+            $this->laravelIndicator(),
             $this->backupIndicator(),
             $this->updateIndicator(),
             $this->diskIndicator(),
@@ -43,6 +45,58 @@ class DashboardStatusService
                 ? __('Running PHP :version', ['version' => $version])
                 : __('PHP :version is below recommended 8.1+', ['version' => $version]),
             'href' => route('admin.operations.server-info'),
+        ];
+    }
+
+    /**
+     * @return array{key:string,label:string,status:string,message:string,href:?string}
+     */
+    private function laravelIndicator(): array
+    {
+        $installed = $this->laravelRelease->installedVersion();
+        $href = route('admin.operations.index');
+
+        if (! config('cms.laravel_version_check_enabled', true)) {
+            return [
+                'key' => 'laravel',
+                'label' => __('Laravel framework'),
+                'status' => 'ok',
+                'message' => __('Running Laravel :version', ['version' => $installed]),
+                'href' => $href,
+            ];
+        }
+
+        $latest = $this->laravelRelease->latestStableVersion();
+
+        if ($latest === null) {
+            return [
+                'key' => 'laravel',
+                'label' => __('Laravel framework'),
+                'status' => 'warn',
+                'message' => __('Could not check Laravel releases. Installed: :version', ['version' => $installed]),
+                'href' => $href,
+            ];
+        }
+
+        if (version_compare($latest, $installed, '>')) {
+            return [
+                'key' => 'laravel',
+                'label' => __('Laravel framework'),
+                'status' => 'warn',
+                'message' => __('New Laravel version available: :remote (installed :installed)', [
+                    'remote' => $latest,
+                    'installed' => $installed,
+                ]),
+                'href' => $href,
+            ];
+        }
+
+        return [
+            'key' => 'laravel',
+            'label' => __('Laravel framework'),
+            'status' => 'ok',
+            'message' => __('Laravel up to date (:version)', ['version' => $installed]),
+            'href' => $href,
         ];
     }
 

@@ -80,6 +80,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Laravel-Framework-Version (Packagist-Check)
+    |--------------------------------------------------------------------------
+    | Prüft einmal täglich (Cache), ob auf packagist.org eine neuere stabile
+    | laravel/framework-Version existiert als installiert (Admin-Dashboard).
+    */
+
+    'laravel_version_check_enabled' => filter_var(env('CMS_LARAVEL_VERSION_CHECK_ENABLED', true), FILTER_VALIDATE_BOOLEAN),
+    'laravel_version_check_ttl' => (int) env('CMS_LARAVEL_VERSION_CHECK_TTL', 86400),
+
+    /*
+    |--------------------------------------------------------------------------
     | Pfade, die beim Entpacken eines Updates NICHT überschrieben werden
     |--------------------------------------------------------------------------
     | Relativ zum Projektroot, Schrägstriche. config/ und .env sind immer geschützt.

@@ -8,9 +8,48 @@
         <p class="text-gray-500 dark:text-gray-400 mt-1">{{ __('Welcome back! Here\'s what\'s happening with your news portal.') }}</p>
     </div>
 
-    <div class="mb-6">
-        <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">{{ __('System status') }}</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+    <div
+        x-data="{
+            open: localStorage.getItem('dashboardSystemStatusOpen') !== '0',
+            toggle() {
+                this.open = !this.open;
+                localStorage.setItem('dashboardSystemStatusOpen', this.open ? '1' : '0');
+            }
+        }"
+        class="mb-6"
+    >
+        @php
+            $statusCounts = ['fail' => 0, 'warn' => 0, 'ok' => 0];
+            foreach ($statusIndicators as $indicator) {
+                $statusCounts[$indicator['status']] = ($statusCounts[$indicator['status']] ?? 0) + 1;
+            }
+            $summaryTone = ($statusCounts['fail'] ?? 0) > 0
+                ? 'text-red-600 dark:text-red-400'
+                : (($statusCounts['warn'] ?? 0) > 0 ? 'text-amber-600 dark:text-amber-400' : 'text-green-600 dark:text-green-400');
+        @endphp
+        <button
+            type="button"
+            @click="toggle()"
+            class="w-full flex items-center justify-between gap-3 text-left group"
+            :aria-expanded="open"
+        >
+            <div class="flex items-center gap-3 min-w-0">
+                <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{{ __('System status') }}</h2>
+                <span class="text-xs font-medium {{ $summaryTone }}">
+                    @if(($statusCounts['fail'] ?? 0) > 0)
+                        {{ trans_choice(':count issue needs attention|:count issues need attention', $statusCounts['fail'], ['count' => $statusCounts['fail']]) }}
+                    @elseif(($statusCounts['warn'] ?? 0) > 0)
+                        {{ trans_choice(':count warning|:count warnings', $statusCounts['warn'], ['count' => $statusCounts['warn']]) }}
+                    @else
+                        {{ __('All checks passed') }}
+                    @endif
+                </span>
+            </div>
+            <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform duration-200" :class="{ 'rotate-180': open }"></i>
+        </button>
+
+        <div x-show="open" x-cloak class="mt-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4">
             @foreach($statusIndicators as $indicator)
                 @php
                     $tone = match ($indicator['status']) {
@@ -37,6 +76,7 @@
                     @endif
                 </div>
             @endforeach
+            </div>
         </div>
     </div>
 

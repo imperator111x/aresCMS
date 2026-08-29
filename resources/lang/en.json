@@ -1151,5 +1151,13 @@
     "Up to date (:version)": "Up to date (:version)",
     "Disk space": "Disk space",
     "Could not determine free disk space.": "Could not determine free disk space.",
-    ":free free of :total (:pct%)": ":free free of :total (:pct%)"
+    ":free free of :total (:pct%)": ":free free of :total (:pct%)",
+    "All checks passed": "All checks passed",
+    ":count issue needs attention|:count issues need attention": ":count issue needs attention|:count issues need attention",
+    ":count warning|:count warnings": ":count warning|:count warnings",
+    "Laravel framework": "Laravel framework",
+    "Running Laravel :version": "Running Laravel :version",
+    "Could not check Laravel releases. Installed: :version": "Could not check Laravel releases. Installed: :version",
+    "New Laravel version available: :remote (installed :installed)": "New Laravel version available: :remote (installed :installed)",
+    "Laravel up to date (:version)": "Laravel up to date (:version)"
 }

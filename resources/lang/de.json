@@ -1206,5 +1206,13 @@
     "Up to date (:version)": "Aktuell (:version)",
     "Disk space": "Speicherplatz",
     "Could not determine free disk space.": "Freier Speicherplatz konnte nicht ermittelt werden.",
-    ":free free of :total (:pct%)": ":free frei von :total (:pct%)"
+    ":free free of :total (:pct%)": ":free frei von :total (:pct%)",
+    "All checks passed": "Alle Prüfungen OK",
+    ":count issue needs attention|:count issues need attention": ":count Problem|:count Probleme",
+    ":count warning|:count warnings": ":count Hinweis|:count Hinweise",
+    "Laravel framework": "Laravel-Framework",
+    "Running Laravel :version": "Laravel :version aktiv",
+    "Could not check Laravel releases. Installed: :version": "Laravel-Versionen konnten nicht geprüft werden. Installiert: :version",
+    "New Laravel version available: :remote (installed :installed)": "Neue Laravel-Version verfügbar: :remote (installiert :installed)",
+    "Laravel up to date (:version)": "Laravel aktuell (:version)"
 }
