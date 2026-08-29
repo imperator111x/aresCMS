@@ -223,6 +223,12 @@
                         <span>{{ __('Forms') }}</span>
                     </a>
                 @endif
+                @if(optional($adminUser)->hasAdminPermission('settings'))
+                    <a href="{{ route('admin.redirects.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg {{ request()->routeIs('admin.redirects.*') ? 'bg-primary-500 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-700' }}">
+                        <i class="fas fa-random w-5"></i>
+                        <span>{{ __('Redirects') }}</span>
+                    </a>
+                @endif
                 @if(optional($adminUser)->hasAdminPermission('users'))
                     <a href="{{ route('admin.users.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg {{ request()->routeIs('admin.users.*') ? 'bg-primary-500 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-700' }}">
                         <i class="fas fa-users w-5"></i>
