@@ -31,5 +31,9 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/.cursor
+.cursorignore
+.cursorrules
+AGENTS.md
 composer.phar
 *.zip

@@ -208,6 +208,7 @@ class CreateCmsUpdate extends Command
             '.idea/',
             '.vscode/',
             '.cursor/',
+            '.claude/',
             'storage/logs/',
             'storage/app/public/',
             'storage/app/backups/',
@@ -227,7 +228,16 @@ class CreateCmsUpdate extends Command
             }
         }
 
-        $blockedExact = ['.env', '.env.backup', 'htdocs.lnk', 'mkdir', 'public/hot'];
+        $blockedExact = [
+            '.env',
+            '.env.backup',
+            'htdocs.lnk',
+            'mkdir',
+            'public/hot',
+            '.cursorignore',
+            '.cursorrules',
+            'agents.md',
+        ];
         foreach ($blockedExact as $name) {
             if ($rel === $name) {
                 return false;
