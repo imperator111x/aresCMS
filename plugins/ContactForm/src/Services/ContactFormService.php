@@ -104,7 +104,7 @@ class ContactFormService
 
         $turnstileSiteKey = config('services.cloudflare.turnstile.site_key');
 
-        return view()->file(__DIR__.'/../../resources/views/partials/form.blade.php', [
+        return view('contact-form::partials.form', [
             'form' => $form,
             'submitLabel' => $submitLabel ?: __('Send message'),
             'turnstileSiteKey' => filled($turnstileSiteKey) ? $turnstileSiteKey : null,
