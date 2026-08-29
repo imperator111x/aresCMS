@@ -271,6 +271,44 @@ class SettingController extends Controller
     }
 
     /**
+     * Cookie-/Consent-Banner (DSGVO).
+     */
+    public function cookieConsent()
+    {
+        $settings = [
+            'cookie_consent_enabled' => Setting::getBoolValue('cookie_consent_enabled', true),
+            'cookie_consent_title' => (string) Setting::getValue('cookie_consent_title', ''),
+            'cookie_consent_text' => (string) Setting::getValue('cookie_consent_text', ''),
+            'cookie_consent_privacy_label' => (string) Setting::getValue('cookie_consent_privacy_label', ''),
+        ];
+
+        return view('admin.settings.cookie-consent', compact('settings'));
+    }
+
+    /**
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateCookieConsent(Request $request)
+    {
+        $request->validate([
+            'cookie_consent_enabled' => 'nullable|boolean',
+            'cookie_consent_title' => 'nullable|string|max:190',
+            'cookie_consent_text' => 'nullable|string|max:4000',
+            'cookie_consent_privacy_label' => 'nullable|string|max:190',
+        ]);
+
+        Setting::setValue('cookie_consent_enabled', $request->boolean('cookie_consent_enabled'));
+        Setting::setValue('cookie_consent_title', trim((string) $request->input('cookie_consent_title', '')));
+        Setting::setValue('cookie_consent_text', trim((string) $request->input('cookie_consent_text', '')));
+        Setting::setValue('cookie_consent_privacy_label', trim((string) $request->input('cookie_consent_privacy_label', '')));
+
+        ActivityLogger::log('settings.cookie_consent_updated', __('Cookie consent settings updated'));
+
+        return redirect()->route('admin.settings.cookie-consent')
+            ->with('success', __('Settings updated successfully!'));
+    }
+
+    /**
      * Sprachdateien (.json) verwalten.
      */
     public function languages(Request $request)

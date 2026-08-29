@@ -18,7 +18,7 @@ class FormSubmissionController extends Controller
             ->where('is_active', true)
             ->firstOrFail();
 
-        // Simple honeypot to block bots.
+        // Simple honeypot to block bots (field must stay empty / hidden in the UI).
         if (filled((string) $request->input('website'))) {
             return back()->with('success', $form->success_message ?: __('Thank you! Your message has been sent.'));
         }

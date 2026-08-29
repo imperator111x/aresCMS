@@ -506,7 +506,9 @@
                         <li><a href="{{ \App\Support\LegalUrl::imprint() }}" class="text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">{{ __('legal.imprint.page_title') }}</a></li>
                         <li><a href="{{ \App\Support\LegalUrl::privacy() }}" class="text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">{{ __('legal.privacy.page_title') }}</a></li>
                         <li><a href="{{ \App\Support\LegalUrl::terms() }}" class="text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">{{ __('legal.terms.page_title') }}</a></li>
-                        <li><a href="#" class="js-open-cookie-settings text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">{{ __('Cookie settings') }}</a></li>
+                        @if(\App\Models\Setting::getBoolValue('cookie_consent_enabled', true))
+                            <li><a href="#" class="js-open-cookie-settings text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">{{ __('Cookie settings') }}</a></li>
+                        @endif
                         @guest
                             <li><a href="{{ route('login') }}" class="text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">{{ __('Login') }}</a></li>
                             @unless($registrationDisabled)
@@ -623,8 +625,10 @@
                     <a href="{{ \App\Support\LegalUrl::privacy() }}" class="hover:text-primary-500 transition-colors">{{ __('legal.privacy.page_title') }}</a>
                     <span class="mx-2 text-gray-400">·</span>
                     <a href="{{ \App\Support\LegalUrl::terms() }}" class="hover:text-primary-500 transition-colors">{{ __('legal.terms.page_title') }}</a>
-                    <span class="mx-2 text-gray-400">·</span>
-                    <a href="#" class="js-open-cookie-settings hover:text-primary-500 transition-colors">{{ __('Cookie settings') }}</a>
+                    @if(\App\Models\Setting::getBoolValue('cookie_consent_enabled', true))
+                        <span class="mx-2 text-gray-400">·</span>
+                        <a href="#" class="js-open-cookie-settings hover:text-primary-500 transition-colors">{{ __('Cookie settings') }}</a>
+                    @endif
                 </p>
                 <div x-data="{ openCmsInfo: false, copied: false, infoText: @js($cmsInfoExport), copyInfo() { try { navigator.clipboard.writeText(this.infoText); this.copied = true; setTimeout(() => this.copied = false, 1600); } catch (_e) {} } }" class="flex items-center gap-2">
                     <p class="text-gray-600 dark:text-gray-400 text-sm">

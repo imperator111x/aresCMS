@@ -297,6 +297,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
     Route::put('/settings/registration', [App\Http\Controllers\Admin\SettingController::class, 'updateRegistration'])->name('settings.registration.update');
     Route::get('/settings/legal-imprint', [App\Http\Controllers\Admin\SettingController::class, 'legalImprint'])->name('settings.legal-imprint');
     Route::put('/settings/legal-imprint', [App\Http\Controllers\Admin\SettingController::class, 'updateLegalImprint'])->name('settings.legal-imprint.update');
+    Route::get('/settings/cookie-consent', [App\Http\Controllers\Admin\SettingController::class, 'cookieConsent'])->name('settings.cookie-consent');
+    Route::put('/settings/cookie-consent', [App\Http\Controllers\Admin\SettingController::class, 'updateCookieConsent'])->name('settings.cookie-consent.update');
     Route::get('/settings/languages', [App\Http\Controllers\Admin\SettingController::class, 'languages'])->name('settings.languages');
     Route::post('/settings/languages', [App\Http\Controllers\Admin\SettingController::class, 'storeLanguage'])->name('settings.languages.store');
     Route::put('/settings/languages', [App\Http\Controllers\Admin\SettingController::class, 'updateLanguage'])->name('settings.languages.update');

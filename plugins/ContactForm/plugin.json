@@ -1,0 +1,19 @@
+{
+  "slug": "contact-form",
+  "name": "Kontaktformular",
+  "description": "Öffentliche Kontaktseite (/kontakt) mit Honeypot und Rate-Limit. Nutzt das CMS-Formular-System.",
+  "version": "1.0.0",
+  "enabled": true,
+  "provider_file": "src/ContactFormServiceProvider.php",
+  "provider": "Plugins\\ContactForm\\ContactFormServiceProvider",
+  "routes_file": "routes/web.php",
+  "admin_nav": [
+    {
+      "route": "admin.contact-form.index",
+      "label": "Kontaktformular",
+      "icon": "fas fa-envelope-open-text",
+      "active_pattern": "admin.contact-form.*",
+      "permission": "settings"
+    }
+  ]
+}
