@@ -34,6 +34,7 @@ class Kernel extends HttpKernel
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \App\Http\Middleware\SetLocale::class,
+            \App\Http\Middleware\ApplyUrlRedirects::class,
             \App\Http\Middleware\EnsureValidLicense::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\PreventRequestsDuringMaintenance::class,

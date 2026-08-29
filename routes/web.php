@@ -24,6 +24,8 @@ use App\Http\Controllers\Admin\ThemeController as AdminThemeController;
 use App\Http\Controllers\Admin\TwoFactorSecurityController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\FormController as AdminFormController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\RedirectController as AdminRedirectController;
 use App\Http\Controllers\Auth\TwoFactorChallengeController;
 use App\Http\Controllers\Auth\SocialAuthController;
 use App\Http\Controllers\AccountController;
@@ -192,9 +194,12 @@ Route::delete('/news/{news}/comments/{comment}', [NewsController::class, 'destro
 
 // Admin Routes
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
-    Route::get('/', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+    Route::get('/', AdminDashboardController::class)->name('dashboard');
+
+    Route::get('/redirects', [AdminRedirectController::class, 'index'])->name('redirects.index');
+    Route::post('/redirects', [AdminRedirectController::class, 'store'])->name('redirects.store');
+    Route::put('/redirects/{redirect}', [AdminRedirectController::class, 'update'])->name('redirects.update');
+    Route::delete('/redirects/{redirect}', [AdminRedirectController::class, 'destroy'])->name('redirects.destroy');
 
     Route::get('/search/suggestions', [AdminSearchController::class, 'suggestions'])->name('search.suggestions');
     Route::get('/search', [AdminSearchController::class, 'index'])->name('search');
