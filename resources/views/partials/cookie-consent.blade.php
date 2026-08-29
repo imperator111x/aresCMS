@@ -1,4 +1,20 @@
-{{-- Cookie-Einwilligung: localStorage + Cookie cookie_consent (essential|all); funktioniert ohne Tailwind (z. B. Guest-Layout). --}}
+@php
+    $cookieConsentEnabled = \App\Models\Setting::getBoolValue('cookie_consent_enabled', true);
+    $cookieConsentTitle = trim((string) \App\Models\Setting::getValue('cookie_consent_title', ''));
+    $cookieConsentText = trim((string) \App\Models\Setting::getValue('cookie_consent_text', ''));
+    $cookieConsentPrivacyLabel = trim((string) \App\Models\Setting::getValue('cookie_consent_privacy_label', ''));
+    if ($cookieConsentTitle === '') {
+        $cookieConsentTitle = __('Cookie consent');
+    }
+    if ($cookieConsentText === '') {
+        $cookieConsentText = __('We use cookies and similar technologies for essential functions, language and session. With your consent, optional services (e.g. CAPTCHA) may load as described in the privacy policy.');
+    }
+    if ($cookieConsentPrivacyLabel === '') {
+        $cookieConsentPrivacyLabel = __('Cookie privacy link');
+    }
+@endphp
+@if($cookieConsentEnabled)
+{{-- Cookie-Einwilligung: localStorage + Cookie cookie_consent (essential|all); konfigurierbar unter Admin → Einstellungen → Cookie consent. --}}
 <style>
 #cookie-consent-root.cc-banner-root {
     position: fixed;
@@ -131,14 +147,14 @@
     role="dialog"
     aria-labelledby="cookie-consent-title"
     aria-live="polite"
-    data-title-initial="{{ __('Cookie consent') }}"
+    data-title-initial="{{ e($cookieConsentTitle) }}"
     data-title-settings="{{ __('Cookie settings') }}">
     <div class="cc-banner-inner">
         <div>
-            <p id="cookie-consent-title" class="cc-banner-title">{{ __('Cookie consent') }}</p>
-            <p class="cc-banner-text">{{ __('We use cookies and similar technologies for essential functions, language and session. With your consent, optional services (e.g. CAPTCHA) may load as described in the privacy policy.') }}</p>
+            <p id="cookie-consent-title" class="cc-banner-title">{{ $cookieConsentTitle }}</p>
+            <p class="cc-banner-text">{{ $cookieConsentText }}</p>
             <p class="cc-banner-link">
-                <a href="{{ route('legal.privacy') }}#cookies">{{ __('Cookie privacy link') }}</a>
+                <a href="{{ route('legal.privacy') }}#cookies">{{ $cookieConsentPrivacyLabel }}</a>
             </p>
         </div>
         <div class="cc-banner-actions">
@@ -239,3 +255,4 @@
     });
 })();
 </script>
+@endif

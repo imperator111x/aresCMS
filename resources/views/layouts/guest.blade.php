@@ -332,8 +332,10 @@
                 <a href="{{ route('legal.imprint') }}" style="color: var(--md-primary); text-decoration: none;">{{ __('legal.imprint.page_title') }}</a>
                 <span style="margin: 0 0.5rem; opacity: 0.5;">·</span>
                 <a href="{{ route('legal.privacy') }}" style="color: var(--md-primary); text-decoration: none;">{{ __('legal.privacy.page_title') }}</a>
-                <span style="margin: 0 0.5rem; opacity: 0.5;">·</span>
-                <a href="#" class="js-open-cookie-settings" style="color: var(--md-primary); text-decoration: none;">{{ __('Cookie settings') }}</a>
+                @if(\App\Models\Setting::getBoolValue('cookie_consent_enabled', true))
+                    <span style="margin: 0 0.5rem; opacity: 0.5;">·</span>
+                    <a href="#" class="js-open-cookie-settings" style="color: var(--md-primary); text-decoration: none;">{{ __('Cookie settings') }}</a>
+                @endif
             </p>
         </div>
     </footer>

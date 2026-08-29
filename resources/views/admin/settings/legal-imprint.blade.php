@@ -8,20 +8,7 @@
         <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">{{ __('These fields appear on the public imprint page and in the site footer (e-mail). If a field is empty here, the value from the server .env file (LEGAL_*) is used as a fallback.') }}</p>
     </div>
 
-    <div class="mb-6 flex flex-wrap gap-2">
-        <a href="{{ route('admin.settings.general') }}" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border {{ request()->routeIs('admin.settings.general*') ? 'bg-primary-600 text-white border-primary-600' : 'border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-700' }}">
-            <i class="fas fa-sliders-h"></i>
-            {{ __('General Settings') }}
-        </a>
-        <a href="{{ route('admin.settings.languages') }}" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border {{ request()->routeIs('admin.settings.languages*') ? 'bg-primary-600 text-white border-primary-600' : 'border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-700' }}">
-            <i class="fas fa-language"></i>
-            {{ __('Language Settings') }}
-        </a>
-        <a href="{{ route('admin.settings.legal-imprint') }}" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border {{ request()->routeIs('admin.settings.legal-imprint*') ? 'bg-primary-600 text-white border-primary-600' : 'border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-700' }}">
-            <i class="fas fa-balance-scale"></i>
-            {{ __('Legal notice (Imprint)') }}
-        </a>
-    </div>
+    @include('admin.settings._nav')
 
     <form action="{{ route('admin.settings.legal-imprint.update') }}" method="POST" class="max-w-3xl space-y-6">
         @csrf
