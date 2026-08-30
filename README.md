@@ -1,15 +1,22 @@
-# aresCMS — Laravel Application
+# aresCMS
 
-A modern news portal built with Laravel featuring a dark Material Design theme.
+Laravel-basiertes CMS für News-Portale, Community-Seiten und Webauftritte.
+
+**Repository:** https://github.com/imperator111x/aresCMS
+
+```bash
+git clone https://github.com/imperator111x/aresCMS.git
+cd aresCMS
+```
 
 ## Features
 
-- **User Authentication**: Login, registration, password reset, email verification
-- **News System**: Create, edit, delete, and publish news articles
-- **Comments**: Users can comment on news articles
-- **Admin Panel**: Full admin dashboard for managing news and users
-- **User Management**: Ban/unban users, promote to admin
-- **Dark Material Design**: Beautiful dark theme with Material Design principles
+- **Authentifizierung**: Login, Registrierung, Passwort-Reset, E-Mail-Verifizierung, 2FA, OAuth
+- **News-System**: Artikel erstellen, bearbeiten, veröffentlichen, Kommentare & Reaktionen
+- **Admin-Panel**: Dashboard mit Systemstatus, Benutzerverwaltung, Themes, Plugins
+- **Updates & Backup**: ZIP-/Manifest-Updates, Backups, Redirect-Manager, Cookie-Banner
+- **Plugins**: Kontaktformular, User-Profile/Chat, Breaking News, Sponsor-Slots u. a.
+- **Themes**: Anpassbare Themes inkl. Dark Mode
 
 ## Requirements
 
@@ -24,11 +31,7 @@ A modern news portal built with Laravel featuring a dark Material Design theme.
 
 ### Lokal (Entwicklung)
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd news-portal
-```
+1. Repository klonen (siehe oben) oder ZIP von GitHub herunterladen.
 
 2. Install PHP dependencies:
 ```bash
